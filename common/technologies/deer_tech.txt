@@ -579,6 +579,10 @@ technologies = {
 			leads_to_tech = tech_deer_seer_a
 			research_cost_coeff = 1
 		}
+		path = {
+			leads_to_tech = tech_deer_seer_a_lar
+			research_cost_coeff = 1
+		}
 
 
 		research_cost = 1
@@ -650,6 +654,53 @@ technologies = {
 
 		foreign_subversive_activites = -0.2
 		decryption_factor = 0.1
+
+		allow_branch = {
+			NOT = {
+				has_dlc = "La Resistance"
+			}
+		}
+
+		path = {
+			leads_to_tech = tech_deer_seer_b
+			research_cost_coeff = 1
+		}
+
+		research_cost = 1.5
+		start_year = 1007
+		folder = {
+			name = deer_folder
+			position = { x = 6 y = @1016 }
+		}
+
+		categories = {
+			magical_tech
+			seer_tech
+			race_tech
+		}
+
+		ai_will_do = {
+			factor = 3
+			modifier = {
+				factor = 1.5
+				date > "1017.1.1"
+			}
+
+			modifier = {
+				factor = 2
+				date > "1018.1.1"
+			}
+		}
+	}
+
+	tech_deer_seer_a_lar = {
+
+		foreign_subversive_activites = -0.2
+		decryption_power = 10
+
+		allow_branch = {
+			has_dlc = "La Resistance"
+		}
 
 		path = {
 			leads_to_tech = tech_deer_seer_b

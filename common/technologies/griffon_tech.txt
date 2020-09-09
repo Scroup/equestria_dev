@@ -521,6 +521,10 @@ technologies = {
 			leads_to_tech = tech_griffon_misc_a
 			research_cost_coeff = 1
 		}
+		path = {
+			leads_to_tech = tech_griffon_misc_a_lar
+			research_cost_coeff = 1
+		}
 
 		research_cost = 1.5
 		start_year = 1007
@@ -551,7 +555,55 @@ technologies = {
 	#Magical early warning
 	tech_griffon_misc_a = {
 
+		allow_branch = {
+			NOT = {
+				has_dlc = "La Resistance"
+			}	
+		}
+
+
 		decryption_factor = 0.05
+		air_interception_detect_factor = 0.1
+
+		path = {
+			leads_to_tech = tech_griffon_misc_b
+			research_cost_coeff = 1
+		}
+
+		research_cost = 1.5
+		start_year = 1007
+		folder = {
+			name = griffon_folder
+			position = { x = 6 y = @1016 }
+		}
+
+		categories = {
+			race_tech
+			magical_tech
+		}
+
+		ai_will_do = {
+			factor = 2
+
+			modifier = {
+				factor = 1.5
+				date > "1017.1.1"
+			}
+
+			modifier = {
+				factor = 2
+				date > "1018.1.1"
+			}
+		}
+	}
+
+	tech_griffon_misc_a_lar = {
+
+		allow_branch = {
+			has_dlc = "La Resistance"
+		}
+
+		decryption_power = 5
 		air_interception_detect_factor = 0.1
 
 		path = {
