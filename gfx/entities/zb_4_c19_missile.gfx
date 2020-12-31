@@ -1,0 +1,126 @@
+objectTypes = {	
+#S_SPi_b_SP_Missile
+##  GER MISSILE  ##
+	pdxmesh = {
+		name = "GER_missile_1_V2_mesh"
+		file = "gfx/models/units/missile/GER_missile_1_V2.mesh"
+		animation = { id = "nuke" type = "missile_bomb_animation" }
+		animation = { id = "idle" type = "missile_V2idle_animation" }
+		animation = { id = "launch" type = "missile_launch_animation" }
+		animation = { id = "explode" type = "missile_V2idle_animation" }		
+	}
+		pdxmesh = {
+		name = "GER_missile_2_A9_mesh"
+		file = "gfx/models/units/missile/GER_missile_2_A9.mesh"
+		animation = { id = "nuke" type = "missile_bomb_animation" }
+		animation = { id = "idle" type = "missile_V2idle_animation" }
+		animation = { id = "launch" type = "missile_launch_animation" }
+		animation = { id = "explode" type = "missile_V2idle_animation" }	
+	}
+		pdxmesh = {
+		name = "GER_missile_3_A10_mesh"
+		file = "gfx/models/units/missile/GER_missile_3_A10.mesh"
+		animation = { id = "nuke" type = "missile_bomb_animation" }
+		animation = { id = "idle" type = "missile_V2idle_animation" }
+		animation = { id = "launch" type = "missile_launch_animation" }
+		animation = { id = "explode" type = "missile_V2idle_animation" }		
+	}
+##  USA MISSILE  ##
+	pdxmesh = {
+		name = "USA_missile_3_mesh"
+		file = "gfx/models/units/missile/generic_missile_3.mesh"
+		animation = { id = "nuke" type = "missile_bomb_animation" }
+		animation = { id = "idle" type = "missile_V2idle_animation" }
+		animation = { id = "launch" type = "missile_launch_animation" }
+		animation = { id = "explode" type = "missile_V2idle_animation" }	
+		meshsettings = {
+            texture_diffuse = "USA_missile_3.dds"
+        }	
+	}
+##  SOV MISSILE  ##
+	pdxmesh = {
+		name = "SOV_missile_3_mesh"
+		file = "gfx/models/units/missile/generic_missile_3.mesh"
+		animation = { id = "nuke" type = "missile_bomb_animation" }
+		animation = { id = "idle" type = "missile_V2idle_animation" }
+		animation = { id = "launch" type = "missile_launch_animation" }
+		animation = { id = "explode" type = "missile_V2idle_animation" }	
+		meshsettings = {
+            texture_diffuse = "SOV_missile_3.dds"
+        }	
+	}		
+##  JAP MISSILE  ##
+	pdxmesh = {
+		name = "JAP_missile_3_mesh"
+		file = "gfx/models/units/missile/generic_missile_3.mesh"
+		animation = { id = "nuke" type = "missile_bomb_animation" }
+		animation = { id = "idle" type = "missile_V2idle_animation" }
+		animation = { id = "launch" type = "missile_launch_animation" }
+		animation = { id = "explode" type = "missile_V2idle_animation" }		
+		meshsettings = {
+            texture_diffuse = "JAP_missile_3.dds"
+        }	
+	}	
+##  generic MISSILE  ##
+	pdxmesh = {
+		name = "generic_missile_00_mesh"
+		file = "gfx/models/units/missile/generic_missile_00.mesh"
+		animation = { id = "nuke" type = "missile_bomb_animation" }
+		animation = { id = "idle" type = "missile_V2idle_animation" }
+		animation = { id = "launch" type = "missile_launch_animation" }
+		animation = { id = "explode" type = "missile_V2idle_animation" }		
+	}
+		pdxmesh = {
+		name = "generic_missile_0_mesh"
+		file = "gfx/models/units/missile/generic_missile_0.mesh"
+		animation = { id = "nuke" type = "missile_bomb_animation" }
+		animation = { id = "idle" type = "missile_V2idle_animation" }
+		animation = { id = "launch" type = "missile_launch_animation" }
+		animation = { id = "explode" type = "missile_V2idle_animation" }		
+	}
+		pdxmesh = {
+		name = "generic_missile_1_mesh"
+		file = "gfx/models/units/missile/generic_missile_1.mesh"
+		animation = { id = "nuke" type = "missile_bomb_animation" }
+		animation = { id = "idle" type = "missile_V2idle_animation" }
+		animation = { id = "launch" type = "missile_launch_animation" }
+		animation = { id = "explode" type = "missile_V2idle_animation" }		
+	}
+		pdxmesh = {
+		name = "generic_missile_2_mesh"
+		file = "gfx/models/units/missile/generic_missile_2.mesh"
+		animation = { id = "nuke" type = "missile_bomb_animation" }
+		animation = { id = "idle" type = "missile_V2idle_animation" }
+		animation = { id = "launch" type = "missile_launch_animation" }
+		animation = { id = "explode" type = "missile_V2idle_animation" }	
+	}
+		pdxmesh = {
+		name = "generic_missile_3_mesh"
+		file = "gfx/models/units/missile/generic_missile_3.mesh"
+		animation = { id = "nuke" type = "missile_bomb_animation" }
+		animation = { id = "idle" type = "missile_V2idle_animation" }
+		animation = { id = "launch" type = "missile_launch_animation" }
+		animation = { id = "explode" type = "missile_V2idle_animation" }		
+	}	
+	
+	
+	
+##  FRAME  ##	
+	pdxmesh = {
+		name = "missile_frame_mesh"
+		file = "gfx/models/units/missile/missile_frame.mesh"
+	
+		animation = { id = "success"			type = "missile_frame_bomb_animation" }
+		animation = { id = "launch"				type = "missile_frame_launch_animation" }	
+		animation = { id = "default"			type = "missile_frame_idle_animation" }		
+	}
+
+##  SITE  ##
+	pdxmesh = {
+		name = "GER_missile_site_1_V2_mesh"
+		file = "gfx/models/units/missile/site/GER_missile_site_1_V2.mesh"		
+		scale = 0.1	
+	}
+
+######### END #########
+}

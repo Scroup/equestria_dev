@@ -1,0 +1,216 @@
+particle={
+	name="Rocket_engine_smoke_file"
+subsystem={
+		name="dust_base_right"
+		max_amount=500
+		slave_particles=0
+		emitter_type="point"
+		invert=no
+		trail=no
+		local_space=yes
+		billboard=yes
+		texture={
+			file="gfx/particles/cloud.dds"
+			x=1
+			y=1
+			shader="ParticleAlphaBlend"
+		}
+		color={
+			x=225.000
+			y=210.000
+			z=190.000
+			alpha=75.000,dust_base_alpha
+		}
+		position={
+		}
+		duration=100.500
+		velocity_pitch={ 0.000 5.000 }
+		velocity_yaw={ -90.000 90.000 }
+		velocity={ 25.000 10.000 }
+		life={ 1.000 0.500 }
+		emission=100.000
+		size={ 8.000 2.000 }
+		particle_pitch=90.000
+		rotation={ 0.000 180.000 }
+		rotation_speed=200.000
+		force=drag,upforce
+	}
+	subsystem={
+		name="dust_base_left"
+		max_amount=500
+		slave_particles=0
+		emitter_type="point"
+		invert=no
+		trail=no
+		local_space=yes
+		billboard=yes
+		texture={
+			file="gfx/particles/cloud.dds"
+			x=1
+			y=1
+			shader="ParticleAlphaBlend"
+		}
+		color={
+			x=225.000
+			y=210.000
+			z=190.000
+			alpha=75.000,dust_base_alpha
+		}
+		position={
+		}
+		duration=100.500
+		velocity_pitch={ 0.000 5.000 }
+		velocity_yaw={ 90.000 90.000 }
+		velocity={ 25.000 10.000 }
+		life={ 1.000 0.500 }
+		emission=100.000
+		size={ 8.000 2.000 }
+		particle_pitch=90.000
+		rotation={ 0.000 180.000 }
+		rotation_speed=-200.000
+		force=drag,upforce
+	}
+	subsystem={
+		name="shockwave"
+		max_amount=1
+		slave_particles=0
+		emitter_type="point"
+		invert=no
+		trail=no
+		local_space=yes
+		billboard=no
+		texture={
+			file="gfx/particles/bubble.dds"
+			x=1
+			y=1
+			shader="ParticleAlphaBlend"
+		}
+		color={
+			x=220.000
+			y=200.000
+			z=190.000
+			alpha=50.000,shockwave_alpha
+		}
+		position={
+		}
+		start=0.100
+		duration=100.100
+		life=0.200
+		emission=100.000
+		size=80.000,grow
+		particle_pitch=90.000
+		rotation={ 0.000 180.000 }
+	}
+	subsystem={
+		name="glow"
+		max_amount=200
+		slave_particles=0
+		emitter_type="point"
+		invert=no
+		trail=no
+		local_space=yes
+		billboard=yes
+		texture={
+			file="gfx/particles/fire03_des.dds"
+			x=1
+			y=1
+			shader="ParticleAdditive"
+		}
+		color={
+			x=220.000
+			y=200.000
+			z=190.000
+			alpha=255.000,alpha_fade
+		}
+		position={
+		}
+		duration=100.000
+		velocity_pitch={ 0.000 10.000 }
+		velocity_yaw={ 0.000 180.000 }
+		velocity={ 10.000 5.000 }
+		life={ 0.200 0.100 }
+		emission=200.000
+		size=2.000
+		rotation={ 0.000 180.000 }
+	}
+	animation={
+		name="dust_base_alpha"
+		start=0.000
+		duration=100.000
+		repeat=no
+		minValue=0.000
+		maxValue=0.400
+		curve={
+			0.000 0.000 0.121 0.078 0.247 0.641 0.388 0.977 0.765 1.000 0.909 0.633 1.000 0.000 
+		}
+		op="MUL"
+		time="life"
+	}
+	animation={
+		name="shockwave_alpha"
+		start=0.000
+		duration=100.000
+		repeat=no
+		minValue=0.000
+		maxValue=1.000
+		curve={
+			0.000 0.000 0.338 0.992 0.718 1.000 1.000 0.000 
+		}
+		op="MUL"
+		time="life"
+	}
+	animation={
+		name="grow"
+		start=0.000
+		duration=100.000
+		repeat=no
+		minValue=0.000
+		maxValue=1.000
+		curve={
+			0.000 0.000 1.000 1.000 
+		}
+		op="MUL"
+		time="life"
+	}
+	animation={
+		name="alpha_fade"
+		start=0.000
+		duration=100.000
+		repeat=no
+		minValue=0.000
+		maxValue=1.000
+		curve={
+			0.000 0.000 0.294 1.000 0.732 1.000 1.000 0.000 
+		}
+		op="MUL"
+		time="life"
+	}
+	force={
+		type="friction"
+		name="drag"
+		position={
+			0.000 0.000 0.000 
+		}
+		direction={
+			0.000 0.000 0.000 
+		}
+		local_force=yes
+		yaw=0.000
+		division=16
+		amount=1.500
+	}
+	force={
+		type="planar"
+		name="upforce"
+		position={
+			0.000 0.000 0.000 
+		}
+		direction={
+			0.000 1.000 0.000 
+		}
+		local_force=yes
+		yaw=0.000
+		division=16
+		amount=10.000
+	}
+}

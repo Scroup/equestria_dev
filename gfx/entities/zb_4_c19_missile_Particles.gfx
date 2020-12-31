@@ -1,0 +1,19 @@
+objectTypes = {	
+#S_SPi_b_SP_Missile
+	pdxparticle = {
+		name = "Rocket_bomb_particle"
+		type = "Rocket_bomb_file"
+		scale = 1.5
+	}
+		pdxparticle = {
+		name = "Rocket_engine_particle"
+		type = "Rocket_engine_file"
+		scale = 1
+	}
+		pdxparticle = {
+		name = "Rocket_engine_smoke_particle"
+		type = "Rocket_engine_smoke_file"
+		scale = 1
+	}
+#S_SPi_b_SP_Missile
+}

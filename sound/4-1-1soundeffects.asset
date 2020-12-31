@@ -1,0 +1,57 @@
+soundeffect = {
+	name = missile_launch
+	falloff = "falloff_100"
+	sounds = {
+		sound = missile_launch
+
+	} 
+	max_audible = 2
+	#delay_random_offset = { 0.0 1.5 }
+	loop = yes
+	is3d = yes
+	max_audible_behaviour = fail
+	volume = 1.0
+}
+
+soundeffect = {
+	name = distance_missile_launch
+	falloff = "falloff_distance"
+	loop = yes
+	sounds = {
+		sound = distance_missile_launch
+	}
+	max_audible = 3
+	max_audible_behaviour = fail
+	is3d = yes
+	volume = 1.0
+}
+
+#################################################################
+
+soundeffect = {
+	name = missile_idle
+	falloff = "falloff_100"
+	sounds = {
+		sound = missile_idle
+
+	} 
+	max_audible = 2
+	#delay_random_offset = { 0.0 1.5 }
+	loop = yes
+	is3d = yes
+	max_audible_behaviour = fail
+	volume = 1.0
+}
+
+soundeffect = {
+	name = distance_missile_idle
+	falloff = "falloff_distance"
+	loop = yes
+	sounds = {
+		sound = distance_missile_idle
+	}
+	max_audible = 3
+	max_audible_behaviour = fail
+	is3d = yes
+	volume = 1.0
+}

@@ -1,0 +1,199 @@
+#S_SPi_b_SP_Missile
+######### START #########
+
+#################	ITA_ MISSILE 1    #################
+entity = {
+	name = "ITA_guided_missile_equipment_1_entity"
+	pdxmesh = "generic_missile_1_mesh"
+	state = { name = "launch" animation = "idle"   
+		event = { time = 0.0	node = engine_exhaust	particle = "Rocket_engine_smoke_particle"	trigger_once = yes	keep_particle = yes	sound = { soundeffect = "missile_launch" } }
+	}
+	state = { name = "explode" animation = "explode" 
+		event = { time = 0 node = engine_exhaust	particle = "Rocket_engine_smoke_particle"	trigger_once = yes	keep_particle = no	sound = { soundeffect = "missile_idle" } }
+		event = { time = 3.7 node = engine_exhaust	particle = "Rocket_bomb_particle"						keep_particle = no	sound = { soundeffect = "nuke" } }
+	}
+	state = { name = "idle" animation = "idle"   looping = no 
+		event = { time = 3 node = engine_exhaust	particle = "Rocket_engine_smoke_particle"	trigger_once = yes	keep_particle = yes }
+		event = { time = 0 node = engine_exhaust	particle = "rocket_exhaust_particle"		trigger_once = yes	keep_particle = yes		sound = { soundeffect = "missile_idle" }} 
+		event = { time = 0 node = engine_exhaust	particle = "Rocket_engine_particle"			trigger_once = no	keep_particle = no }
+	}	
+	default_state = idle		
+	scale = 0.14
+}
+#################	END  #################
+
+#################	ITA_ MISSILE 2    #################
+entity = {
+	name = "ITA_guided_missile_equipment_2_entity"
+	pdxmesh = "generic_missile_2_mesh"
+	state = { name = "launch" animation = "idle"   
+		event = { time = 0.0	node = engine_exhaust	particle = "Rocket_engine_smoke_particle"	trigger_once = yes	keep_particle = yes	sound = { soundeffect = "missile_launch" } }
+	}
+	state = { name = "explode" animation = "explode" 
+		event = { time = 0 node = engine_exhaust	particle = "Rocket_engine_smoke_particle"	trigger_once = yes	keep_particle = no	sound = { soundeffect = "missile_idle" } }
+		event = { time = 3.7 node = engine_exhaust	particle = "Rocket_bomb_particle"						keep_particle = no	sound = { soundeffect = "nuke" } }
+	}
+	state = { name = "idle" animation = "idle"   looping = no 
+		event = { time = 3 node = engine_exhaust	particle = "Rocket_engine_smoke_particle"	trigger_once = yes	keep_particle = yes }
+		event = { time = 0 node = engine_exhaust	particle = "rocket_exhaust_particle"		trigger_once = yes	keep_particle = yes		sound = { soundeffect = "missile_idle" }} 
+		event = { time = 0 node = engine_exhaust	particle = "Rocket_engine_particle"			trigger_once = no	keep_particle = no }
+	}	
+	default_state = idle		
+	scale = 0.14
+}
+#############	END  #################
+
+
+#################	ITA_ MISSILE 3    #################
+entity = {
+	name = "ITA_guided_missile_equipment_3_entity"
+	pdxmesh = "generic_missile_3_mesh"
+	state = { name = "launch" animation = "idle"   
+		event = { time = 0.0	node = engine_exhaust	particle = "Rocket_engine_smoke_particle"	trigger_once = yes	keep_particle = yes	sound = { soundeffect = "missile_launch" } }
+	}
+	state = { name = "explode" animation = "explode" 
+		event = { time = 0 node = engine_exhaust	particle = "Rocket_engine_smoke_particle"	trigger_once = yes	keep_particle = no	sound = { soundeffect = "missile_idle" } }
+		event = { time = 3.3 node = engine_exhaust	particle = "Rocket_bomb_particle"						keep_particle = no	sound = { soundeffect = "nuke" } }
+	}
+	state = { name = "idle" animation = "idle"   looping = no 
+		event = { time = 3 node = engine_exhaust	particle = "Rocket_engine_smoke_particle"	trigger_once = yes	keep_particle = yes }
+		event = { time = 0 node = engine_exhaust	particle = "rocket_exhaust_particle"		trigger_once = yes	keep_particle = yes		sound = { soundeffect = "missile_idle" }} 
+		event = { time = 0 node = engine_exhaust	particle = "Rocket_engine_particle"			trigger_once = no	keep_particle = no }
+	}	
+	default_state = idle		
+	scale = 0.14
+}
+#################	END  #################
+
+
+#################	FRA_ MISSILE 1    #################
+entity = {
+	name = "FRA_guided_missile_equipment_1_entity"
+	pdxmesh = "generic_missile_0_mesh"
+	state = { name = "launch" animation = "idle"   
+		event = { time = 0.0	node = engine_exhaust	particle = "Rocket_engine_smoke_particle"	trigger_once = yes	keep_particle = yes	sound = { soundeffect = "missile_launch" } }
+	}
+	state = { name = "explode" animation = "explode" 
+		event = { time = 0 node = engine_exhaust	particle = "Rocket_engine_smoke_particle"	trigger_once = yes	keep_particle = no	sound = { soundeffect = "missile_idle" } }
+		event = { time = 3.7 node = engine_exhaust	particle = "Rocket_bomb_particle"						keep_particle = no	sound = { soundeffect = "nuke" } }
+	}
+	state = { name = "idle" animation = "idle"   looping = no 
+		event = { time = 3 node = engine_exhaust	particle = "Rocket_engine_smoke_particle"	trigger_once = yes	keep_particle = yes }
+		event = { time = 0 node = engine_exhaust	particle = "rocket_exhaust_particle"		trigger_once = yes	keep_particle = yes		sound = { soundeffect = "missile_idle" }} 
+		event = { time = 0 node = engine_exhaust	particle = "Rocket_engine_particle"			trigger_once = no	keep_particle = no }
+	}	
+	default_state = idle		
+	scale = 0.14
+}
+#################	END  #################
+
+#################	FRA_ MISSILE 2    #################
+entity = {
+	name = "FRA_guided_missile_equipment_2_entity"
+	pdxmesh = "generic_missile_1_mesh"
+	state = { name = "launch" animation = "idle"   
+		event = { time = 0.0	node = engine_exhaust	particle = "Rocket_engine_smoke_particle"	trigger_once = yes	keep_particle = yes	sound = { soundeffect = "missile_launch" } }
+	}
+	state = { name = "explode" animation = "explode" 
+		event = { time = 0 node = engine_exhaust	particle = "Rocket_engine_smoke_particle"	trigger_once = yes	keep_particle = no	sound = { soundeffect = "missile_idle" } }
+		event = { time = 3.7 node = engine_exhaust	particle = "Rocket_bomb_particle"						keep_particle = no	sound = { soundeffect = "nuke" } }
+	}
+	state = { name = "idle" animation = "idle"   looping = no 
+		event = { time = 3 node = engine_exhaust	particle = "Rocket_engine_smoke_particle"	trigger_once = yes	keep_particle = yes }
+		event = { time = 0 node = engine_exhaust	particle = "rocket_exhaust_particle"		trigger_once = yes	keep_particle = yes		sound = { soundeffect = "missile_idle" }} 
+		event = { time = 0 node = engine_exhaust	particle = "Rocket_engine_particle"			trigger_once = no	keep_particle = no }
+	}	
+	default_state = idle		
+	scale = 0.14
+}
+#############	END  #################
+
+
+#################	FRA_ MISSILE 3    #################
+entity = {
+	name = "FRA_guided_missile_equipment_3_entity"
+	pdxmesh = "generic_missile_2_mesh"
+	state = { name = "launch" animation = "idle"   
+		event = { time = 0.0	node = engine_exhaust	particle = "Rocket_engine_smoke_particle"	trigger_once = yes	keep_particle = yes	sound = { soundeffect = "missile_launch" } }
+	}
+	state = { name = "explode" animation = "explode" 
+		event = { time = 0 node = engine_exhaust	particle = "Rocket_engine_smoke_particle"	trigger_once = yes	keep_particle = no	sound = { soundeffect = "missile_idle" } }
+		event = { time = 3.3 node = engine_exhaust	particle = "Rocket_bomb_particle"						keep_particle = no	sound = { soundeffect = "nuke" } }
+	}
+	state = { name = "idle" animation = "idle"   looping = no 
+		event = { time = 3 node = engine_exhaust	particle = "Rocket_engine_smoke_particle"	trigger_once = yes	keep_particle = yes }
+		event = { time = 0 node = engine_exhaust	particle = "rocket_exhaust_particle"		trigger_once = yes	keep_particle = yes		sound = { soundeffect = "missile_idle" }} 
+		event = { time = 0 node = engine_exhaust	particle = "Rocket_engine_particle"			trigger_once = no	keep_particle = no }
+	}	
+	default_state = idle		
+	scale = 0.14
+}
+#################	END  #################
+
+
+#################	ENG_ MISSILE 1    #################
+entity = {
+	name = "ENG_guided_missile_equipment_1_entity"
+	pdxmesh = "generic_missile_0_mesh"
+	state = { name = "launch" animation = "idle"   
+		event = { time = 0.0	node = engine_exhaust	particle = "Rocket_engine_smoke_particle"	trigger_once = yes	keep_particle = yes	sound = { soundeffect = "missile_launch" } }
+	}
+	state = { name = "explode" animation = "explode" 
+		event = { time = 0 node = engine_exhaust	particle = "Rocket_engine_smoke_particle"	trigger_once = yes	keep_particle = no	sound = { soundeffect = "missile_idle" } }
+		event = { time = 3.7 node = engine_exhaust	particle = "Rocket_bomb_particle"						keep_particle = no	sound = { soundeffect = "nuke" } }
+	}
+	state = { name = "idle" animation = "idle"   looping = no 
+		event = { time = 3 node = engine_exhaust	particle = "Rocket_engine_smoke_particle"	trigger_once = yes	keep_particle = yes }
+		event = { time = 0 node = engine_exhaust	particle = "rocket_exhaust_particle"		trigger_once = yes	keep_particle = yes		sound = { soundeffect = "missile_idle" }} 
+		event = { time = 0 node = engine_exhaust	particle = "Rocket_engine_particle"			trigger_once = no	keep_particle = no }
+	}	
+	default_state = idle		
+	scale = 0.14
+}
+#################	END  #################
+
+#################	ENG_ MISSILE 2    #################
+entity = {
+	name = "ENG_guided_missile_equipment_2_entity"
+	pdxmesh = "generic_missile_1_mesh"
+	state = { name = "launch" animation = "idle"   
+		event = { time = 0.0	node = engine_exhaust	particle = "Rocket_engine_smoke_particle"	trigger_once = yes	keep_particle = yes	sound = { soundeffect = "missile_launch" } }
+	}
+	state = { name = "explode" animation = "explode" 
+		event = { time = 0 node = engine_exhaust	particle = "Rocket_engine_smoke_particle"	trigger_once = yes	keep_particle = no	sound = { soundeffect = "missile_idle" } }
+		event = { time = 3.7 node = engine_exhaust	particle = "Rocket_bomb_particle"						keep_particle = no	sound = { soundeffect = "nuke" } }
+	}
+	state = { name = "idle" animation = "idle"   looping = no 
+		event = { time = 3 node = engine_exhaust	particle = "Rocket_engine_smoke_particle"	trigger_once = yes	keep_particle = yes }
+		event = { time = 0 node = engine_exhaust	particle = "rocket_exhaust_particle"		trigger_once = yes	keep_particle = yes		sound = { soundeffect = "missile_idle" }} 
+		event = { time = 0 node = engine_exhaust	particle = "Rocket_engine_particle"			trigger_once = no	keep_particle = no }
+	}	
+	default_state = idle		
+	scale = 0.14
+}
+#############	END  #################
+
+
+#################	ENG_ MISSILE 3    #################
+entity = {
+	name = "ENG_guided_missile_equipment_3_entity"
+	pdxmesh = "generic_missile_2_mesh"
+	state = { name = "launch" animation = "idle"   
+		event = { time = 0.0	node = engine_exhaust	particle = "Rocket_engine_smoke_particle"	trigger_once = yes	keep_particle = yes	sound = { soundeffect = "missile_launch" } }
+	}
+	state = { name = "explode" animation = "explode" 
+		event = { time = 0 node = engine_exhaust	particle = "Rocket_engine_smoke_particle"	trigger_once = yes	keep_particle = no	sound = { soundeffect = "missile_idle" } }
+		event = { time = 3.3 node = engine_exhaust	particle = "Rocket_bomb_particle"						keep_particle = no	sound = { soundeffect = "nuke" } }
+	}
+	state = { name = "idle" animation = "idle"   looping = no 
+		event = { time = 3 node = engine_exhaust	particle = "Rocket_engine_smoke_particle"	trigger_once = yes	keep_particle = yes }
+		event = { time = 0 node = engine_exhaust	particle = "rocket_exhaust_particle"		trigger_once = yes	keep_particle = yes		sound = { soundeffect = "missile_idle" }} 
+		event = { time = 0 node = engine_exhaust	particle = "Rocket_engine_particle"			trigger_once = no	keep_particle = no }
+	}	
+	default_state = idle		
+	scale = 0.14
+}
+#################	END  #################
+
+
+######### END #########

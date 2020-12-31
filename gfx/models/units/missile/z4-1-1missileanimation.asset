@@ -1,0 +1,33 @@
+animation = {
+	name = "missile_frame_bomb_animation"
+	file = "missile_frame_bomb.anim"
+}
+animation = {
+	name = "missile_V2idle_animation"
+	file = "v2rocket_idle.anim"
+}
+animation = {
+	name = "missile_frame_idle_animation"
+	file = "missile_frame_idle.anim"
+}	
+animation = {
+	name = "missile_frame_launch_animation"
+	file = "missile_frame_launch.anim"	
+}	
+animation = {
+	name = "missile_bomb_animation"
+	file = "missile_bomb.anim"
+}
+
+animation = {
+	name = "missile_idle_animation"
+	file = "missile_idle.anim"
+}	
+animation = {
+	name = "missile_launch_animation"
+	file = "missile_launch.anim"	
+}	
+animation = {
+	name = "missile_idle_under_animation"
+	file = "missile_idle_under.anim"	
+}	

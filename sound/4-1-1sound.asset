@@ -1,0 +1,26 @@
+########################DEBUG #########################
+sound =
+{
+	name = "missile_idle"
+	file = "animations/missile_idle.wav"
+	volume = 2.5
+}
+sound =
+{
+	name = "missile_launch"
+	file = "animations/missile_launch.wav"
+	volume = 2.5
+}
+
+sound =
+{
+	name = "distance_missile_idle"
+	file = "animations/missile_idle.wav"
+	volume = 2.5
+}
+sound =
+{
+	name = "distance_missile_launch"
+	file = "animations/missile_launch.wav"
+	volume = 2.5
+}
