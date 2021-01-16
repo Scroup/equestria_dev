@@ -2528,8 +2528,8 @@ leader_traits = {
 	bar_viira_end_lar = {
 		random = no
 		military_leader_cost_factor = 100
-		encryption_power_factor = 1
-		crypto_strength = 1
+		decryption_power_factor = 1
+		crypto_strength = 5
 	}
 	bar_viira_end_1 = {
 		random = no
