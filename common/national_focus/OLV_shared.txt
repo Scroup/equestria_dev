@@ -6923,7 +6923,15 @@ shared_focus = {
 	}
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus OLV_internally"
-		add_ideas = OLV_internally_idea
+		if = {
+			limit = {
+				has_dlc = "La Resistance"
+			}
+			add_ideas = OLV_internally_idea_lar
+		}
+		else = {
+			add_ideas = OLV_internally_idea
+		}
 		custom_effect_tooltip = available_political_advisor
 		show_ideas_tooltip = OLV_secret_police_chief
 	}
