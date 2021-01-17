@@ -1,5 +1,5 @@
 ﻿division_template = {
-	name = "Pikhotnyy Polk"
+	name = "Pikhotnyi Polk"
 	division_names_group = GRY_INF_01
 	regiments = {
 		infantry = { x = 0 y = 0 }
@@ -15,7 +15,7 @@
 }
 
 division_template = {
-	name = "Okhoronets Polk"
+	name = "Zapasnyi Polk"
 	division_names_group = GRY_INF_01
 	regiments = {
 		infantry = { x = 0 y = 0 }
@@ -28,7 +28,7 @@ division_template = {
 }
 
 division_template = {
-	name = "Kozatskyy Kosh"
+	name = "Lytsars'kyi Polk"
 	division_names_group = GRY_KNI_01
 	regiments = {
 		knights = { x = 0 y = 0 }
@@ -56,102 +56,69 @@ division_template = {
 
 units = {
 	division = {
-		division_name = {
-			is_name_ordered = yes
-			name_order = 1
-		}
+		name = "Chykchyryns'kyi Klyn"
 		location = 10780
-		division_template = "Pikhotnyy Polk"
+		division_template = "Pikhotnyi Polk"
 		start_experience_factor = 0.3
 		start_equipment_factor = 0.6 }
 	division = {
-		division_name = {
-			is_name_ordered = yes
-			name_order = 2
-		}
+		name = "Kaivs'kyi Klyn"
 		location = 10764
-		division_template = "Pikhotnyy Polk"
+		division_template = "Pikhotnyi Polk"
 		start_experience_factor = 0.2
 		start_equipment_factor = 0.8 }
 	division = {
-		division_name = {
-			is_name_ordered = yes
-			name_order = 3
-		}
-		location = 7948
-		division_template = "Pikhotnyy Polk"
+		name = "Vorobeys'kyi Klyn"
+		location = 10746
+		division_template = "Pikhotnyi Polk"
 		start_experience_factor = 0.1
 		start_equipment_factor = 0.5 }
 	division = {
-		division_name = {
-			is_name_ordered = yes
-			name_order = 4
-		}
-		location = 12714
-		division_template = "Pikhotnyy Polk"
+		name = "Holubashs'kyi Klyn"
+		location = 810
+		division_template = "Pikhotnyi Polk"
 		start_experience_factor = 0.1
 		start_equipment_factor = 0.2 }
 	division = {
-		division_name = {
-			is_name_ordered = yes
-			name_order = 5
-		}
-		location = 10426
-		division_template = "Pikhotnyy Polk"
+		name = "Shklos'kyi Klyn"
+		location = 1960
+		division_template = "Pikhotnyi Polk"
 		start_experience_factor = 0.3
 		start_equipment_factor = 0.5 }
 	division = {
-		division_name = {
-			is_name_ordered = yes
-			name_order = 6
-		}
-		location = 8019
-		division_template = "Pikhotnyy Polk"
+		name = "Voronashs'kyi Klyn"
+		location = 8054
+		division_template = "Pikhotnyi Polk"
 		start_experience_factor = 0.3
 		start_equipment_factor = 0.3 }
 	division = {
-		division_name = {
-			is_name_ordered = yes
-			name_order = 7
-		}
-		location = 7650
-		division_template = "Pikhotnyy Polk"
+		name = "Husats'kyi Klyn"
+		location = 11893
+		division_template = "Pikhotnyi Polk"
 		start_experience_factor = 0.3
 		start_equipment_factor = 0.54 }
 	division = {
-		division_name = {
-			is_name_ordered = yes
-			name_order = 8
-		}
-		location = 9798
-		division_template = "Pikhotnyy Polk"
+		name = "Skorpadovs'kyi Klyn"
+		location = 6989
+		division_template = "Pikhotnyi Polk"
 		start_experience_factor = 0.3
 		start_equipment_factor = 0.4 }
 	division = {
-		division_name = {
-			is_name_ordered = yes
-			name_order = 6
-		}
-		location = 8019
-		division_template = "Pikhotnyy Polk"
+		name = "Orel's'kyi Klyn"
+		location = 1969
+		division_template = "Pikhotnyi Polk"
 		start_experience_factor = 0.3
 		start_equipment_factor = 0.3 }
 	division = {
-		division_name = {
-			is_name_ordered = yes
-			name_order = 7
-		}
-		location = 7650
-		division_template = "Pikhotnyy Polk"
+		name = "Husats'kyi Klyn"
+		location = 11879
+		division_template = "Pikhotnyi Polk"
 		start_experience_factor = 0.3
 		start_equipment_factor = 0.54 }
 	division = {
-		division_name = {
-			is_name_ordered = yes
-			name_order = 8
-		}
-		location = 9798
-		division_template = "Pikhotnyy Polk"
+		name = "Holdkrestovs'kyi Klyn"
+		location = 2083
+		division_template = "Pikhotnyi Polk"
 		start_experience_factor = 0.3
 		start_equipment_factor = 0.4 }
 }
