@@ -133,17 +133,17 @@ create_corps_commander = {
 	planning_skill = 3
 	logistics_skill = 3
 }
-create_corps_commander = {
-	name = "Sydir Kvach"
-	traits = { griffon_race_trait old_guard organizer media_personality }
-	picture = "General1.tga"
-	skill = 2
-	attack_skill = 2
-	defense_skill = 3
-	planning_skill = 1
-	logistics_skill = 2
-	id = 1463
-}
+#create_corps_commander = {
+#	name = "Sydir Kvach"
+#	traits = { griffon_race_trait old_guard organizer media_personality }
+#	picture = "Kvach.tga"
+#	skill = 2
+#	attack_skill = 2
+#	defense_skill = 3
+#	planning_skill = 1
+#	logistics_skill = 2
+#	id = 1463
+#}
 create_corps_commander = {
 	name = "Mykhailo Prolatov"
 	picture = "Mikhail.tga"
@@ -180,10 +180,10 @@ random_army_leader = {
 	save_global_event_target_as = GRY_Feathovsky
 }
 
-random_army_leader = {
-	limit = { has_id = 1463 }
-	save_global_event_target_as = GRY_Shnoklaw
-}
+#random_army_leader = {
+#	limit = { has_id = 1463 }
+#	save_global_event_target_as = GRY_Shnoklaw
+#}
 
 random_army_leader = {
 	limit = { has_id = 1464 }

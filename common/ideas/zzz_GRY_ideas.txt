@@ -1478,8 +1478,16 @@ ideas = {
 			}
 			removal_cost = -1
 			modifier = {
-				conscription = 0.01
+				conscription = -0.01
+				army_org_factor = -0.1 # -10%? will check tomorrow
 				army_speed_factor = 0.05
+				custom_modifier_tooltip = ZES_military_blocked_tp
+			}
+			on_add = {
+				country_lock_all_division_template = yes
+			}
+			on_remove = {
+				country_lock_all_division_template = no
 			}
 			picture = BRF_everyman_a_knight
 		}
