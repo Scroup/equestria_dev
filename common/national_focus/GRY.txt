@@ -14,14 +14,18 @@ focus_tree = {
 	}
 	continuous_focus_position = { x = 70 y = 2000 }
 
-	shared_focus = GRY_kickstart_economy
-	shared_focus = GRY_prywhen_response
-	shared_focus = GRY_cossack_reform
-	shared_focus = GRY_navy
-	shared_focus = GRY_airforce
+	shared_focus = GRY_prywhen_raid
+	# shared_focus = GRY_kickstart_economy
+	# shared_focus = GRY_prywhen_response
+	# shared_focus = GRY_cossack_reform
+	# shared_focus = GRY_navy
+	# shared_focus = GRY_airforce
+
+
 }
 
-
+###################################################
+# I want to keep komissariat stuff, but I'll rework everything else
 focus_tree = {
 	id = GRY_focus_kommissariat
 
@@ -40,7 +44,6 @@ focus_tree = {
 #	shared_focus = GRY_cossack_reform
 #	shared_focus = GRY_navy
 #	shared_focus = GRY_airforce
-# I want to keep komissariat stuff, but I'll rework everything else
 
 	focus = {
 		id = GRY_lord_protector
