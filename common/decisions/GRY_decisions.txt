@@ -1,3 +1,17 @@
+GRY_hetman_popularity_category = {
+	GRY_support_grifnitsky = {
+		icon = generic_nationalism
+	}
+	GRY_support_kravlets = {
+		icon = generic_nationalism
+	}
+	GRY_support_coalition = {
+		icon = generic_nationalism
+	}
+}
+
+######
+#Komissariat
 GRY_gun_exchange_program = {
 
 	GRY_10k_weapons_for_manpower = {##Ask GRI for guns in exchange for manpower
@@ -584,111 +598,6 @@ GRY_industry_exchange_program = {
 					add_manpower = 50000
 				}
 			}
-		}
-	}
-}
-
-GRY_modernisation_decisions = {
-	GRY_modernise_society = {
-		icon = modern_city
-		
-		cost = 150
-		
-		ai_will_do = {
-			factor = 125
-		}
-		modifier = {
-			consumer_goods_factor = 0.15
-		}
-		days_remove = 365
-		remove_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision remove GRY_modernise_society"
-		 	increase_society_development = yes
-		}
-	}
-}
-
-GRY_integrate_tribes_decisions = {
-	GRY_integrate_tribes = {
-		icon = hammer_and_horseshoe_decision
-
-		cost = 30
-
-		ai_will_do = {
-			factor = 125
-		}
-		modifier = {
-			political_power_gain = -0.25
-		}
-
-		days_remove = 60
-		remove_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision remove GRY_integrate_tribes"
-			if = {
-				limit = {
-					has_idea = GRY_independent_tribes
-				}
-				swap_ideas = {
-					remove_idea = GRY_independent_tribes
-					add_idea = GRY_comm_tribes_1
-				}
-			}
-			else_if = {
-				limit = {
-					has_idea = GRY_comm_tribes_1
-				}
-				swap_ideas = {
-					remove_idea = GRY_comm_tribes_1
-					add_idea = GRY_comm_tribes_2
-				}
-			}
-			else_if = {
-				limit = {
-					has_idea = GRY_comm_tribes_2
-				}
-				swap_ideas = {
-					remove_idea = GRY_comm_tribes_2
-					add_idea = GRY_comm_tribes_3
-				}
-			}
-		}
-
-	}
-}
-GRY_free_prywhen_category = {
-	GRY_release_the_GLA = {
-		icon = decision_category_generic_political_actions
-		visible = { 
-			is_subject = no
-			has_government = communism
-			GRW = { exists = no }
-		}
-		ai_will_do = {
-			factor = 120
-		}
-		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision GRY_release_the_GLA"
-			country_event = { id = gryphianhost.136}
-		}
-	}
-	GRY_release_brodfeld = {
-		icon = decision_category_generic_political_actions
-		visible = { 
-			is_subject = no
-			BRF = {
-				exists = no
-			}
-			NOT = {
-				has_government = communism
-				has_government = fascism
-			}
-		}
-		ai_will_do = {
-			factor = 120
-		}
-		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision GRY_release_brodfeld"
-			country_event = { id = gryphianhost.137}
 		}
 	}
 }

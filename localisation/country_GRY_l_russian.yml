@@ -175,6 +175,13 @@
  GRY_cossacks_desc:0 "Грізні козаки Січі славляться своєю швидкістю і численністю. Їх набіги губительні для сусідніх деревень поні та невеликих містечок."
 
  ###Decisions###
+ GRY_hetman_popularity_category:0 "Борьба за власть"
+ GRY_hetman_popularity_category_desc:0 "Не секрет, что Гетьман Калас Бульба уже давно не молод, потому §YБорад Грифницкий§!, §gЕвген Кравлец§! и §CЛевдруна Багровская§! уже борятся за власть.\n\nПоддержка §YГрифницкого§!: §Y[?GRY_grifnitsky_support_v|0]%§!\nПоддержка §gКравлеца§!: §Y[?GRY_kravlets_support_v|0]%§!\nПоддержка §CБагровской§!: §Y[?GRY_bagrovska_support_v|0]%§!\n"
+ GRY_support_grifnitsky:0 "Поддержать кандидатуру §YГрифницкого§!"
+ GRY_support_kravlets:0 "Поддержать кандидатуру §gКравлеца§!"
+ GRY_support_coalition:0 "Поддержать кандидатуру §CБагровской§!"
+
+
  GRY_10k_weapons_for_manpower:0 "Запропонувати 10,000 солдат"
  GRY_25k_weapons_for_manpower:0 "Запропонувати 25,000 солдат"
  GRY_50k_weapons_for_manpower:0 "Запропонувати 50,000 солдат"

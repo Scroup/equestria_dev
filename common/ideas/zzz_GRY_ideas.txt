@@ -834,7 +834,7 @@ ideas = {
 			removal_cost = -1
 			modifier = {
 				conscription = -0.01
-				army_org_factor = -0.1 # -10%? will check tomorrow
+				army_org_factor = -0.1
 				army_speed_factor = 0.05
 				custom_modifier_tooltip = ZES_military_blocked_tp
 			}
@@ -846,6 +846,7 @@ ideas = {
 			}
 			picture = BRF_everyman_a_knight
 		}
+		# Here goes Komissariat stuff
 		GRY_research_boost_10K = {
 			allowed = {
 				always = no

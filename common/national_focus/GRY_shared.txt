@@ -1,7 +1,7 @@
 # Starting tree #
 shared_focus = {
 	id = GRY_prywhen_raid
-	icon = GFX_goal_shadow_government
+	icon = GFX_focus_indy_swing_the_sword
 	cost = 5.00
 	ai_will_do = { factor = 160 }
 	x = 8
@@ -12,7 +12,7 @@ shared_focus = {
 }
 shared_focus = {
 	id = GRY_get_the_guns
-	icon = GFX_goal_shadow_government
+	icon = GFX_goal_national_arsenal
 	prerequisite = { focus = GRY_prywhen_raid }
 	relative_position_id = GRY_prywhen_raid
 	cost = 5.00
@@ -25,7 +25,7 @@ shared_focus = {
 }
 shared_focus = {
 	id = GRY_prepare_the_cossacks
-	icon = GFX_goal_shadow_government
+	icon = GFX_goal_griffon_shield
 	prerequisite = { focus = GRY_prywhen_raid }
 	relative_position_id = GRY_prywhen_raid
 	cost = 5.00
@@ -38,7 +38,7 @@ shared_focus = {
 }
 shared_focus = {
 	id = GRY_plan_the_attack
-	icon = GFX_goal_shadow_government
+	icon = GFX_goal_planning_bonus
 	prerequisite = { focus = GRY_prywhen_raid }
 	relative_position_id = GRY_prywhen_raid
 	cost = 5.00
@@ -51,7 +51,7 @@ shared_focus = {
 }
 shared_focus = {
 	id = GRY_expedition_to_husaka
-	icon = GFX_goal_shadow_government
+	icon = GFX_focus_generic_diplomatic_treaty_pony_griffon
 	prerequisite = { focus = GRY_get_the_guns }
 	prerequisite = { focus = GRY_prepare_the_cossacks }
 	prerequisite = { focus = GRY_plan_the_attack }
@@ -66,7 +66,7 @@ shared_focus = {
 }
 shared_focus = {
 	id = GRY_letter_to_vorobeyko
-	icon = GFX_goal_shadow_government
+	icon = GFX_goal_skull_treaty
 	prerequisite = { focus = GRY_get_the_guns }
 	prerequisite = { focus = GRY_prepare_the_cossacks }
 	prerequisite = { focus = GRY_plan_the_attack }
@@ -81,7 +81,7 @@ shared_focus = {
 }
 shared_focus = {
 	id = GRY_assign_otamans
-	icon = GFX_goal_shadow_government
+	icon = GFX_goal_officers
 	prerequisite = { focus = GRY_expedition_to_husaka }
 	prerequisite = { focus = GRY_letter_to_vorobeyko }
 	relative_position_id = GRY_expedition_to_husaka
@@ -95,7 +95,7 @@ shared_focus = {
 }
 shared_focus = {
 	id = GRY_all_is_ready
-	icon = GFX_goal_shadow_government
+	icon = GFX_goal_LEC_monkey
 	prerequisite = { focus = GRY_assign_otamans }
 	relative_position_id = GRY_assign_otamans
 	cost = 5.00

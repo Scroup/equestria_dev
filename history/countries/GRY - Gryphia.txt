@@ -50,13 +50,38 @@ set_politics = {
 add_ideas = {
 	agrarian_society
 	lack_of_scientists
-	GRY_independent_tribes
-	GRY_landed_gentry
 	GRY_cossacks
-	GRY_communist_rebels
 }
 
 set_stability = 0.70
+
+set_variable = {
+	var = GRY_grifnitsky_support_v
+	value = 41
+}
+clamp_variable = {
+	var = GRY_grifnitsky_support_v
+	min = 0
+	max = 100
+}
+set_variable = {
+	var = GRY_kravlets_support_v
+	value = 36
+}
+clamp_variable = {
+	var = GRY_kravlets_support_v
+	min = 0
+	max = 100
+}
+set_variable = {
+	var = GRY_bagrovska_support_v
+	value = 23
+}
+clamp_variable = {
+	var = GRY_bagrovska_support_v
+	min = 0
+	max = 100
+}
 
 create_country_leader = {
 	name = "Hetman Calas Bulba"

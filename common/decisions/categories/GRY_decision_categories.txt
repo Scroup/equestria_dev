@@ -1,3 +1,8 @@
+GRY_hetman_popularity_category = {
+	icon = decision_category_generic_political_actions
+	allowed = { original_tag = GRY }
+	priority = 150
+}
 GRY_gun_exchange_program = {
 	icon = rifles
 	allowed = { tag = GRY }
@@ -23,51 +28,5 @@ GRY_industry_exchange_program = {
 		is_subject_of = event_target:griffonian_empire
 		has_focus_tree = GRY_focus_kommissariat
 		has_completed_focus = GRY_industry_for_manpower
-	}
-}
-
-GRY_modernisation_decisions = {
-	icon = modern_city
-	allowed = { tag = GRY }
-	visible = {
-		has_completed_focus = GRY_modernisation_effort
-		NOT = {
-			has_idea = modern_society
-		}
-	}
-}
-
-GRY_integrate_tribes_decisions = {
-	icon = decision_category_generic_political_actions
-
-	allowed = {
-		tag = GRY
-	}
-
-	visible = {
-		has_completed_focus = GRY_solidarity
-		OR = {
-			has_idea = GRY_independent_tribes
-			has_idea = GRY_comm_tribes_1
-			has_idea = GRY_comm_tribes_2
-		}
-	}
-}
-
-GRY_free_prywhen_category = {
-	icon = form_prywhen_cat_picture
-	allowed = {
-		tag = GRY
-	}
-	visible = {
-		any_owned_state = {
-			OR = {
-				is_core_of = BRF
-				is_core_of = GRW
-			}
-		}
-		NOT = {
-			has_global_flag = EVI_formed
-		}
 	}
 }
