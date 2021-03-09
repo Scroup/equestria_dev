@@ -1,0 +1,18 @@
+guiTypes = {
+	containerWindowType = {
+		name = "GRY_state_leading_candidate"
+		position = { x = 139 y = -48 }
+		size = { width= 270 height= 100 }
+		show_sound = menu_open_window
+		hide_sound = menu_close_window
+		orientation = center
+		origo = center
+		moveable = yes
+		clipping = no
+
+		background = {
+			name = "Background"		
+			quadTextureSprite ="GFX_tiled_plain_bg"
+		}
+	}
+}

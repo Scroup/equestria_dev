@@ -1,0 +1,14 @@
+scripted_gui = {
+	GRY_state_leading_candidate_gui = { 
+		context_type = selected_state_context
+		parent_window_token = selected_state_view
+
+		window_name = "GRY_state_leading_candidate"
+
+		visible = {
+			THIS = {
+				is_owned_by = ROOT
+			}
+		}
+	}
+}
