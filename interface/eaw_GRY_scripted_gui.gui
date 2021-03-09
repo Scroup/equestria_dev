@@ -1,18 +1,27 @@
 guiTypes = {
 	containerWindowType = {
 		name = "GRY_state_leading_candidate"
-		position = { x = 139 y = -48 }
-		size = { width= 270 height= 100 }
+		position = { x = 0 y = 50 }
+		size = { width = 353 height = 100 }
 		show_sound = menu_open_window
 		hide_sound = menu_close_window
 		orientation = center
 		origo = center
-		moveable = yes
 		clipping = no
 
 		background = {
 			name = "Background"		
 			quadTextureSprite ="GFX_tiled_plain_bg"
+		}
+		instantTextboxType = {
+			name = "title"
+			position = { x = 15 y = 8 }
+			
+			borderSize = {x = 0 y = 0}
+			text = "Leading candidate in [?this.GetName]:"
+			maxWidth = 200
+			maxHeight = 100
+			format = left	
 		}
 	}
 }

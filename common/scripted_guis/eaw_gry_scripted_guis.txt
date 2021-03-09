@@ -6,9 +6,14 @@ scripted_gui = {
 		window_name = "GRY_state_leading_candidate"
 
 		visible = {
-			THIS = {
-				is_owned_by = ROOT
-			}
+			AND = {
+				ROOT = {
+					original_tag = GRY
+				}
+				THIS = {
+					is_owned_by = ROOT
+				}
+			}			
 		}
 	}
 }

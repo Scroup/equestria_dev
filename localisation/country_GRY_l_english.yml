@@ -189,10 +189,12 @@
  
  ###Decisions###
  GRY_hetman_popularity_category:0 "Power Struggle"
- GRY_hetman_popularity_category_desc:0 "It's a common knowledge that Kalas Bulba's days are numbered, so §YBorad Grifnitsky§!, §gYevhen Kravlets§! and §CLevdruna Bagrovska§! already struggle for power.\n\nSupport for §YGrifnitsky§!: §Y[?GRY_grifnitsky_support_v|0]%§!\nSupport for §gKravlets§!: §Y[?GRY_kravlets_support_v|0]%§!\nSupport for §CBagrovska§!: §Y[?GRY_bagrovska_support_v|0]%§!\n"
+ GRY_hetman_popularity_category_desc:0 "It's a common knowledge that Kalas Bulba's days are numbered, so §YBorad Grifnitsky§!, §gYevhen Kravlets§! and §CLevdruna Bagrovska§! already struggle for power."
  GRY_support_grifnitsky:0 "Support §YGrifnitsky§!'s nomination"
  GRY_support_kravlets:0 "Support §gKravlets§!' nomination"
  GRY_support_coalition:0 "Support §CBagrovska§!'s nomination"
+
+ SCOPE_TEXT:0 "[scope_text]"
 
  GRY_10k_weapons_for_manpower:0 "Offer 10,000 Soldiers"
  GRY_25k_weapons_for_manpower:0 "Offer 25,000 Soldiers"
