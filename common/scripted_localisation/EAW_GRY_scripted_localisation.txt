@@ -2,26 +2,24 @@ defined_text = {
     name = GRY_candidate_tt
     text = {
         trigger = {
-            THIS = {
-                has_state_flag = candidate_0_support
-            }
+            has_state_flag = GRY_supports_grif
         }
-        localization_key = GRY_candidate_0_tt
+        localization_key = GRY_candidate_grif_tt
     }
     text = {
         trigger = {
-            THIS  = {
-                has_state_flag = candidate_1_support
-            }
+            has_state_flag = GRY_supports_krav
         }
-        localization_key = GRY_candidate_1_tt
+        localization_key = GRY_candidate_krav_tt
     }
-        text = {
+    text = {
         trigger = {
-            THIS = {
-				has_state_flag = candidate_2_support
-            }
+			has_state_flag = GRY_supports_bagr
         }
-        localization_key = GRY_candidate_2_tt
+        localization_key = GRY_candidate_bagr_tt
+    }
+    #debug key
+    text = {
+        localization_key = GRY_candidate_none_tt
     }
 }

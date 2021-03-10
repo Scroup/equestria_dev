@@ -81,7 +81,7 @@ shared_focus = {
 }
 shared_focus = {
 	id = GRY_assign_otamans
-	icon = GFX_goal_officers
+	icon = GFX_goal_generic_drafted_army
 	prerequisite = { focus = GRY_expedition_to_husaka }
 	prerequisite = { focus = GRY_letter_to_vorobeyko }
 	relative_position_id = GRY_expedition_to_husaka
@@ -95,7 +95,7 @@ shared_focus = {
 }
 shared_focus = {
 	id = GRY_all_is_ready
-	icon = GFX_goal_LEC_monkey
+	icon = GFX_goal_skull_cannon
 	prerequisite = { focus = GRY_assign_otamans }
 	relative_position_id = GRY_assign_otamans
 	cost = 5.00

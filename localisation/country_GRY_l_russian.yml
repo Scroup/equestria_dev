@@ -2,28 +2,28 @@
 
 ### National Focuses ###
  ## Стартовое древо
- GRY_prywhen_raid:0 "Raid is Coming"
+ GRY_prywhen_raid:0 "Близится рейд"
  GRY_prywhen_raid_desc:0 ""
- GRY_get_the_guns:0 "Get the Guns"
+ GRY_get_the_guns:0 "Достать оружие"
  GRY_get_the_guns_desc:0 ""
- GRY_prepare_the_cossacks:0 "Prepare the Cossacks"
+ GRY_prepare_the_cossacks:0 "Подготовить казаков"
  GRY_prepare_the_cossacks_desc:0 ""
- GRY_plan_the_attack:0 "Plan the Attack"
+ GRY_plan_the_attack:0 "Спланировать атаку"
  GRY_plan_the_attack_desc:0 ""
- GRY_expedition_to_husaka:0 "Expedition to Husaka"
+ GRY_expedition_to_husaka:0 "Экспедиция в Гусаку"
  GRY_expedition_to_husaka_desc:0 ""
- GRY_letter_to_vorobeyko:0 "Letter to Vorobeyko"
+ GRY_letter_to_vorobeyko:0 "Письмо в Воробейко"
  GRY_letter_to_vorobeyko_desc:0 ""
- GRY_assign_otamans:0 "Assign Otamans"
+ GRY_assign_otamans:0 "Назначить атаманов"
  GRY_assign_otamans_desc:0 ""
- GRY_all_is_ready:0 "All is Ready"
+ GRY_all_is_ready:0 "Всё готово"
  GRY_all_is_ready_desc:0 ""
  
  ##Nazi Puppet Path
  GRY_lord_protector:0 "Новий Порядок"
  GRY_lord_protector_desc:0 "На континенті з'явилась нова сила, вільна від дворянських кайданів. Ми втратили нашу незалежність, Грифія стала Імперською Прикордонною Маркою під контролем іноземного губернатора."
  GRY_the_imperial_march:0 "Рейхскоміссаріат Козакенленд"
- GRY_the_imperial_march_desc:0 "Этих диких грифонов нужно усмирить и преподать пару уроков. Они должны быть счастливы, что мы позволили им существовать в качестве протектората. Теперь давайте пенабігем к административным делам." # Речь все равно не от лица Грифийцев/Зафийцев, а иностранных захватчиков, пока переводить не буду
+ GRY_the_imperial_march_desc:0 "Этих диких грифонов нужно усмирить и преподать пару уроков. Они должны быть счастливы, что мы позволили им существовать в качестве протектората. Теперь давайте пенабігем к административным делам."
  GRY_convince_the_warriors:0 "Обеспечить Верность Воинов"
  GRY_convince_the_warriors_desc:0 "Яростные воины Зафии горды и независимы. Это непростая комбинация, но у нас есть способы убедить их сражаться за нас и наши интересы."
  GRY_convince_the_people:0 "Заверить народ"
@@ -176,7 +176,7 @@
 
  ###Decisions###
  GRY_hetman_popularity_category:0 "Борьба за власть"
- GRY_hetman_popularity_category_desc:0 "Не секрет, что Гетьман Калас Бульба уже давно не молод, потому §YБорад Грифницкий§!, §gЕвген Кравлец§! и §CЛевдруна Багровская§! уже борятся за власть.\n\nПоддержка §YГрифницкого§!: §Y[?GRY_grifnitsky_support_v|0]%§!\nПоддержка §gКравлеца§!: §Y[?GRY_kravlets_support_v|0]%§!\nПоддержка §CБагровской§!: §Y[?GRY_bagrovska_support_v|0]%§!\n"
+ GRY_hetman_popularity_category_desc:0 "Не секрет, что Гетьман Калас Бульба уже давно не молод, потому §YБорад Грифницкий§!, §gЕвген Кравлец§! и §CЛевдруна Багровская§! уже борятся за власть.\n\n[592.GetName] supports [592.GRY_candidate_tt]\n[596.GetName] supports [596.GRY_candidate_tt]\n[597.GetName] supports [597.GRY_candidate_tt]\n[598.GetName] supports [598.GRY_candidate_tt]\n[609.GetName] supports [609.GRY_candidate_tt]\n[610.GetName] supports [610.GRY_candidate_tt]\n[611.GetName] supports [611.GRY_candidate_tt]\n[612.GetName] supports [612.GRY_candidate_tt]\n[613.GetName] supports [613.GRY_candidate_tt]\n[631.GetName] supports [631.GRY_candidate_tt]"
  GRY_support_grifnitsky:0 "Поддержать кандидатуру §YГрифницкого§!"
  GRY_support_kravlets:0 "Поддержать кандидатуру §gКравлеца§!"
  GRY_support_coalition:0 "Поддержать кандидатуру §CБагровской§!"

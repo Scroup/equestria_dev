@@ -1,9 +1,9 @@
 guiTypes = {
 	containerWindowType = {
 		name = "GRY_state_leading_candidate"
-		position = { x = 5 y = -60 }
-		size = { width = 400 height = 100 }
-		orientation = upper_left
+		position = { x = 10 y = -10 }
+		size = { width = 200 height = 250 }
+		orientation = lower_right
 		origo = lower_left
 		clipping = no
 
@@ -13,14 +13,13 @@ guiTypes = {
 		}
 		instantTextboxType = {
 			name = "title"
-			position = { x = 15 y = 41 }
-			orientation = center_left
+			position = { x = 15 y = 8 }
 			borderSize = {x = 0 y = 0}
 			text = "Leading candidate in [?this.GetName]:"
-			maxWidth = 300
+			maxWidth = 150
 			maxHeight = 100
-			format = left	
+			format = left
 		}
-		# https://discord.com/channels/327145757650059275/393141376658833409/819012014218805269 - Jaspy explains what the fuck I should do
+		# https://discord.com/channels/327145757650059275/393141376658833409/819012014218805269 - Jaspy explains what the fuck I should do (I should better get icons first)
 	}
 }

@@ -34,34 +34,34 @@ if = {
 }
 
 592 = {
-	set_state_flag = candidate_0_support
+	set_state_flag = GRY_supports_grif
 }
 596 = {
-	set_state_flag = candidate_0_support
+	set_state_flag = GRY_supports_grif
 }
 597 = {
-	set_state_flag = candidate_1_support
+	set_state_flag = GRY_supports_krav
 }
 598 = {
-	set_state_flag = candidate_0_support
+	set_state_flag = GRY_supports_grif
 }
 609 = {
-	set_state_flag = candidate_0_support
+	set_state_flag = GRY_supports_grif
 }
 610 = {
-	set_state_flag = candidate_1_support
+	set_state_flag = GRY_supports_krav
 }
 611 = {
-	set_state_flag = candidate_2_support
+	set_state_flag = GRY_supports_bagr
 }
 612 = {
-	set_state_flag = candidate_1_support
+	set_state_flag = GRY_supports_krav
 }
 613 = {
-	set_state_flag = candidate_2_support
+	set_state_flag = GRY_supports_bagr
 }
 631 = {
-	set_state_flag = candidate_0_support
+	set_state_flag = GRY_supports_grif
 }
 
 set_convoys = 70
@@ -81,6 +81,7 @@ set_politics = {
 add_ideas = {
 	agrarian_society
 	lack_of_scientists
+	poverty3
 	GRY_cossacks
 }
 
