@@ -189,12 +189,10 @@
  
  ###Decisions###
  GRY_hetman_popularity_category:0 "Power Struggle"
- GRY_hetman_popularity_category_desc:0 "It's a common knowledge that Kalas Bulba's days are numbered, so §YBorad Grifnitsky§!, §gYevhen Kravlets§! and §CLevdruna Bagrovska§! already struggle for power."
+ GRY_hetman_popularity_category_desc:0 "It's a common knowledge that Kalas Bulba's days are numbered, so §YBorad Grifnitsky§!, §gYevhen Kravlets§! and §CLevdruna Bagrovska§! already struggle for power.\n\n"
  GRY_support_grifnitsky:0 "Support §YGrifnitsky§!'s nomination"
  GRY_support_kravlets:0 "Support §gKravlets§!' nomination"
  GRY_support_coalition:0 "Support §CBagrovska§!'s nomination"
-
- SCOPE_TEXT:0 "[scope_text]"
 
  GRY_10k_weapons_for_manpower:0 "Offer 10,000 Soldiers"
  GRY_25k_weapons_for_manpower:0 "Offer 25,000 Soldiers"
@@ -217,3 +215,7 @@
  GRY_YEVEN_DESC:0 "Despite being the grandson of old Hetman Bulba's sister, Yeven Krawvelets is something of a dark mirror of the old bird. Where Bulba was straightforward and honest, Yeven is loud-mouthed and fond of verbal abuse. Where Bulba was valiant, Yeven is violent. One thing he has got, however, is ambition - and lots of it. He dreams of restoring the Zaphzan people to ancient greatness, and is willing to use force to achieve his dream of a "Greater Zaphzia"." 
  GRY_CORNBOI_DESC:0 "Cornilo Khurshevich was a confidante of Redglad's, and was one of his old drinking buddies before the Revolution in Prywhen broke out. Shortly before this, Cornilo left Prywhen to lead the resistance in his own home country. Now that he is in power, he will certainly seek out his old friend and align with him. He favors a policy of solidarity with Prywhen and caring for the vulnerable farming class as the way forward for Zaphzia."
  GRY_BORAD_DESC:0 "Borad Grifnitsky is an atypical cossack - though valiant in battle, he is not fond of violence and prefers to find peaceful, long-term solutions to serious problems where possible. In the warlike Cossack society this should have isolated and ostracised him, but a combination of battlefield valor, an amicable personality, and exceptional oratory has drawn a following to him nonetheless. Seeing the poor state of the Zapzhans, he desires to reform the Host into a democratic republic and diplomatically secure their people against reprisals from the Communists and the Riverponies."
+
+ GRY_candidate_0_tt:0 "§YBorad Grifnitsky§!"
+ GRY_candidate_1_tt:0 "§gYevhen Kravlets§!"
+ GRY_candidate_2_tt:0 "§CLevdruna Bagrovska§!"

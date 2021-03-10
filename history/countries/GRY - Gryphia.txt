@@ -33,6 +33,37 @@ if = {
 	}
 }
 
+592 = {
+	set_state_flag = candidate_0_support
+}
+596 = {
+	set_state_flag = candidate_0_support
+}
+597 = {
+	set_state_flag = candidate_1_support
+}
+598 = {
+	set_state_flag = candidate_0_support
+}
+609 = {
+	set_state_flag = candidate_0_support
+}
+610 = {
+	set_state_flag = candidate_1_support
+}
+611 = {
+	set_state_flag = candidate_2_support
+}
+612 = {
+	set_state_flag = candidate_1_support
+}
+613 = {
+	set_state_flag = candidate_2_support
+}
+631 = {
+	set_state_flag = candidate_0_support
+}
+
 set_convoys = 70
 set_popularities = {
 	democratic = 30
@@ -130,17 +161,17 @@ create_corps_commander = {
 	planning_skill = 3
 	logistics_skill = 3
 }
-#create_corps_commander = {
-#	name = "Sydir Kvach"
-#	traits = { griffon_race_trait old_guard organizer media_personality }
-#	picture = "Kvach.tga"
-#	skill = 2
-#	attack_skill = 2
-#	defense_skill = 3
-#	planning_skill = 1
-#	logistics_skill = 2
-#	id = 1463
-#}
+create_corps_commander = {
+	name = "Sydir Kvach"
+	traits = { griffon_race_trait old_guard organizer media_personality }
+	picture = "Kvach.tga"
+	skill = 2
+	attack_skill = 2
+	defense_skill = 3
+	planning_skill = 1
+	logistics_skill = 2
+	id = 1463
+}
 create_corps_commander = {
 	name = "Mykhailo Prolatov"
 	picture = "Mikhail.tga"
@@ -177,10 +208,10 @@ random_army_leader = {
 	save_global_event_target_as = GRY_Feathovsky
 }
 
-#random_army_leader = {
-#	limit = { has_id = 1463 }
-#	save_global_event_target_as = GRY_Shnoklaw
-#}
+random_army_leader = {
+	limit = { has_id = 1463 }
+	save_global_event_target_as = GRY_Kvach
+}
 
 random_army_leader = {
 	limit = { has_id = 1464 }
