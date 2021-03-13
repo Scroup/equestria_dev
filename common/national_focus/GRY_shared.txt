@@ -51,7 +51,7 @@ shared_focus = {
 }
 shared_focus = {
 	id = GRY_expedition_to_husaka
-	icon = GFX_focus_generic_diplomatic_treaty_pony_griffon
+	icon = GFX_goal_rct_deal
 	prerequisite = { focus = GRY_get_the_guns }
 	prerequisite = { focus = GRY_prepare_the_cossacks }
 	prerequisite = { focus = GRY_plan_the_attack }
