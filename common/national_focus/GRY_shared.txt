@@ -81,7 +81,7 @@ shared_focus = {
 }
 shared_focus = {
 	id = GRY_assign_otamans
-	icon = GFX_goal_generic_drafted_army
+	icon = GFX_goal_gryphian_cossacks
 	prerequisite = { focus = GRY_expedition_to_husaka }
 	prerequisite = { focus = GRY_letter_to_vorobeyko }
 	relative_position_id = GRY_expedition_to_husaka

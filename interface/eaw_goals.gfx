@@ -6654,4 +6654,8 @@ spriteTypes = {
 		name = "GFX_goal_ASY_assyrian_levies"
 		texturefile = "gfx/interface/goals/ASY_assyrian_levies.dds"
 	}
+	spriteType = {
+		name = "GFX_goal_gryphian_cossacks"
+		texturefile = "gfx/interface/goals/goal_gryphian_cossacks.dds"
+	}
 }
