@@ -15,6 +15,7 @@ guiTypes = {
 			name = "title"
 			position = { x = 15 y = 8 }
 			borderSize = {x = 0 y = 0}
+			font = "hoi_16mbs"
 			text = "gry_leading_candidate_in_the_state"
 			maxWidth = 150
 			maxHeight = 100

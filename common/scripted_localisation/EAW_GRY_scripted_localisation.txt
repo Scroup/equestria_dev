@@ -23,3 +23,28 @@ defined_text = {
         localization_key = GRY_candidate_none_tt
     }
 }
+defined_text = {
+    name = GRY_gui_candidate_tt
+    text = {
+        trigger = {
+            has_state_flag = GRY_supports_grif
+        }
+        localization_key = GRY_grif_tt
+    }
+    text = {
+        trigger = {
+            has_state_flag = GRY_supports_krav
+        }
+        localization_key = GRY_krav_tt
+    }
+    text = {
+        trigger = {
+			has_state_flag = GRY_supports_bagr
+        }
+        localization_key = GRY_bagr_tt
+    }
+    #debug key
+    text = {
+        localization_key = GRY_candidate_none_tt
+    }
+}

@@ -836,6 +836,7 @@ ideas = {
 				conscription = -0.01
 				army_org_factor = -0.1
 				army_speed_factor = 0.05
+				army_attack_factor = 0.05
 				custom_modifier_tooltip = ZES_military_blocked_tp
 			}
 			on_add = {
@@ -846,6 +847,38 @@ ideas = {
 			}
 			picture = BRF_everyman_a_knight
 		}
+
+		GRY_rysovars_and_darmolits = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				conscription = -0.05
+				consumer_goods_factor = -0.1
+				stability_factor = -0.1
+			}
+			picture = BRF_everyman_a_knight
+		}
+		
+		GRY_pony_minority = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				stability_factor = -0.05
+				democratic_drift = 0.01
+			}
+			picture = BRF_everyman_a_knight
+		}
+
 		# Here goes Komissariat stuff
 		GRY_research_boost_10K = {
 			allowed = {

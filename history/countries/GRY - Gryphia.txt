@@ -83,6 +83,8 @@ add_ideas = {
 	lack_of_scientists
 	poverty3
 	GRY_cossacks
+	GRY_rysovars_and_darmolits
+	GRY_pony_minority
 }
 
 set_stability = 0.70

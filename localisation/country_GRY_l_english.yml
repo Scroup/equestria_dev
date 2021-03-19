@@ -189,9 +189,9 @@
  
  ###Decisions###
  GRY_hetman_popularity_category:0 "Power Struggle"
- GRY_hetman_popularity_category_desc:0 "It's a common knowledge that Kalas Bulba's days are numbered, so §YBorad Grifnitsky§!, §gYevhen Kravlets§! and §CLevdruna Bagrovska§! already struggle for power.\n\n[592.GetName] supports [592.GRY_candidate_tt]\n[596.GetName] supports [596.GRY_candidate_tt]\n[597.GetName] supports [597.GRY_candidate_tt]\n[598.GetName] supports [598.GRY_candidate_tt]\n[609.GetName] supports [609.GRY_candidate_tt]\n[610.GetName] supports [610.GRY_candidate_tt]\n[611.GetName] supports [611.GRY_candidate_tt]\n[612.GetName] supports [612.GRY_candidate_tt]\n[613.GetName] supports [613.GRY_candidate_tt]\n[631.GetName] supports [631.GRY_candidate_tt]"
+ GRY_hetman_popularity_category_desc:0 "It's a common knowledge that Kalas Bulba's days are numbered, so §YBorad Grifnitsky§!, §RYevhen Kravlets§! and §CLevdruna Bagrovska§! already struggle for power.\n\n[592.GetName] supports [592.GRY_candidate_tt]\n[596.GetName] supports [596.GRY_candidate_tt]\n[597.GetName] supports [597.GRY_candidate_tt]\n[598.GetName] supports [598.GRY_candidate_tt]\n[609.GetName] supports [609.GRY_candidate_tt]\n[610.GetName] supports [610.GRY_candidate_tt]\n[611.GetName] supports [611.GRY_candidate_tt]\n[612.GetName] supports [612.GRY_candidate_tt]\n[613.GetName] supports [613.GRY_candidate_tt]\n[631.GetName] supports [631.GRY_candidate_tt]"
  GRY_support_grifnitsky:0 "Support §YGrifnitsky§!'s nomination"
- GRY_support_kravlets:0 "Support §gKravlets§!' nomination"
+ GRY_support_kravlets:0 "Support §RKravlets§!' nomination"
  GRY_support_coalition:0 "Support §CBagrovska§!'s nomination"
 
  GRY_10k_weapons_for_manpower:0 "Offer 10,000 Soldiers"
@@ -217,8 +217,13 @@
  GRY_BORAD_DESC:0 "Borad Grifnitsky is an atypical cossack - though valiant in battle, he is not fond of violence and prefers to find peaceful, long-term solutions to serious problems where possible. In the warlike Cossack society this should have isolated and ostracised him, but a combination of battlefield valor, an amicable personality, and exceptional oratory has drawn a following to him nonetheless. Seeing the poor state of the Zapzhans, he desires to reform the Host into a democratic republic and diplomatically secure their people against reprisals from the Communists and the Riverponies."
 
  GRY_candidate_grif_tt:0 "§YBorad Grifnitsky§!"
- GRY_candidate_krav_tt:0 "§gYevhen Kravlets§!"
+ GRY_candidate_krav_tt:0 "§RYevhen Kravlets§!"
  GRY_candidate_bagr_tt:0 "§CLevdruna Bagrovska§!"
+ GRY_candidate_none_tt:0 "§RERROR§!"
+
+ GRY_grif_tt:0 "§YBorad Grifnitsky§!"
+ GRY_krav_tt:0 "§RYevhen Kravlets§!"
+ GRY_bagr_tt:0 "§CLevdruna Bagrovska§!"
 
 ## GUI stuffs
 

@@ -1,5 +1,45 @@
 ﻿add_namespace = gryphianhost
-add_namespace = gryphianhost
+
+country_event = {#GRI gets message asking for more guns in exchange for manpower
+	id = gryphianhost.240
+	immediate = {log = "[GetDateText]: [Root.GetName]: event gryphianhost.240"}
+	title = gryphianhost.240.t
+	desc = gryphianhost.240.d
+	picture = GFX_event_griffon_with_gun
+
+	is_triggered_only = yes
+
+	option = {#OK
+		name = gryphianhost.240.a
+		ai_chance = { 
+			factor = 100 
+			modifier = {
+				factor = 0
+				has_equipment = {
+					infantry_equipment < 10000
+				}
+			}
+		}
+		send_equipment = {
+			equipment = infantry_equipment
+			amount = 2000
+			target = FROM
+		}
+		add_manpower = 10000
+		FROM = {
+			add_manpower = -10000
+			country_event =  gryphianhost.243 
+		}
+	}
+	option = {#No
+		name = gryphianhost.240.b
+		ai_chance = { factor = 1 }
+		FROM = {
+			country_event = gryphianhost.244 
+		}
+	}
+}
+
 
 # Komissariat stuff
 country_event = {#GRI gets message asking for more guns in exchange for manpower
