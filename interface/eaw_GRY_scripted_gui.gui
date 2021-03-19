@@ -13,9 +13,9 @@ guiTypes = {
 		}
 		instantTextboxType = {
 			name = "title"
-			position = { x = 15 y = 8 }
+			position = { x = 15 y = 15 }
 			borderSize = {x = 0 y = 0}
-			font = "hoi_16mbs"
+			font = "hoi_30header"
 			text = "gry_leading_candidate_in_the_state"
 			maxWidth = 150
 			maxHeight = 100
