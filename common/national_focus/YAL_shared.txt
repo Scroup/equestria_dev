@@ -5408,6 +5408,18 @@ shared_focus = {
 			}
 			declare_war_on = { type = annex_everything target = BOI }
 		}
+		else_if = {
+			limit = {
+				389 = {
+					owner = {
+						NOT = {
+							tag = ROOT
+						}
+					}
+				}
+			}
+			create_wargoal = { type = annex_everything target = 389.owner }
+		}
 		if = {
 			limit = {
 				LAK = {
@@ -6122,6 +6134,14 @@ shared_focus = {
 	}
 	prerequisite = {
 		focus = YAL_a_lesson_they_remember
+	}
+	available = {
+		MIT = {
+			OR = {
+				NOT = { has_war_with = event_target:griffonian_empire }
+				exists = no
+			}
+		}
 	}
 	ai_will_do = {
 		factor = 40
@@ -10355,8 +10375,10 @@ shared_focus = {
 			}
 		}
 		else = {
-			remove_ideas = YAL_technocrats3_noconscrip
-			add_ideas = YAL_technocrats4_noconscrip
+			swap_ideas = {
+				remove_idea = YAL_technocrats3_noconscrip
+				add_idea = YAL_technocrats4_noconscrip	
+			}
 		}
 	}
 	search_filters = { FOCUS_FILTER_MANPOWER FOCUS_FILTER_POLITICAL FOCUS_FILTER_RESEARCH }

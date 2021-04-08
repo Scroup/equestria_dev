@@ -32,11 +32,11 @@ CRY_SOL = {
 }
 STG_EQS = {
 	color = rgb { 252 219 100 }
-	color_ui = rgb { 135 57 63 }
+	color_ui = rgb { 155 135 62 }
 }
 STG_SIN = {
 	color = rgb { 148 44 58 }
-	color_ui = rgb { 155 135 62 }
+	color_ui = rgb { 135 57 63 }
 }
 STG_CHN = {
 	color = rgb { 60 64 86 }
@@ -1288,4 +1288,8 @@ WNG_formed = {
 JER_GRIFFONIAN_REPUBLIC = {
 	color = rgb { 255 214 117 }
 	color_ui = rgb { 255 214 117 }
+}
+FLO_JER_subject = {
+	color = rgb { 84 104 181 }
+	color_ui = rgb { 84 104 181 }
 }
