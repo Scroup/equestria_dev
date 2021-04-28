@@ -253,8 +253,14 @@ set_cosmetic_tag = YAN_FEA
 
 add_ideas = {
 	outdated_industry
-	lack_of_scientists2
 	better_science_base
+	poverty4
+	YAN_dutchoverlord
+	YAN_angery3
+	YAN_tonguetied
+	YAN_pulalap_rebellion
+	YAN_shit_paperwork
+	no_lack_of_scientists
 }
 
 create_country_leader = {
@@ -269,9 +275,9 @@ create_country_leader = {
 }
 
 create_country_leader = {
-	name = "Sokka"
+	name = "Orangtua Yangmarah"
 	desc = ""
-	#picture = "Portrait_Ethiopia_Haile_Selassie.dds"
+	picture = "gfx/leaders/YAN/YAN_Orangtua_Yangmarah.tga"
 	expire = "1965.1.1"
 	ideology = marxism
 	traits = {
@@ -280,24 +286,35 @@ create_country_leader = {
 }
 
 create_country_leader = {
-	name = "Isnaeni"
+	name = "Cakarkeluli Semuakawan"
 	desc = ""
-	#picture = "Portrait_Ethiopia_Haile_Selassie.dds"
+	picture = "gfx/leaders/YAN/YAN_Cakarkeluli_Semuakawan.tga"
 	expire = "1965.1.1"
 	ideology = fascism_ideology
 	traits = {
-
+		dictator
 	}
 }
 
 create_country_leader = {
-	name = "Wongsonegoro"
+	name = "Harimauraja Cakarkeluli Semuakawan"
 	desc = ""
-	#picture = "Portrait_Ethiopia_Haile_Selassie.dds"
+	picture = "gfx/leaders/YAN/YAN_Cakarkeluli_Semuakawan.tga"
+	expire = "1965.1.1"
+	ideology = fascism_ideology
+	traits = {
+		dictator
+	}
+}
+
+create_country_leader = {
+	name = "Princess Kudakelasi"
+	desc = ""
+	picture = "gfx/leaders/YAN/YAN_Kudakelasi.tga"
 	expire = "1965.1.1"
 	ideology = liberalism
 	traits = {
-
+		socialite_connections
 	}
 }
 

@@ -1,0 +1,1830 @@
+ideas = {
+
+	
+
+	# Special ones that can be applied on other countries through focus system.
+		
+
+	country = {
+		YAN_dutchoverlord = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = SOV_scientist_defect
+			removal_cost = -1
+			modifier = {
+				local_resources_factor = -0.10
+				consumer_goods_factor = 0.05
+			}	
+		}
+	}
+
+	country = {
+		YAN_pulalap_rebellion = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = chi_wargaming_division
+			removal_cost = -1 
+			modifier = {
+				stability_factor = -0.05
+				political_power_gain = -0.01
+			}
+		}
+
+	}
+
+
+
+	#####Kebangkitan Nasional Spirits##### - Loterijen, Kudakelasi Paths
+	country = {
+		YAN_angery = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = generic_morale_bonus
+			removal_cost = -1
+			modifier = {
+				political_power_gain = -0.05
+			}
+		}
+	}
+
+	country = {
+		YAN_angery2 = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = generic_morale_bonus
+			removal_cost = -1
+			modifier = {
+				political_power_gain = -0.10
+				fascism_drift = 0.01
+				neutrality_drift = -0.01
+				democratic_drift = 0.01
+				communism_drift = 0.01
+				stability_factor = -0.05
+				war_support_factor = -0.05
+				autonomy_gain = 1
+			}
+		}
+	}
+
+
+	country = {
+		YAN_angery3 = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = generic_morale_bonus
+			removal_cost = -1
+			modifier = {
+				political_power_gain = -0.20
+				fascism_drift = 0.02
+				neutrality_drift = -0.02
+				democratic_drift = 0.02
+				communism_drift = 0.02
+				stability_factor = -0.10
+				war_support_factor = -0.10
+				autonomy_gain = 2
+				conscription_factor = -0.05
+			}
+		}
+	}						
+		
+
+	country = {
+		YAN_angery4 = {	
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = generic_morale_bonus
+			removal_cost = -1
+			modifier = {
+				political_power_gain = -0.30
+				fascism_drift = 0.05
+				neutrality_drift = -0.05
+				democratic_drift = 0.05
+				communism_drift = 0.05
+				stability_factor = -0.15
+				war_support_factor = -0.15
+				autonomy_gain = 5
+				conscription_factor = -0.15
+			}
+		}
+	}
+
+	country = {
+		YAN_angery5 = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+			always = yes
+			}
+			
+			picture = generic_morale_bonus
+			removal_cost = -1
+			modifier = {
+				political_power_gain = -0.50
+				fascism_drift = 0.10
+				neutrality_drift = -0.10
+				democratic_drift = 0.10
+				communism_drift = 0.10
+				stability_factor = -0.20
+				war_support_factor = -0.20
+				autonomy_gain = 10
+				conscription_factor = -0.20
+			}
+				
+		}
+	}
+
+	###We're a bit tongued tied here - All paths##
+
+	country = {
+		YAN_tonguetied = {
+			allowed = {
+				always = yes
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			#picture = 
+			removal_cost = -1 
+			modifier = {
+				political_power_gain = -0.15
+				stability_factor = -0.10
+				conscription_factor = -0.15
+				research_speed_factor = -0.30
+			}
+		}
+
+		YAN_tonguetied2 = {
+			allowed = {
+				always = yes
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			#picture = 
+			removal_cost = -1 
+			modifier = {
+				political_power_gain = -0.10
+				stability_factor = -0.05
+				conscription_factor = -0.10
+				research_speed_factor = -0.15
+			}			
+		}
+
+		YAN_tonguetied3 = {
+			allowed = {
+				always = yes
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			#picture = 
+			removal_cost = -1 
+			modifier = {
+				political_power_gain = -0.05
+				conscription_factor = -0.05
+			}			
+		}
+
+
+	}
+
+	country = {
+		YAN_dutch = {
+			allowed = {
+				always = yes
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			#picture = 
+			removal_cost = -1
+			modifier = {
+				stability_factor = 0.05
+				political_power_gain = -0.10
+				conscription_factor = -0.20
+				research_speed_factor = 0.05
+			}
+		}
+	}
+
+	country = {
+		YAN_indonesian = {
+			allowed = {
+				always = yes
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			#picture = 
+			removal_cost = -1
+			modifier = {
+				conscription_factor = 0.05
+				political_power_gain = -0.05
+				research_speed_factor = -0.05
+			}
+		}
+	}
+
+	country = {
+		YAN_german = {
+			allowed = {
+				always = yes
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			#picture = 
+			removal_cost = -1
+			modifier = {
+				stability_factor = -0.05
+				political_power_gain = -0.05
+				research_speed_factor = -0.05
+			}
+		}
+	}
+	country = {
+		YAN_compromise = {
+			allowed = {
+				always = yes
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			#picture = 
+			removal_cost = -1
+			modifier = {
+				political_power_gain = -0.20
+				stability_factor = -0.05
+				research_speed_factor = -0.075
+			}
+		}
+	}
+
+	###The Zebridies Quartets - Everyone gotta deal with em###
+
+	country = {
+		YAN_kudakelasi_family = {
+			allowed = {
+				always = yes
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			#picture = 
+			removal_cost = -1 
+			modifier = {
+				production_speed_buildings_factor = 0.07
+				production_speed_infrastructure_factor = 0.15
+				production_speed_industrial_complex_factor = 0.015
+				consumer_goods_factor = 0.06
+				political_power_gain = -0.20
+
+			}
+		}
+	}
+
+	##Messy Bureaucracy - Goddamn everyone's gotta deal with it##
+
+	country = {
+		YAN_shit_paperwork = {
+			allowed = {
+				always = yes
+			}
+			allowed_civil_war ={
+				always = yes
+			}
+			#picture = 
+			removal_cost = -1
+			modifier = {
+				political_power_gain = -0.40
+				stability_factor = -0.10
+				production_speed_buildings_factor = -0.15
+			}
+		}
+	}
+
+	country = {
+		YAN_shit_paperwork2 = {
+			allowed = {
+				always = yes
+			}
+			allowed_civil_war ={
+				always = yes
+			}
+			#picture = 
+			removal_cost = -1
+			modifier = {
+				political_power_gain = -0.30
+				stability_factor = -0.08
+				production_speed_buildings_factor = -0.12
+			}
+		}
+	}
+
+	country = {
+		YAN_shit_paperwork3 = {
+			allowed = {
+				always = yes
+			}
+			allowed_civil_war ={
+				always = yes
+			}
+			#picture = 
+			removal_cost = -1
+			modifier = {
+				political_power_gain = -0.20
+				stability_factor = -0.06
+				production_speed_buildings_factor = -0.10
+			}
+		}
+	}
+
+	country = {
+		YAN_shit_paperwork4 = {
+			allowed = {
+				always = yes
+			}
+			allowed_civil_war ={
+				always = yes
+			}
+			#picture = 
+			removal_cost = -1
+			modifier = {
+				political_power_gain = -0.10
+				stability_factor = -0.03
+				production_speed_buildings_factor = -0.05
+			}
+		}
+	}
+
+	###People has right National Spirits - Kudakelasi ###
+	country = {
+		YAN_rights = {
+			allowed = {
+				always = yes
+			}
+			allowed_civil_war = {
+				always  = yes
+			}
+			#picture = 
+			removal_cost = -1
+			modifier = {
+				stability_factor = 0.05
+				political_power_gain = -0.05
+			}
+		}
+	}
+
+	country = {
+		YAN_rights2 = {
+			allowed = {
+				always = yes
+			}
+			allowed_civil_war = {
+				always  = yes
+			}
+			#picture = 
+			removal_cost = -1
+			modifier = {
+				stability_factor = 0.1
+				political_power_gain = -0.07
+			}
+		}
+	}		
+	
+	##Naturalization or Sanguinis
+	
+	country = {
+		YAN_long_citizen = {
+			allowed = {
+				always = yes
+			}
+			allowed_civil_war = {
+				always  = yes
+			}
+			#picture = 
+			removal_cost = -1
+			modifier = {
+				stability_factor = 0.05
+				research_speed_factor = 0.05
+				monthly_population = -0.05
+				conscription_factor = -0.05
+			}
+		}
+	}
+
+	country = {
+		YAN_instant_citizen = {
+			allowed = {
+				always = yes
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			#picture = 
+			removal_cost = -1
+			modifier = {
+				stability_factor = -0.10
+				production_speed_buildings_factor = 0.05
+				monthly_population = 0.30
+				conscription_factor = 0.10
+			}
+		}
+	}
+
+	##Free Speech##
+
+	country = {
+		YAN_free_speech = {
+			allowed = {
+				always = yes
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			#picture = 
+			removal_cost = -1
+			modifier = {
+				stability_factor = -0.05
+				political_power_gain = 0.10
+			}
+		}
+	}
+
+	##Youth Organisations 
+
+	country = {
+		YAN_youth_org = {
+			allowed = {
+				always = yes
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			#picture = 
+			removal_cost = -1
+			modifier = {
+				fascism_drift = 0.01
+				neutrality_drift = 0.02
+				democratic_drift = 0.02
+				conscription_factor = 0.05
+			}
+		}
+	}
+
+	##Medical Reforms
+	country = {
+		YAN_needles = {
+			allowed = {
+				always = yes
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			#picture = 
+			removal_cost = -1
+			modifier = {
+				monthly_population = 0.05
+			}
+		}
+
+		YAN_needles2 = {
+			allowed = {
+				always = yes
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			#picture = 
+			removal_cost = -1
+			modifier = {
+				monthly_population = 0.1
+			}
+
+		}
+	
+		##Welfare Committee
+		YAN_committee = {
+			allowed = {
+				always = yes
+			}
+			#picture = 
+			removal_cost = -1
+			modifier = {
+				stability_factor = 0.05
+				political_power_gain = -0.05
+			}
+		}
+	
+	}
+
+	country = {
+
+		YAN_travelschools = {
+			allowed = {
+				always = yes
+			}
+			#picture =
+			removal_cost = -1
+			modifier = {
+				research_speed_factor = 0.05 
+			}
+		}
+		YAN_anti_corrupt = {
+			allowed = {
+				always = yes
+			}
+			#picture = 
+			removal_cost = -1
+			modifier = {
+				stability_weekly = 0.05
+				democratic_drift = 0.01
+			}
+		}
+
+		YAN_pulalap_auth = {
+			allowed = {
+				always = yes
+			}
+			#picture = 
+			removal_cost = -1
+			modifier = {
+				political_power_gain = -0.40
+				production_speed_buildings_factor = 0.05
+			}
+		}
+	}
+	#3Political AAdvisors 
+
+	political_advisor = {
+		Budiman_teh = {
+			allowed_to_remove = {
+				always = no
+			}
+			allowed = {
+				original_tag = YAN
+			}
+
+			traits = {
+				FAT_lunatic_workbird
+			}
+		}
+	}
+
+	#End Kuda Focus
+
+
+	###LEGACY CODE - ALL LOTERIJEN'S SHIT, DO NOT TOUCH###
+	country = {
+		YAN_industrial1 = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = generic_central_management
+			removal_cost = -1
+			modifier = {
+				political_power_gain = -0.15
+				production_speed_infrastructure_factor = 0.1
+				production_speed_industrial_complex_factor = 0.2
+
+			}
+
+		}
+	}
+
+	####Kirinese Family Focuses
+
+	country = {
+		YAN_Zavanese_Families1 = {
+			allowed = {
+				always = no
+			}
+			picture = generic_disjointed_gov
+			removal_cost = -1
+			modifier = {
+				production_speed_buildings_factor = 0.10
+				stability_factor = 0.05
+				consumer_goods_factor = 0.03
+				political_power_gain = -0.05
+			}
+		}
+	}
+
+	country = {
+		YAN_Zavanese_Families2 = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = generic_disjointed_gov
+			removal_cost = -1
+			modifier = {
+				production_speed_buildings_factor = 0.15 
+				stability_factor = 0.07
+				consumer_goods_factor = 0.05
+				political_power_gain = -0.10
+			}
+		}
+	}
+
+
+		#Flowena Lessons
+
+	country = {
+		YAN_lessons_flowena = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = new_deal
+			removal_cost = -1
+			modifier = {
+				consumer_goods_factor = -0.02
+			}
+		}
+	}
+
+	country = {
+		YAN_lessons_flowena_2 = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = new_deal
+			removal_cost = -1
+			modifier = {
+				consumer_goods_factor = -0.05
+				political_power_gain = -0.02
+			}
+		}
+	}
+
+	country = {
+		YAN_lessons_flowena_3 = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = new_deal
+			removal_cost = -1
+			modifier = {
+				consumer_goods_factor = -0.07
+				political_power_gain = -0.05
+			}
+		}
+	}
+
+	country = {
+		YAN_lessons_flowena_4 = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = new_deal
+			removal_cost = -1
+			modifier = {
+				consumer_goods_factor = -0.08
+				political_power_gain = -0.10
+				stability_factor = 0.5
+			}
+		}
+	}
+
+
+		#HORSE LORD STUFF
+	 
+	country = {
+		YAN_horse_lord1 = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = SOV_scientist_defect
+			removal_cost = -1
+			modifier = {
+				local_resources_factor = 0.01
+				political_power_gain = -0.05
+			}
+		}
+	}
+
+	country = {
+		YAN_horse_lord2 = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = SOV_scientist_defect
+			removal_cost = -1
+			modifier = {
+				local_resources_factor = 0.02
+				political_power_gain = -0.07
+			}
+		}
+	}
+
+	country = {
+		YAN_horse_lord3 = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = SOV_scientist_defect
+			removal_cost = -1
+			modifier = {
+				local_resources_factor = 0.04
+				political_power_gain = -0.10
+				consumer_goods_factor = -0.03
+			}
+		}
+	}
+
+	country = {
+		YAN_horse_lord3_1 = {
+				allowed = {
+					always = no
+				}
+				allowed_civil_war = {
+					always = yes
+				}
+				picture = SOV_scientist_defect
+				removal_cost = -1
+				modifier = {
+					local_resources_factor = 0.04
+					political_power_gain = -0.10
+					consumer_goods_factor = -0.06
+				}
+			}
+		}
+
+	country = {
+		YAN_horse_lord3_2 = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = SOV_scientist_defect
+			removal_cost = -1
+			modifier = {
+				local_resources_factor = 0.10
+				political_power_gain = -0.10
+				consumer_goods_factor = -0.03
+			}			
+		}
+	}
+
+	country = {
+		YAN_horse_lord4 = {
+			allowed = {
+				always = yes
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = SOV_scientist_defect
+			removal_cost = -1
+			modifier = {
+				political_power_gain = -0.12
+				local_resources_factor = 0.15
+				consumer_goods_factor = -0.05
+			}
+		}
+	}
+
+		#EDUCATION THING#
+	country = {
+		YAN_education_not_shitshow = {
+			allowed = {
+				always = yes
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = raj_marginalized_muslim_community_happy
+			modifier = {
+				political_power_gain = -0.05
+				stability_factor = 0.05
+				war_support_factor = 0.05
+				research_speed_factor = -0.05
+			}
+		}
+	}
+
+	country = {
+		YAN_education_shitshow = { 
+			allowed = {
+				always = yes
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = raj_marginalized_muslim_community
+			modifier = {
+				political_power_gain = -0.05
+				stability_factor = -0.05
+				war_support_factor = -0.05
+				research_speed_factor = 0.05
+			}
+		}
+	}
+
+	country = {
+		YAN_business = {
+			available = {
+				is_in_faction = yes
+			}
+			allowed = {
+				always = yes
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = generic_goods_red_bonus
+			targeted_modifier = {
+				tag = YAN
+				cic_to_target_factor = 0.05
+				extra_trade_to_target_factor = 0.25
+				trade_cost_for_target_factor = -0.3
+			}
+			modifier = {
+				trade_opinion_factor = 0.25
+				political_power_gain = 0.05
+				min_export = 0.05
+			}
+			#	targeted_modifier = {
+			# tag = WNG
+            #    cic_to_target_factor = 0.05
+            #      extra_trade_to_target_factor = 0.15
+            #     trade_cost_for_target_factor = -0.1
+            # }
+		} 
+	}
+
+	country = {
+
+		YAN_infra_investment = {
+			available = {
+				is_in_faction = yes
+			}
+			allowed = {
+				always = yes
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = generic_build_infrastructure
+			modifier = {
+				production_speed_infrastructure_factor = 0.1 
+				political_power_gain = -0.05
+			}
+		}
+
+		YAN_business_investment_1 = {
+			available = {
+				is_in_faction = yes
+			}
+			allowed = {
+				always = yes
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = SOV_scientist_defect
+			modifier = {
+				consumer_goods_factor = -0.02
+				political_power_gain = -0.1
+				local_building_slots_factor = 0.10
+			}
+
+
+		}
+
+		YAN_business_investment_2 = {
+			available = {
+				is_in_faction = yes
+			}
+			allowed = {
+				always = yes
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = SOV_scientist_defect
+			modifier = {
+				consumer_goods_factor = -0.05
+				political_power_gain = -0.8
+				local_building_slots_factor = 0.15
+			}
+		}
+
+		YAN_SE_FTA = {
+			available = {
+				is_in_faction = yes
+			}
+			allowed = {
+				always = yes
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = generic_flexible_foreign_policy2
+			modifier = {
+				min_export = 0.1
+				production_factory_max_efficiency_factor = 0.1
+				industrial_capacity_factory	= 0.05
+			}
+		}
+
+		YAN_SE_CM = {
+			available = {
+				is_in_faction = yes
+			}
+			allowed = {
+				always = yes
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = generic_fortify_the_borders
+			modifier = {
+				max_command_power = 10
+				command_power_gain_mult = 0.15
+				mobilization_speed = 0.05
+				surrender_limit = 0.10
+			}
+		}
+	}
+
+	country = {
+		YAN_strengthen_rights = {
+			allowed = {
+				always = yes
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = FRA_national_mobilization_focus
+
+			modifier = {
+				stability_factor = -0.05
+				democratic_drift = 0.05
+				communism_drift = 0.01
+				political_power_factor = -0.10
+			}
+		}
+
+		YAN_strengthen_police = {
+			allowed = {
+				always = yes
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = ast_volunteer_defence_corps
+			modifier = {
+				stability_weekly = 0.005
+				consumer_goods_factor = 0.05
+			}
+
+		}
+
+		YAN_corruption_crackdown = {
+			allowed = {
+				always = yes
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = generic_purge
+			modifier = {
+				stability_factor = -0.15
+				political_power_factor = -0.20 
+				fascism_drift = 0.05
+				democratic_drift = 0.01
+			}
+		}
+
+		YAN_business_subsidize = {
+			allowed = {
+				always = yes
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = man_five_year_plan_industry
+			modifier = {
+				production_speed_buildings_factor = 0.25
+				consumer_goods_factor = -0.10 
+				political_power_gain = -0.25
+			}
+		}
+
+		YAN_drug_crackdown = {
+			allowed = {
+				always = yes
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = prc_permit_opium_trade
+			modifier = {
+				stability_factor = -0.05
+				production_speed_buildings_factor = -0.01
+				political_power_factor = 0.10
+			}
+		}
+	}
+
+
+
+	##SEMUAKAWAN##
+
+	country = {
+		YAN_anarchy = {
+			allowed = {
+				always = yes
+			}			
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = chaos_idea
+			modifier = {
+				stability_factor = -0.30
+				war_support_factor = -0.10
+				political_power_gain = -0.45
+				monthly_population = -0.30
+				consumer_goods_factor = 0.5
+			}
+		}
+	}
+
+	country = {
+		YAN_Kawan_police = {
+			allowed = {
+				always = yes
+			}			
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = BAL_officer
+			modifier = {
+				stability_factor = 0.05
+				mobilization_speed = 0.05
+			}
+		}
+	}
+
+	country = {
+		YAN_print_money = {
+			allowed = {
+				always = yes
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = received_attache
+			modifier = {
+				political_power_gain = -0.30
+				stability_weekly = -0.005
+				consumer_goods_factor = -0.10
+				production_speed_buildings_factor = 0.30
+			}
+
+		}
+	}
+
+	country = {
+		YAN_terrible_economy = {
+			allowed = {
+				always = yes
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = usa_great_depression_3
+			modifier = {
+				stability_factor = -0.10
+				political_power_gain = -0.10
+				consumer_goods_factor = 0.30
+			}
+		}
+
+		YAN_recovering_economy = {
+			allowed = {
+				always = yes
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = usa_great_depression
+			modifier = {
+				stability_factor = -0.05
+				political_power_gain = -0.05
+				consumer_goods_factor = 0.10
+			}
+
+		}
+
+		YAN_exporting_economy = {
+			allowed = {
+				always = yes
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = generic_foreign_capital
+			modifier = {
+				min_export = 0.1
+				production_factory_max_efficiency_factor = 0.1
+			}
+		}
+
+		YAN_exporting_economy_2 = {
+			allowed = {
+				always = yes
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = generic_foreign_capital
+			modifier = {
+				min_export = 0.15
+				production_factory_max_efficiency_factor = 0.20
+				consumer_goods_factor = -0.05
+			}
+		}
+
+		YAN_domestic_economy = {
+			allowed = {
+				always = yes
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = generic_central_management
+			modifier = {
+				local_building_slots_factor = 0.05
+				production_speed_buildings_factor = 0.02
+				consumer_goods_factor = 0.05
+			}
+		}
+
+		YAN_domestic_economy_2 = {
+			allowed = {
+				always = yes
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = generic_central_management
+			modifier = {
+				local_building_slots_factor = 0.10
+				production_speed_buildings_factor = 0.05
+				industrial_capacity_factory = 0.10
+				consumer_goods_factor = 0.05
+			}
+		}
+	}
+
+	country = {
+		YAN_trains_yas = {
+			allowed = {
+				always = yes
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = generic_build_infrastructure
+			modifier = {
+				production_speed_infrastructure_factor = 0.10
+				production_speed_naval_base_factor = 0.10 
+			}
+		}
+
+		YAN_train_camps = {
+			allowed = {
+				always = yes
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = generic_build_infrastructure
+			modifier = {
+				production_speed_infrastructure_factor = 0.15
+				production_speed_naval_base_factor = 0.15
+				stability_factor = -0.05
+			}
+		}
+
+		YAN_chaotic_paperwork = {
+			allowed = {
+				always = yes
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = disrupted_communications
+			modifier = {
+				stability_factor = -0.20
+				political_power_factor = -0.50
+				production_speed_buildings_factor = -0.20
+			}
+
+		}
+
+		YAN_indonesian_now = {
+			allowed = {
+				always = yes
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = disrupted_communications
+			modifier = {
+				political_power_gain = -0.20
+				stability_weekly = 0.005
+				war_support_factor = 0.05
+			}
+		}
+
+		YAN_Indonesian_2 = {
+			allowed = {
+				always = yes
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = disrupted_communications
+			modifier = {
+				stability_factor = 0.05
+				war_support_factor = 0.10
+				fascism_drift = 0.01
+				democratic_drift = 0.001
+			}
+		}
+
+		YAN_remove_dutch_culture = {
+			allowed = {
+				always = yes
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = can_patriation
+			modifier = {
+				stability_weekly = -0.005
+				fascism_drift = 0.01
+				war_stability_factor = 0.01
+			}
+		}
+
+		YAN_many_cultures_idea = {
+			allowed = {
+				always = yes
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = generic_morale_bonus
+			modifier = {
+				fascism_drift = 0.01
+				democratic_drift = 0.005
+				communism_drift = 0.005
+				democratic_acceptance = 50
+				communism_acceptance = 50
+				war_support_factor = 0.05
+			}
+		}
+
+		YAN_one_culture_forced_idea = {
+			allowed = {
+				always = yes
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = generic_morale_bonus
+			modifier = {
+				fascism_drift = 0.02
+				stability_factor = 0.1
+				political_power_factor = -0.10
+			}
+		}
+
+		YAN_decentralized_rule = {
+			allowed = {
+				always = yes
+			}
+			allowed_civil_war = {
+				always = no
+			}
+			picture = generic_local_self_management
+			modifier = {
+				stability_factor = -0.05
+				war_support_factor = 0.05
+				offensive_war_stability_factor = 0.2 
+				neutrality_drift = -0.05
+			}
+		}
+
+		YAN_subjugated_lineages = {
+			allowed = {
+				always = yes
+			}
+			allowed_civil_war = {
+				always = no
+			}
+			picture = jap_zaibatsu_control
+			modifier = {
+				political_power_gain = 0.15
+				production_speed_buildings_factor = 0.10
+				consumer_goods_factor = -0.05
+			}
+		}
+
+		YAN_free_lineages = {
+			allowed = {
+				always = yes
+			}
+			allowed_civil_war = {
+				always = no
+			}
+			picture = jap_zaibatsu_ally
+			modifier = {
+				political_power_gain = -0.15
+				trade_opinion_factor = 0.2
+				production_factory_max_efficiency_factor = 0.05
+				production_speed_buildings_factor = 0.10
+			}
+		}
+
+		YAN_landlord_support = {
+			allowed = {
+				always = yes
+			}
+			allowed_civil_war = {
+				always = no
+			}
+			picture = ROM_king_carol_ii_hedonist
+			modifier = {
+				political_power_gain = 0.05
+				monthly_population = 0.05
+			}
+		}
+
+		YAN_landlord_support2 = {
+			allowed = {
+				always = yes
+			}
+			allowed_civil_war = {
+				always = no
+			}
+			picture = ROM_king_carol_ii_hedonist
+			modifier = {
+				political_power_gain = 0.05
+				monthly_population = 0.05
+				production_speed_infrastructure_factor = 0.01
+			}
+		}
+
+		YAN_landlord_support3 = {
+			allowed = {
+				always = yes
+			}
+			allowed_civil_war = {
+				always = no
+			}
+			picture = ROM_king_carol_ii_hedonist
+			modifier = {
+				political_power_gain = 0.07
+				monthly_population = 0.10
+				production_speed_infrastructure_factor = 0.05
+			}
+		}
+
+		YAN_competitive_production = {
+			allowed = {
+				always = yes
+			}
+			allowed_civil_war = {
+				always = no
+			}
+			picture = can_wartime_prices_and_trade_board
+			modifier = {
+				line_change_production_efficiency_factor = 0.05
+				production_factory_efficiency_gain_factor = 0.05
+			}
+		}
+
+		YAN_baby_for_tax_cuts_idea = {
+			allowed = {
+				always = yes
+			}
+			allowed_civil_war = {
+				always = no
+			}
+			picture = food_market
+			modifier = {
+				monthly_population = 0.05
+				consumer_goods_factor = -0.01
+			}
+		}
+
+		YAN_improve_coordinations = {
+			allowed = {
+				always = yes
+			}
+			allowed_civil_war = {
+				always = no
+			}
+			picture = received_attache
+			modifier = {
+				political_power_gain = 0.10
+				political_advisor_cost_factor = -0.35
+			}
+		}
+
+		YAN_Ministry_HA = {
+			allowed = {
+				always = yes
+			}
+			allowed_civil_war = {
+				always = no
+			}
+			picture = generic_agrarian_reform
+			modifier = {
+				global_building_slots_factor = 0.1
+				political_power_factor = 0.2
+				monthly_population = 0.05
+				stability_factor = 0.05
+			}
+		}
+
+		YAN_DEL_religious_immigration = {
+			allowed = {
+				always = yes
+			}
+			allowed_civil_war = {
+				always = no
+			}
+			picture = generic_agrarian_reform
+			modifier = {
+				research_speed_factor = 0.05
+				stability_factor = -0.05
+
+			}
+		}
+
+		YAN_internal_religious_spread = {
+			allowed = {
+				always = yes
+			}
+			allowed_civil_war = {
+				always = no
+			}
+			##picture = generic_agrarian_reform
+
+			modifier = {
+				communism_drift = -0.10
+				stability_factor = 0.05
+				neutrality_drift = 0.03
+				fascism_drift = 0.05
+			}
+		}
+
+		YAN_DEL_buddy_now = {
+			allowed = {
+				always = yes
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			#picture = 
+
+			targeted_modifier = {
+				tag = YAN
+				extra_trade_to_overlord_factor = 0.3 
+				cic_to_overlord_factor = 0.05
+			}
+			modifier = {
+				political_power_gain = -0.05
+				fascism_drift = 0.02
+			}
+		}
+
+		YAN_support_DEL_civs = {
+			allowed = {
+				always = yes
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			#picture = 
+			modifier = {
+				stability_factor = 0.05
+				production_speed_buildings_factor = 0.025
+			}
+		}
+
+		YAN_DEL_vaccine_rollout = {
+			allowed = {
+				always = yes
+			}
+			allowed_civil_war = {
+				always = no
+			}
+			#picture = 	
+			modifier = {
+				monthly_population = 0.05 
+				stability_weekly = -0.005
+				political_power_factor = -0.005
+			}	
+		}	
+		YAN_DEL_investment = {
+			allowed = {
+				always = yes
+			}
+			allowed_civil_war = {
+				always = no
+			}
+			#picture = 
+			modifier = {
+				stability_factor = -0.05
+				consumer_goods_factor = 0.05
+			}
+		}
+
+		YAN_DEL_investment_2 = {
+			allowed = {
+				always = yes
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			#picture = 
+			modifier = {
+				consumer_goods_factor = -0.05
+				production_speed_buildings_factor = 0.10
+			}
+		}
+
+		YAN_DEL_investment2 = {
+			allowed = {
+				always = yes
+			}
+			allowed_civil_war = {
+				always = no
+			}
+			#picture = 
+			modifier = {
+				stability_factor = -0.075
+				consumer_goods_factor = 0.075
+			}
+		}
+
+		YAN_DEL_investment_22 = {
+			allowed = {
+				always = yes
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			#picture = 
+			modifier = {
+				consumer_goods_factor = -0.075
+				production_speed_buildings_factor = 0.25
+			}
+		}
+
+
+
+		####Terrorism in the South East
+
+		YAN_IDO_terrorists = {
+			allowed = {
+				always = yes
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			#picture = 
+
+			modifier = {
+				stability_factor = -0.05
+				production_speed_infrastructure_factor = -0.15
+				local_resources_factor = -0.05
+			}
+		}
+
+		YAN_IDO_warcrimes = {
+			allowed = {
+				always = yes
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			#picture = 
+
+			modifier = {
+				war_support_weekly = -0.01
+				stability_factor = -0.05
+			}
+		}
+
+		YAN_IDO_soldier_deployment = {
+			allowed = {
+				always = yes
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			#picture = 
+			modifier = {
+				command_power_gain = -0.05
+				weekly_manpower	= -50
+			}
+		}
+
+		##LOTERJIEN IDEAS
+
+		YAN_loyal_bureaucrats = {
+			allowed = {
+				always = yes
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			#picture = 
+			modifier = {
+				neutrality_drift = 0.01 
+				stability_factor = 0.05
+				political_power_factor = -0.10
+			}
+		}
+
+		YAN_cultivation_system = {
+			allowed = {
+				always = yes
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			#picture = 
+			modifier = {
+				communism_drift = 0.02
+				stability_factor = -0.10
+				political_power_factor = -0.20
+				production_speed_industrial_complex_factor = 0.25 
+
+			}
+		}
+
+		YAN_economic_liberalisation_idea = {
+			allowed = {
+				always = yes
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			#picture = 
+			modifier = {
+				min_export = 0.1
+				line_change_production_efficiency_factor = 0.05
+				research_speed_factor = 0.05
+			}
+		}
+
+		YAN_government_economy_idea = {
+			allowed = {
+				always = yes
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			#picture = 
+			targeted_modifier = {
+				tag = FEA
+				extra_trade_to_target_factor = 0.2
+			}
+			modifier = {
+				min_export = 0.25
+				trade_opinion_factor = 0.3
+				autonomy_gain_trade_factor = 0.1
+
+			}
+		}
+
+		YAN_STOVIA_reopened = { 
+			allowed = {
+				always = yes
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			#picture = 
+			modifier = {
+				research_speed_factor = 0.05
+				political_power_gain = 0.04
+			}
+		}
+	}
+
+	political_advisor = {
+		YAN_berkeley_mafia = {
+			allowed = {
+				always = yes
+			}
+			allowed_civil_war = {
+				always = no
+			}
+			picture = generic_disjointed_gov
+			modifier = {
+				consumer_goods_factor = -0.01
+				production_speed_industrial_complex_factor = 0.05
+				production_speed_arms_factory_factor = 0.05
+				production_speed_dockyard_factor = 0.05
+			}
+		}
+
+		YAN_Kudakelasi_loterijen = {
+			allowed = {
+				always = yes
+			}
+			allowed_civil_war = {
+				always = no
+			}
+			#picture
+			modifier = {
+				consumer_goods_factor = -0.02
+				production_speed_industrial_complex_factor = 0.03 
+			}
+		}
+
+		YAN_Kudakelasi_loterijen_2 = {
+			allowed = {
+				always = yes
+			}
+			allowed_civil_war = {
+				always = no
+			}
+			#picture
+			modifier = {
+				consumer_goods_factor = -0.05
+				production_speed_industrial_complex_factor = 0.05
+				global_building_slots_factor = 0.05
+				production_speed_buildings_factor = 0.025
+			}
+		}
+
+	}
+
+
+	
+
+}

@@ -1,0 +1,6051 @@
+
+###Lines : 
+###Intial Tree Starts at Line 7, Military at 213, Loterijen at 914, Sane Kudakelasi at 2204
+
+###INTIAL TREE###
+shared_focus = {
+	id = YAN_solid_chaos
+	icon = GFX_focus_generic_support_the_left_right
+	x = 15
+	y = 0
+	cost = 5
+
+	ai_will_do = {
+		factor = 100
+	}
+
+	available_if_capitulated = yes
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus YAN_solid_chaos"
+		add_stability = 0.05
+		add_political_power = 50
+		hidden_effect = {
+			country_event = { id = YAN_intro.1 days = 2}
+			country_event = { id = YAN_intro.2 days = 14}
+			country_event = { id = YAN_intro.3 days = 29}
+			country_event = { id = YAN_intro.4 days = 45}
+		}
+	}
+}
+
+shared_focus = {
+	id = YAN_calm_revoltists
+	icon = GFX_focus_generic_diplomatic_treaty
+	x = 13
+	y = 1
+	cost = 5
+
+	available_if_capitulated = yes
+
+	prerequisite = {
+		focus = YAN_solid_chaos
+	}
+
+
+	ai_will_do = {
+		factor = 100
+	}
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus YAN_calm_revoltists"
+		swap_ideas = {
+			remove_idea = YAN_angery3
+			add_idea = YAN_angery2
+		}
+	}
+}
+
+shared_focus = {
+	id = YAN_gather_forces
+	icon = GFX_goal_generic_military_sphere
+	x = 15
+	y = 1
+	cost = 5
+
+	available_if_capitulated = yes
+
+
+	ai_will_do = {
+		factor = 100
+	}
+
+	prerequisite = {
+		focus = YAN_solid_chaos
+	}
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus YAN_gather_forces"
+		add_manpower = 50000
+		#add_equipment
+	}
+}
+
+shared_focus = {
+	id = YAN_powers_of_governor
+	icon = GFX_goal_tripartite_pact
+	x = 17
+	y = 1
+	cost = 5
+
+	available_if_capitulated = yes
+
+
+	ai_will_do = {
+		factor = 100
+	}
+
+	prerequisite = {
+		focus = YAN_solid_chaos
+	} 
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus YAN_powers_of_governor"
+		FEA = {	country_event = Indozeeb.3	}
+	}
+}
+
+shared_focus = {
+	id = YAN_industrial_spending
+	icon = GFX_goal_generic_construct_civ_factory
+	x = 13
+	y = 2
+	cost = 5
+
+	available_if_capitulated = yes
+
+
+	ai_will_do = {
+		factor = 100
+	}
+
+	prerequisite = {
+		focus = YAN_calm_revoltists
+	}
+
+	prerequisite = {
+		focus = YAN_gather_forces
+	}
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus YAN_industrial_spending"
+		random_owned_controlled_state = {
+			limit = {
+				free_building_slots = {
+					building = industrial_complex
+					size > 1
+					include_locked = yes
+				}
+				is_core_of = ROOT
+			}
+			add_extra_state_shared_building_slots = 2
+			add_building_construction = {
+				type = industrial_complex
+				level = 1
+				instant_build = yes
+			}
+		}
+		random_owned_controlled_state = {
+			limit = {
+				free_building_slots = {
+					building = industrial_complex
+					size > 1
+					include_locked = yes
+				}
+				is_core_of = ROOT
+			}
+			add_extra_state_shared_building_slots = 2
+			add_building_construction = {
+				type = industrial_complex
+				level = 1
+				instant_build = yes
+			}
+		}
+
+	}
+}
+
+shared_focus = {
+	id = YAN_gathersupport
+	icon = GFX_goal_generic_national_unity
+	x = 15
+	y = 2
+	cost = 5
+
+	available_if_capitulated = yes 
+
+	prerequisite = {
+		focus = YAN_gather_forces
+	}
+
+	mutually_exclusive = {
+		focus = YAN_gethelp
+	}
+
+
+	ai_will_do = {
+		factor = 99
+	}
+
+	prerequisite = {
+		focus = YAN_powers_of_governor
+	}
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: focus YAN_gathersupport"
+		add_stability = 0.10
+		add_political_power = 75
+		add_popularity = { ideology = neutrality popularity = 0.15}
+
+	}
+}
+
+shared_focus = {
+	id = YAN_gethelp
+	icon = GFX_goal_continuous_def_against_influence
+	x = 17 
+	y = 2
+	cost = 7
+
+	ai_will_do = {
+		factor = 100
+	}
+
+	available_if_capitulated = yes
+	prerequisite = {
+		focus = YAN_gather_forces
+	}
+	mutually_exclusive = {
+		focus = YAN_gathersupport
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: focus YAN_gethelp"
+		country_event = { id = Indozeeb.50 days = 7 }
+	}
+
+}
+
+shared_focus = {
+	id = YAN_dire_news
+	icon = GFX_focus_renounce_the_treaty_of_triannon
+	x = 15
+	y = 3
+	cost = 0
+
+	available_if_capitulated = yes
+
+
+	ai_will_do = {
+		factor = 100
+	}
+
+	prerequisite = {
+		focus = YAN_industrial_spending
+	}
+	prerequisite = {
+		focus = YAN_gathersupport
+		focus = YAN_gethelp
+	}
+
+	available = {
+			
+		OR = {
+			GRI = { has_completed_focus = GRI_eagleclaw }
+			GRI = { has_completed_focus = GRI_eros }
+		}
+			
+	}
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus YAN_dire_news"
+		country_event = Indozeeb.2
+		swap_ideas = {
+			remove_idea = YAN_angery2
+			add_idea = YAN_angery5
+		}
+	}
+}
+
+##Generic Military Tree#################
+#######################################
+###########################################
+###########################################
+###########################################
+###########################################
+###########################################
+###########################################
+###########################################
+###########################################
+###########################################
+###########################################
+###########################################
+shared_focus = {
+	id = YAN_starting_army
+	#icon = 
+	x = 35
+	y = 0
+	cost = 5
+
+	available_if_capitulated = yes
+
+	ai_will_do = {
+		factor = 130
+	}
+
+	completion_reward = {
+
+	}
+}
+
+shared_focus = {
+	id = YAN_army1 #Question of doctrine? 
+	#icon = 
+	x = 35 
+	y = 1
+	cost = 3 
+
+	prerequisite = {
+		focus = YAN_starting_army
+	}
+
+	available_if_capitulated = yes
+
+	ai_will_do = {
+		factor = 131
+	}
+
+	completion_reward = {
+
+	}
+
+}
+
+shared_focus = {
+	id = YAN_doc1 #Mob.War
+	#icon = 
+	x = 32
+	y = 2
+	cost = 5
+	available_if_capitulated = yes
+
+	ai_will_do = {
+		factor = 135
+	}
+
+	prerequisite = {
+		focus = YAN_army1
+	}
+
+	mutually_exclusive = {focus = YAN_doc2 }
+
+	mutually_exclusive = {focus = YAN_doc3 }
+
+	mutually_exclusive = {focus = YAN_doc4 }
+
+
+	completion_reward = {
+
+	}
+}
+
+shared_focus = {
+	id = YAN_doc2 #Superior Firepower
+	#icon = 
+	x = 34
+	y = 2
+	cost = 5
+	available_if_capitulated = yes 
+
+	ai_will_do = {
+		factor = 130
+	}
+
+	prerequisite = {
+		focus = YAN_army1
+	}
+
+	mutually_exclusive = {focus = YAN_doc1 }
+
+	mutually_exclusive = {focus = YAN_doc3 }
+
+	mutually_exclusive = {focus = YAN_doc4 }
+
+	completion_reward = {
+
+	}
+}
+
+shared_focus = {
+	id = YAN_doc3 #Grand Plan
+	#icon = 
+	x = 36
+	y = 2
+	cost = 5
+	available_if_capitulated = yes 
+
+	ai_will_do = {
+		factor = 130
+	}
+
+
+	prerequisite = {
+		focus = YAN_army1
+	}
+
+	mutually_exclusive = {focus = YAN_doc1 }
+
+	mutually_exclusive = {focus = YAN_doc2 }
+
+	mutually_exclusive = {focus = YAN_doc4 }
+
+
+	completion_reward = {
+
+	}
+}
+
+shared_focus = {
+	id = YAN_doc4 #MASS
+	#icon = 
+	x = 38
+	y = 2
+	cost = 5
+	available_if_capitulated = yes 
+
+	ai_will_do = {
+		factor = 130
+	}
+
+	prerequisite = {
+		focus = YAN_army1
+	}
+
+	mutually_exclusive = {focus = YAN_doc1 }
+
+	mutually_exclusive = {focus = YAN_doc2 }
+
+	mutually_exclusive = {focus = YAN_doc3}
+
+	
+	completion_reward = {
+
+	}
+}
+
+##Left Side
+
+shared_focus = {
+	id = YAN_army2
+	#icon = 
+	x = 30
+	y = 2
+	cost = 5
+
+	prerequisite = {
+		focus = YAN_army1
+	}
+
+	completion_reward = {
+
+	}
+}
+
+shared_focus = {
+	id = YAN_army3
+	#icon = 
+	x = 30 
+	y = 3
+	cost = 5
+
+	prerequisite = {
+		focus = YAN_army2
+	}
+
+	completion_reward = {
+
+	}
+}
+
+shared_focus = {
+	id = YAN_army4
+	#icon = 
+	x = 31
+	y = 4
+	cost = 5
+
+	prerequisite = {
+		focus = YAN_army3 focus = YAN_army_c1
+	}
+
+	completion_reward = {
+
+	}
+}
+
+##Right Side
+
+shared_focus = {
+	id = YAN_army_l1
+	#icon = 
+	x = 40
+	y = 2
+	cost = 5
+
+	prerequisite = {
+		focus = YAN_army1 
+	}
+
+	completion_reward = {
+
+	}
+}
+
+shared_focus = {
+	id = YAN_army_l2
+	#icon = 
+	x = 40
+	y = 3
+	cost = 5
+
+	prerequisite = {
+		focus = YAN_army_l1
+	}
+
+	completion_reward = {
+
+	}
+}
+
+shared_focus = {
+	id = YAN_army_l3
+	#icon = 
+	x = 39
+	y = 4
+	cost = 5
+
+	prerequisite = {
+		focus = YAN_army_l2 focus = YAN_army_c3
+	}
+
+	completion_reward = {
+
+	}
+}
+
+##Central
+
+shared_focus = {
+	id = YAN_army_c1
+	#icon = 
+	x = 33
+	y = 3
+	cost = 5
+
+	prerequisite = {
+		focus = YAN_doc1 focus = YAN_doc2 focus = YAN_doc3 focus = YAN_doc4
+	}
+
+	completion_reward = {
+
+	}
+}
+
+shared_focus = {
+	id = YAN_army_c2
+	#icon = 
+	x = 35
+	y = 3
+	cost = 5
+
+	prerequisite = {
+		focus = YAN_doc1 focus = YAN_doc2 focus = YAN_doc3 focus = YAN_doc4		
+	}
+
+	completion_reward = {
+
+	}
+}
+
+shared_focus = {
+	id = YAN_army_c3
+	#icon = 
+	x = 37
+	y = 3
+	cost = 5
+
+	prerequisite = {
+		focus = YAN_doc1 focus = YAN_doc2 focus = YAN_doc3 focus = YAN_doc4		
+	}
+
+	completion_reward = {
+
+	}
+
+}
+
+##Final Line. 
+
+shared_focus = {
+	id = YAN_central_army
+	#icon = 
+	x = 35
+	y = 4
+	cost = 5
+
+	prerequisite = {
+		focus = YAN_army_c1 focus = YAN_army_c2 focus = YAN_army_c3
+	}
+
+	completion_reward = {
+
+	}
+}
+
+
+##Navy Tree##
+shared_focus = {
+	id = YAN_navy_start
+	#icon = 
+	x = 45
+	y = 0
+	cost = 10
+
+	completion_reward = {
+
+	}
+}
+
+shared_focus = {
+	id = YAN_navy_1_l #Subs?
+	#icon =  
+	x = 43
+	y = 1
+	cost = 7
+
+	prerequisite = {
+		focus = YAN_navy_start
+	}
+
+	mutually_exclusive = { focus = YAN_navy_1_r }
+
+	completion_reward = {
+
+	}
+}
+
+shared_focus = {
+	id = YAN_navy_1_r #Offensive-ish, like big ships
+	#icon = 
+	x = 47
+	y = 1
+	cost = 7
+
+	prerequisite = {
+		focus = YAN_navy_start
+	}
+
+	mutually_exclusive = { focus = YAN_navy_1_l }
+
+	completion_reward = {
+
+	}
+}
+
+shared_focus = {
+	id = YAN_navy2
+	#icon = 
+	x = 43
+	y = 2
+	cost = 7
+
+	prerequisite = { focus = YAN_navy_1_r  focus = YAN_navy_1_l}
+
+	completion_reward = {
+
+	}
+}
+
+shared_focus = {
+	id = YAN_navy3 #Something about Marines
+	#icon = 
+	x = 45
+	y = 2
+	cost = 7
+
+	prerequisite = { focus = YAN_navy_1_r  focus = YAN_navy_1_l}
+
+	completion_reward = {
+		
+	}
+}
+
+shared_focus = {
+	id = YAN_navy4
+	#icon = 
+	x = 47
+	y = 2
+	cost = 7
+
+	prerequisite = { focus = YAN_navy_1_r  focus = YAN_navy_1_l}
+
+	completion_reward = {
+		
+	}
+}
+
+shared_focus = {
+	id = YAN_navy5
+	#icon = 
+	x = 43
+	y = 3
+
+	cost = 10
+
+	prerequisite = {
+		focus = YAN_navy2
+	}
+
+	completion_reward = {
+
+	}
+}
+
+shared_focus = {
+	id = YAN_navy6
+	#icon = 
+	x = 45
+	y = 3
+
+	cost = 10
+
+	prerequisite = {
+		focus = YAN_navy3
+	}
+
+	completion_reward = {
+
+	}
+}
+
+shared_focus = {
+	id = YAN_navy7
+	#icon = 
+	x = 47
+	y = 3
+
+	cost = 10
+
+	prerequisite = {
+		focus = YAN_navy4
+	}
+
+	completion_reward = {
+
+	}
+}
+
+shared_focus = {
+	id = YAN_navy8
+	#icon = 
+	x = 43
+	y = 4
+	cost = 10
+
+	prerequisite = {
+		focus = YAN_navy5
+	}
+
+
+
+	completion_reward = {
+
+	}
+}
+
+shared_focus = {
+	id = YAN_navy9
+	#icon = 
+	x = 45
+	y = 4
+	cost = 10
+
+	prerequisite = {
+		focus = YAN_navy6
+	}
+
+	
+
+	completion_reward = {
+
+	}
+}
+
+shared_focus = {
+	id = YAN_navy10
+	#icon = 
+	x = 47
+	y = 4
+	cost = 10
+
+	prerequisite = {
+		focus = YAN_navy7
+	}
+
+	
+
+	completion_reward = {
+
+	}
+}
+
+shared_focus = {
+	id = YAN_navy11
+	#icon = 
+	x = 43
+	y = 5
+	cost = 10
+
+	prerequisite = {
+		focus = YAN_navy8
+		focus = YAN_navy10
+	}
+
+	mutually_exclusive = {
+		focus = YAN_navy12
+	}
+
+	completion_reward = {
+
+	}
+}
+
+shared_focus = {
+	id = YAN_navy12
+	#icon = 
+	x = 47
+	y = 5
+	cost = 10
+
+	prerequisite = {
+		focus = YAN_navy8
+		focus = YAN_navy10
+	}
+
+	mutually_exclusive = {
+		focus = YAN_navy11
+	}
+
+	completion_reward = {
+
+	}
+}
+
+##Air Force Tree##
+shared_focus = {
+	id = YAN_air1
+	#icon = 
+	x = 51
+	y = 0
+	cost = 7
+
+	completion_reward = {
+
+	}
+}
+
+shared_focus = {
+	id = YAN_air2
+	#icon = 
+	x = 50
+	y = 1
+	cost = 7
+
+	mutually_exclusive = {
+		focus = YAN_air3
+	}
+
+	prerequisite = {
+		focus = YAN_air1
+	}
+
+	completion_reward = {
+
+	}
+}
+
+shared_focus = {
+	id = YAN_air3
+	#icon = 
+	x = 52
+	y = 1
+	cost = 7 
+
+	mutually_exclusive = {
+		focus = YAN_air2
+	}
+
+	prerequisite = {
+		focus = YAN_air1
+	}
+
+	completion_reward = {
+
+	}
+}
+
+shared_focus = {
+	id = YAN_air4
+	#icon = 
+	x = 50
+	y = 2
+	cost = 7
+
+	prerequisite = {
+		focus = YAN_air2 focus = YAN_air3
+	}
+
+	completion_reward = {
+
+	}
+}
+
+shared_focus = {
+	id = YAN_air5
+	#icon = 
+	x = 50
+	y = 3
+	cost = 7
+
+	prerequisite = {
+		focus = YAN_air4
+	}
+
+	completion_reward = {
+
+	}
+}
+
+shared_focus = {
+	id = YAN_air6
+	#icon = 
+	x = 52
+	y = 2
+	cost = 7
+
+	prerequisite = {
+		focus = YAN_air2 focus = YAN_air3		
+	}
+
+	completion_reward = {
+
+	}
+}
+
+shared_focus = {
+	id = YAN_air7
+	#icon = 
+	x = 52
+	y = 3
+	cost = 7
+
+	prerequisite = {
+		focus = YAN_air6
+	}
+
+	completion_reward = {
+
+	}
+}
+
+shared_focus = {
+	id = YAN_8
+	#icon =
+	x = 51
+	y = 4
+	cost = 7
+
+	prerequisite = {
+		focus = YAN_air5 focus = YAN_air7
+	}
+
+	completion_reward = {
+
+	}
+}
+
+
+
+
+##LOTERIJEN TREE############################
+###########################################
+###########################################################################################################################################################################################################################################################################################################################################################################################################################################################################################################################################################################################################################################################################################################################################################
+
+shared_focus = {
+	id = YAN_loterijen_power_Archive
+	icon = GFX_goal_generic_neutrality_focus
+	x = 15
+	y = 0
+	cost = 0
+
+	available_if_capitulated = yes
+
+
+	bypass = {
+		has_country_flag = loterijen_paradise
+	}
+
+	ai_will_do = {
+		factor = 150
+	}
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus YAN_loterijen_power"
+		add_political_power = 50
+	}
+}
+
+
+############################################
+############################################
+##############Kudakelasi####################
+######################TREE##################
+############################################
+############################################
+
+shared_focus = {
+	id = YAN_great_game 
+	#icon = 
+	x = 15
+	y = 0 
+	cost = 5
+
+	ai_will_do = {
+		factor = 150
+	}
+
+	select_effect = {
+		hidden_effect = {
+			country_event = { id = Indozeeb.50 days = 10 }
+		}
+	}
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: focus YAN_great_game"
+		add_political_power = 50
+
+		country_event = { id = Indozeeb.51 hours = 6 }
+		
+	}
+}
+
+shared_focus = {
+	id = YAN_the_idiots
+	#icon = 
+	x = 17
+	y = 1
+	cost = 1
+
+	ai_will_do = {
+		factor = 149
+	}
+
+	prerequisite = {
+		focus = YAN_great_game
+	}
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: focus YAN_the_idiots"
+		country_event = { id = Indozeeb.52 hours = 6 }
+	}
+}
+
+shared_focus = {
+	id = YAN_the_sistem
+	#icon = 
+	x = 15
+	y = 1
+	cost = 1
+
+	ai_will_do = {
+		factor = 149
+	}
+
+	prerequisite = {
+		focus = YAN_great_game
+	}
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: focus YAN_the_sistem"
+		country_event = { id = Indozeeb.53 hours = 6 }
+	}
+}
+
+shared_focus = {
+	id = YAN_the_populace
+	#icon = 
+	x = 13
+	y = 1
+	cost = 1
+
+	ai_will_do = {
+		factor = 149
+	}
+
+	prerequisite = {
+		focus = YAN_great_game
+	}
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: focus YAN_the_populace"
+		country_event = { id = Indozeeb.54 hours = 6 }
+	}
+}
+
+shared_focus = {
+	id = YAN_the_trains ##The Trains must run on time!!
+	#icon = 
+	x = 15 
+	y = 2
+	cost = 10
+
+	ai_will_do = {
+		factor = 148
+	}
+
+	prerequisite = {
+		focus = YAN_the_idiots
+	}
+	prerequisite = {
+		focus = YAN_the_sistem
+	}
+	prerequisite = {
+		focus = YAN_the_populace
+	}
+
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: focus YAN_the_trains"
+		country_event = Indozeeb.55
+	}
+}
+
+############Industrial path
+
+shared_focus = {
+	id = YAN_Family_interests
+	#icon = 
+	x = 19
+	y = 3
+	cost = 3
+
+	ai_will_do = {
+		factor = 140
+	}
+
+	prerequisite = {
+		focus = YAN_the_trains
+	}
+
+	completion_reward = {
+		log = "[GetDateText]:[Root.GetName]: focus YAN_Family_interests"
+		add_ideas = YAN_kudakelasi_family
+	}
+}
+
+shared_focus = {
+	id = YAN_buyup_small_bis
+	#icon = 
+	x = 18
+	y = 4
+	cost = 8 
+
+	ai_will_do = {
+		factor = 139
+	}
+
+	prerequisite = {
+		focus = YAN_Family_interests
+	}
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: focus YAN_buyup_small_bis"
+		1157 = {
+			add_extra_state_shared_building_slots = 2
+			add_building_construction = {
+				type = industrial_complex
+				level = 2
+				instant_build = yes
+			}
+		}
+	}
+}
+
+shared_focus = {
+	id = YAN_targeted_marketing
+	#icon = 
+	x = 20
+	y = 4
+	cost = 8
+
+	ai_will_do = {
+		factor = 139
+	}
+
+	prerequisite = {
+		focus = YAN_Family_interests
+	}
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: focus YAN_targeted_marketing"
+		add_popularity = {
+			ideology = democratic
+			popularity = 0.10
+		}
+		add_popularity = {
+			ideology = neutrality
+			popularity = 0.03
+		}
+	}
+}
+
+shared_focus = {
+	id = YAN_price_wars
+	#icon = 
+	x = 17 
+	y = 5
+	cost = 10
+
+	ai_will_do = {
+		factor = 138 
+	}
+
+	prerequisite = {
+		focus = YAN_buyup_small_bis
+	}
+
+
+	select_effect = {
+		hidden_effect = {
+			country_event = { id = Indozeeb.56 days = 5 }
+		}
+	}
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: focus YAN_price_wars"
+		##Something about Kudakelasi's faction gaining more support as they slash prices and Loterijen's and Semuakawan's begin deteiorating
+		##Add Decision to launch price wars in the future
+		if = {
+			limit = {
+				has_country_flag = YAN_event_56_check
+			}
+			country_event = { id = Indozeeb.57 hours = 6 }
+		}
+		else = {
+			country_event = { id = Indozeeb.56 hours = 6 }
+		}
+	}
+}
+
+shared_focus = {
+	id = YAN_lift_restrictions
+	#icon = 
+	x = 19
+	y = 5
+	cost = 10
+
+	ai_will_do = {
+		factor = 138
+	}
+
+	prerequisite = {
+		focus = YAN_buyup_small_bis
+		focus = YAN_targeted_marketing
+	}
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: focus YAN_lift_restrictions"
+		1156 = {
+			add_building_construction = {
+				type = industrial_complex
+				level = 2
+				instant_build = yes
+			}		
+		}
+		1155 = {
+			add_building_construction = {
+				type = industrial_complex
+				level = 1
+				instant_build = yes
+			}
+		}
+	}
+}
+
+shared_focus = {
+	id = YAN_scandals
+	#icon = 
+	x = 21
+	y = 5
+	cost = 9 
+
+	ai_will_do = {
+		factor = 138
+	}
+
+	prerequisite = {
+		focus = YAN_targeted_marketing
+	}
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: focus YAN_scandals"
+		custom_effect_tooltip = YAN_decrease_sistem
+		1157 = {
+			remove_building = { type = arms_factory  level = 1 }
+		}
+		add_popularity = {
+			ideology = neutrality
+			popularity = -0.05
+		}
+		YAN_sistem_min = yes
+
+		
+	}
+}
+
+shared_focus = {
+	id = YAN_like_kelp 
+	#icon = 
+	x = 19
+	y = 6
+	cost = 10
+
+	ai_will_do = {
+		factor = 137
+	}
+
+	prerequisite = {
+		focus = YAN_price_wars
+	}
+	prerequisite = {
+		focus = YAN_lift_restrictions
+	}
+	prerequisite = {
+		focus = YAN_scandals
+	}
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: focus YAN_like_kelp"
+		##You know that Swordfish in Sicameon? Yeah this is something like that. But instead of like them. This is through shell companies. Add National Spirit, probably event as well
+		1160 = {
+			add_building_construction = {
+				type = infrastructure
+				level = 3
+				instant_build = yes
+			}	
+		}
+		1159 = {
+			add_building_construction = {
+				type = industrial_complex
+				level = 1
+				instant_build = yes
+			}	
+		}
+		add_stability = 0.05
+		custom_effect_tooltip = YAN_decrease_sistem
+		custom_effect_tooltip = YAN_increase_movement
+		custom_effect_tooltip = YAN_increase_populace
+		YAN_sistem_min = yes
+		YAN_independence_add = yes
+		YAN_populace_add = yes
+
+
+	}
+}
+
+shared_focus = {
+	id = YAN_reshuffle_the_board
+	#icon = 
+	x = 19
+	y = 7 
+	cost = 2
+
+	ai_will_do = {
+		factor = 136
+	}
+
+	select_effect = {
+		hidden_effect = {
+			country_event = { id = Indozeeb.58 days = 3 }
+		}
+	}
+
+	prerequisite = {
+		focus = YAN_like_kelp
+	}
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: focus YAN_reshuffle_board"
+
+			if = {
+				limit = {
+					has_country_flag = YAN_event_58_check
+				}
+				country_event = { id = Indozeeb.59 hours = 6 }
+			}
+			else = {
+				country_event = { id = Indozeeb.58 hours = 6 }
+			}
+	}
+}
+
+shared_focus = {
+	id = YAN_a_leak
+	#icon = 
+	x = 18
+	y = 8 
+	cost = 10
+
+	ai_will_do = {
+		factor = 135
+	}
+
+	prerequisite = {
+		focus = YAN_reshuffle_the_board
+	}
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: focus YAN_a_leak"
+		##So sad, some other lineage's drug trade has been leaked, very sad. Add event
+		set_country_flag = YAN_business_kuda_check_1
+		custom_effect_tooltip = YAN_a_leak_tt
+	}
+}
+
+shared_focus = {
+	id = YAN_a_direction
+	#icon = 
+	x = 20 
+	y = 8
+	cost = 3
+
+	ai_will_do = {
+		factor = 135
+	}
+
+	prerequisite = {
+		focus = YAN_reshuffle_the_board
+	}
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: focus YAN_a_direction"
+		##"Huh, why is money disappearing in this certain area?"
+		set_country_flag = YAN_business_kuda_check_2
+		custom_effect_tooltip = YAN_a_direction_tt
+	}
+}
+
+
+##Democratic side of Kudakelasi's tree, focused on the Volksraad
+
+shared_focus = {
+	id = YAN_the_volksraad
+	#icon = 
+	x = 10
+	y = 3
+	cost = 7
+
+	ai_will_do = {
+		factor = 147
+	}
+
+	prerequisite = {
+		focus = YAN_the_trains
+	}
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: focus YAN_the_volksraad"
+		country_event = { id = Indozeeb.64 hours = 6 }
+	}
+}
+
+##Right side of Volksraad tree should be focused on combating predujice against natives
+
+shared_focus = {
+	id = YAN_overturn_limits 
+	#icon = 
+	x = 11
+	y = 4
+	cost = 5
+
+	ai_will_do = {
+		factor = 146
+	}
+
+	prerequisite = {
+		focus = YAN_the_volksraad
+	}
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: focus YAN_overturn_limits"
+		##Make it so more natives, immigrants can get into the Volksraad
+		custom_effect_tooltip = YAN_increase_populace
+		custom_effect_tooltip = YAN_increase_movement
+		custom_effect_tooltip = YAN_decrease_sistem
+
+		YAN_independence_add = yes
+		YAN_populace_add = yes
+		YAN_sistem_min = yes
+
+		add_stability = 0.05
+		add_political_power = 50
+	}
+}
+
+shared_focus = {
+	id = YAN_redraw_borders
+	#icon = 
+	x = 11
+	y = 5 
+	cost = 15
+
+	ai_will_do = {
+		factor = 200
+	}
+
+	prerequisite = {
+		focus = YAN_overturn_limits
+	}
+
+	available = {
+		has_political_power > 100
+	}
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: focus YAN_redraw_borders"
+		##Series of events about Kudakelasi hriign a guy to survey the borders and make a better one?
+		swap_ideas = {
+			remove_idea = YAN_shit_paperwork2
+			add_idea = YAN_shit_paperwork3
+		}
+	}
+
+}
+
+shared_focus = {
+	id = YAN_fix_bureaucracy
+	#icon = 
+	x = 11 
+	y = 6
+	cost = 10
+
+	ai_will_do = {
+		factor = 150
+	}
+
+	prerequisite = {
+		focus = YAN_redraw_borders
+	}
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: focus YAN_fix_bureaucracy"
+		##Title says it all
+		custom_effect_tooltip = YAN_increase_populace
+		custom_effect_tooltip = YAN_decrease_sistem
+
+		YAN_sistem_min = yes
+		YAN_populace_add = yes
+		swap_ideas = {
+			remove_idea = YAN_shit_paperwork3
+			add_idea = YAN_shit_paperwork4
+		}
+	}
+}
+
+shared_focus = {
+	id = YAN_mandated_tests
+	#icon = 
+	x = 11 
+	y = 7
+	cost = 5
+
+	ai_will_do = {
+		factor = 149
+	}
+
+	prerequisite = {
+		focus = YAN_fix_bureaucracy
+	}
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: focus YAN_mandated_tests"
+		remove_ideas = YAN_shit_paperwork4
+		custom_effect_tooltip = YAN_increase_populace
+		custom_effect_tooltip = YAN_decrease_sistem
+
+		YAN_sistem_min = yes
+		YAN_populace_add = yes
+	}
+}
+
+
+shared_focus = {
+	id = YAN_matter_of_citizenship
+	#icon = 
+	x = 14
+	y = 4
+	cost = 3
+
+	ai_will_do = {
+		factor = 146
+	}
+
+	prerequisite = {
+		focus = YAN_the_volksraad 
+	}
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: focus YAN_matter_of_citizenship"
+		##Generic pick one option, jus sanguinius, jus soli, and Naturalization 
+		country_event = { id = Indozeeb.65 days = 4}
+	}
+}
+
+shared_focus = {
+	id = YAN_naturalization
+	#icon = 
+	x = 13
+	y = 5
+	cost = 9
+
+	ai_will_do = {
+		factor = 145
+	}
+
+	prerequisite = {
+		focus = YAN_matter_of_citizenship
+	}
+
+	mutually_exclusive = {focus = YAN_sanguinius}
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: focus YAN_naturalization"
+
+		##You pick the naturalization option, that after some time people will become Citizens - have it take time over some years so more availbale soldiers, and stability
+	}
+}
+
+shared_focus = {
+	id = YAN_sanguinius
+	#icon = 
+	x = 15 
+	y = 5
+	cost = 9
+
+	ai_will_do = {
+		factor = 145
+	}
+
+	prerequisite = {
+		focus = YAN_matter_of_citizenship
+	}
+
+	mutually_exclusive = {focus = YAN_naturalization}
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: focus YAN_sanguinius"
+		##You pick the instant citizenship option, instant all citizenship, but with an intelligence cost
+	}
+}
+
+shared_focus = {
+	id = YAN_encourage_expression
+	#icon = 
+	x = 14 
+	y = 6
+	cost = 6
+
+	ai_will_do = {
+		factor = 144
+	}
+
+	prerequisite = {
+		focus = YAN_naturalization
+		focus = YAN_sanguinius
+	}
+
+	available = {
+		has_completed_focus = YAN_freedom_of_press
+	}
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: focus YAN_encourage_expression"
+		custom_effect_tooltip = YAN_decrease_sistem
+		custom_effect_tooltip = YAN_increase_populace
+		custom_effect_tooltip = YAN_increase_movement
+
+		YAN_independence_add = yes
+		YAN_populace_add = yes
+		YAN_sistem_min = yes
+
+		add_ideas = YAN_free_speech
+		set_country_flag = YAN_free_speech_check
+	}
+}
+
+shared_focus = {
+	id = YAN_free_elections
+	#icon = 
+	x = 13
+	y = 8
+	cost = 10
+
+	ai_will_do = {
+		factor = 143
+	}
+
+	prerequisite = {
+		focus = YAN_encourage_expression
+	}
+	prerequisite = {
+		focus = YAN_redraw_borders
+	}
+
+	prerequisite = {
+		focus = YAN_limit_governor_powers
+	}
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: focus YAN_free_elections"
+		##Add Stability and make Kudakelasi's clique more powerful
+		set_country_flag = YAN_election_kuda_check
+		country_event = { id = Indozeeb.65 days = 5 }
+	}
+}
+
+##Left side is about making laws
+shared_focus = {
+	id = YAN_adapting_laws 
+	#icon = 
+	x = 9 
+	y = 4
+	cost = 3
+
+	ai_will_do = {
+		factor = 146
+	}
+
+	prerequisite = {
+		focus = YAN_the_volksraad
+	}
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: focus YAN_adapting_laws"
+		add_stability = 0.1
+		add_political_power = -50
+		custom_effect_tooltip = YAN_decrease_sistem
+		custom_effect_tooltip = YAN_increase_populace
+		custom_effect_tooltip = YAN_increase_movement
+
+		YAN_independence_add = yes
+		YAN_populace_add = yes
+		YAN_sistem_min = yes
+	}
+}
+
+shared_focus = {
+	id = YAN_law_protect_people
+	#icon = 
+	x = 9 
+	y = 5
+	cost = 10
+
+	ai_will_do = {
+		factor = 145
+	}
+
+	prerequisite = {
+		focus = YAN_adapting_laws
+	}
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: focus YAN_law_protect_people"
+		custom_effect_tooltip = YAN_decrease_sistem
+		custom_effect_tooltip = YAN_increase_populace
+		YAN_populace_add = yes
+		YAN_sistem_min = yes
+		
+		add_ideas = YAN_rights
+
+	}
+}
+
+shared_focus = {
+	id = YAN_freedom_of_press
+	#icon = 
+	x = 7 
+	y = 6
+	cost = 5
+
+	ai_will_do = {
+		factor = 144
+	}
+
+	available = {
+		has_completed_focus = YAN_law_protect_people
+	}
+
+	prerequisite = {
+		focus = YAN_law_protect_people
+	}
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: focus YAN_freedom_of_press"
+		swap_ideas = {
+			remove_idea = YAN_rights
+			add_idea = YAN_rights2
+		}
+		YAN_populace_add = yes
+		YAN_sistem_min = yes
+		##of course, back during the Colonial Days, the Dutch would silent critics and throw them into exile. This focus is probably gonna take form as a national spirit to show that free press is protected. (But of course, even if it's free, they might still be scared.)
+	}
+}
+
+shared_focus = {
+	id = YAN_allow_youth_organizations
+	#icon - 
+	x = 9
+	y = 6
+	cost = 5 
+
+	ai_will_do = {
+		factor = 144
+	}
+
+	prerequisite = {
+		focus = YAN_law_protect_people
+	}
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: focus YAN_allow_youth_organizations"
+		##PRAMUKA< REEEEEEEEEEEEEE (National Spirit btw)
+		add_ideas = YAN_youth_org
+		custom_effect_tooltip =  YAN_decrease_sistem 
+		custom_effect_tooltip = YAN_increase_movement 
+		YAN_sistem_min = yes
+		YAN_independence_add = yes
+	}
+}
+
+shared_focus = {
+	id = YAN_limit_governor_powers
+	#icon = 
+	x = 8 
+	y = 7
+	cost = 15
+
+	ai_will_do = {
+		factor = 150
+	}
+
+	prerequisite = {
+		focus = YAN_freedom_of_press
+	}
+
+	select_effect = {
+		hidden_effect = {
+			country_event = { id = Indozeeb.67 days = 3}
+		}
+	}
+
+	prerequisite = {
+		focus = YAN_allow_youth_organizations
+	}
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: YAN_limit_governor_powers"
+		if = {
+			limit = {
+				has_country_flag = YAN_event_67_check
+			}
+			country_event = { id = Indozeeb.70 days = 3}
+		}
+		else = {
+			country_event = { id = Indozeeb.67 days = 3}
+		}
+	}
+}
+
+###Welfare/Supression Focuses -Kudakelasi ###
+
+shared_focus = {
+	id = YAN_committee_welfare
+	#icon = 
+	x = 26
+	y = 3
+	cost = 5
+
+	ai_will_do = {
+		factor = 140
+	}
+
+	prerequisite = {
+		focus = YAN_the_trains
+	}
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: focus YAN_committee_welfare"
+		country_event = { id = Indozeeb.72 days = 10 }
+		
+	}
+}
+
+shared_focus = {
+	id = YAN_medic_funding
+	#icon = 
+	x = 25
+	y = 4
+	cost = 10
+
+	ai_will_do = {
+		factor = 139
+	}
+
+	prerequisite = {
+		focus = YAN_committee_welfare
+	}
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: focus YAN_medic_funding"
+		##Medical funding
+		add_ideas = YAN_needles
+		add_stability = 0.05
+	}
+}
+
+shared_focus = {
+	id = YAN_vaccine_program
+	#icon = 
+	x = 25 
+	y = 5
+	cost = 7
+
+	ai_will_do = {
+		factor = 138
+	}
+
+	prerequisite = {
+		focus = YAN_medic_funding
+	}
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName}: focus YAN_vaccine_program"
+		add_ideas = YAN_needles2
+		add_manpower = 5000
+		add_stability = 0.05
+	}
+}
+
+shared_focus = {
+	id = YAN_travelling_schools
+	#icon = 
+	x = 27
+	y = 4
+	cost = 5
+
+	ai_will_do = {
+		factor = 139
+	}
+
+	prerequisite = {
+		focus = YAN_committee_welfare
+	}
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: focus YAN_travelling_schools"
+		country_event = { id = Indozeeb.73 hours = 12	}
+	}
+}
+
+shared_focus = {
+	id = YAN_education_efforts
+	#icon = 
+	x = 27
+	y = 5
+	cost = 7
+
+	ai_will_do = {
+		factor = 138
+	}
+
+	prerequisite = {
+		focus = YAN_travelling_schools
+	}
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: focus YAN_education_efforts"
+		country_event = { id = Indozeeb.74 hours = 12 }
+	}
+}
+
+shared_focus = {
+	id = YAN_department_of_welfare
+	#icon = 
+	x = 26 
+	y = 6
+	cost = 10
+
+	ai_will_do = {
+		factor = 137
+	}
+
+	prerequisite = {
+		focus = YAN_education_efforts
+	}
+
+	prerequisite = {
+		focus = YAN_vaccine_program
+	}
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: focus YAN_department_of_welfare"
+		##Add Idea, Kudakelasi pulls enough strings to create such a department under her sister's control
+		add_ideas = YAN_committee
+	}
+}
+
+shared_focus = {
+	id = YAN_welfare_worker
+	#icon = 
+	x = 28
+	y = 8 
+	cost = 7
+
+	ai_will_do = {
+		factor = 136
+	}
+
+	prerequisite = {
+		focus = YAN_department_of_welfare
+	}
+
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: focus_welfare_worker"
+		##Event, Poor Working Zebras that the Movement wants to give protection and compensation
+		add_timed_idea = { idea = YAN_strengthen_rights days = 120 }
+	}
+}
+
+shared_focus = {
+	id = YAN_welfare_crime
+	#icon = 
+	x = 27
+	y = 9
+	cost = 7
+
+	ai_will_do = {
+		factor = 136
+	}
+
+	prerequisite = {
+		focus = YAN_department_of_welfare
+	}
+
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: focus YAN_weflare_crime"
+		##event, High Crime Rate, Admins wants Data Based Policing, Movement wants full police crackdown
+		add_timed_idea = { idea = YAN_strengthen_police days = 120 }
+	}
+}
+
+shared_focus = {
+	id = YAN_welfare_corruption
+	#icon = 
+	x = 26
+	y = 8
+	cost = 7
+	ai_will_do = {
+		factor = 136
+	}
+
+	prerequisite = {
+		focus = YAN_department_of_welfare
+	}
+
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: focus YAN_welfare_corruption "
+		##Corrupt Mayors, Admin wants proper punishments and a usual investigation, movement wants an investigation task force
+		add_timed_idea = { idea = YAN_corruption_crackdown days = 50 }
+	}
+}
+
+shared_focus = {
+	id = YAN_welfare_business
+	#icon = 
+	x = 25
+	y = 9 
+	cost = 7 
+	ai_will_do = {
+		factor = 136
+	}
+
+	prerequisite = {
+		focus = YAN_department_of_welfare
+	}
+
+
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: focus YAN_welfare_cemar"
+		##Businessses failing, Movement wants to subsidize all of them, Admin wants to subsizie some of them only
+		add_timed_idea = { idea = YAN_business_subsidize days = 365 }
+	}
+}
+
+shared_focus = {
+	id = YAN_welfare_drugs
+	#icon = 
+	x = 24
+	y = 8 
+	cost = 7
+	ai_will_do = {
+		factor = 136
+	}
+
+	prerequisite = {
+		focus = YAN_department_of_welfare
+	}
+
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: focus YAN_welfare_drugs"
+		##Drug Epidemic, admin wants a crackdown, movements want a "Say No to Drugs" campaign
+		add_timed_idea = { idea = YAN_drug_crackdown days = 120 }
+	}
+}
+
+shared_focus = {
+	id = YAN_welfare_pulalap
+	#icon = 
+	x = 25
+	y = 9
+	cost = 7 
+	ai_will_do = {
+		factor = 136
+	}
+
+	prerequisite = {
+		focus = YAN_welfare_worker
+	}
+	prerequisite = {
+		focus = YAN_welfare_crime
+	}
+	prerequisite = {
+		focus = YAN_welfare_corruption
+	}
+	prerequisite = {
+		focus = YAN_welfare_drugs
+	}
+	prerequisite = {
+		focus = YAN_welfare_business
+	}
+
+
+	
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: focus YAN_welfare_pulalap"
+		##Admin just wants to dealt the problems from top-down, movement insisits on giving themselves autonomy to fix the problems
+		country_event = { id = Indozeeb.82 days = 5 }
+	}
+
+}
+
+shared_focus = {
+	id = YAN_modernization_campaign
+	#icon = 
+	x = 25
+	y = 10
+	cost = 10
+
+	ai_will_do = {
+		factor = 150 
+	}
+
+	prerequisite = {
+		focus = YAN_welfare_pulalap
+	}
+
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: focus YAN_modernization_campaign"
+		##Out of Outdated, and also gets a temporary effect. 
+		set_country_flag = YAN_welfare_kuda_check
+		remove_ideas = YAN_committee
+		swap_ideas = {
+			remove_idea = big_science_base
+			add_idea = proper_science_base
+		}
+		swap_ideas = {
+			remove_idea = outdated_industry
+			add_idea = modern_society
+		}
+	}
+}
+
+
+
+shared_focus = {
+	id = YAN_governor_election 
+	#icon = 
+	x = 15
+	y = 10
+	cost = 8
+
+	ai_will_do = {
+		factor = 200
+	}
+
+	available = {
+		has_completed_focus = YAN_free_elections 
+	}
+	available = {
+		has_completed_focus = YAN_a_leak
+	}
+	available = {
+		has_completed_focus = YAN_a_direction
+	}
+	available = {
+		has_completed_focus = YAN_modernization_campaign
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: focus YAN_governor_election"
+		##Event that gives a dynamic modifier which depends on Kudakelasi's support among the supporters
+	}
+
+}
+
+
+shared_focus = {
+	id = YAN_greatest_trader
+	#icon = 
+	x = 15 
+	y = 11
+	cost = 5
+
+	ai_will_do = {
+		factor = 200
+	}
+
+	prerequisite = {
+		focus = YAN_governor_election
+	}
+
+	available = {
+		has_country_flag = YAN_business_kuda_check_1
+	}
+	available = {
+		has_country_flag = YAN_business_kuda_check_2
+	}
+	available = {
+		has_country_flag = YAN_election_kuda_check
+	}
+	available = {
+		has_country_flag = YAN_welfare_kuda_check
+	}
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: focus YAN_greatest_trader"
+		load_focus_tree = kudakelasi_governor
+		set_temp_variable = { YANtemp1 = YAN_populace_support_kuda } 
+		multiply_temp_variable = { YANtemp1 = 0.05 }
+		set_variable = { YAN_populace_support_kuda_final = YANtemp1 }
+		set_temp_variable = { YANtemp2 = YAN_sistem_support_kuda } 
+		multiply_temp_variable = { YANtemp2 = 0.05 }
+		set_variable = { YAN_sistem_support_kuda_final = YANtemp2 }
+		set_temp_variable = { YANtemp3 = YAN_independence_support_kuda } 
+		multiply_temp_variable = { YANtemp3 = 0.05 }
+		set_variable = { YAN_independence_support_kuda_final = YANtemp3 }
+	}
+}
+shared_focus = {
+	id = YAN_mistress_of_zebridies
+	#icon = 
+	x = 15 
+	y = 12
+	cost = 5 
+
+	ai_will_do = {
+		factor = 135
+	}
+
+	prerequisite = {
+		focus = YAN_greatest_trader
+	}
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: focus YAN_mistress_of_zebridies"
+		add_stability = 0.05
+		add_dynamic_modifier = {
+			modifier = YAN_Kuda_end_mod
+		}
+	}
+}
+
+shared_focus = {
+	id = YAN_checkmate_loterijen
+	#icon = 
+	x = 14
+	y = 13
+	cost = 9
+
+	ai_will_do = {
+		factor = 134
+	}
+
+	prerequisite = {
+		focus = YAN_mistress_of_zebridies
+	}
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: focus YAN_checkmate_loterijen"
+		#We're retiring Loterijen today!
+		country_event = {
+			id = Indozeeb.85 days = 10
+		}
+	}
+}
+
+shared_focus = {
+	id = YAN_arrest_semuakawan
+	#icon = 
+	x = 16
+	y = 13
+	cost = 3
+
+	ai_will_do = {
+		factor = 134
+	}
+
+	prerequisite = {
+		focus = YAN_mistress_of_zebridies
+	}
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: focus YAN_arrest_semuakawan"
+		country_event = { id = Indozeeb.86 hours = 8 }
+	}
+}
+
+shared_focus = {
+	id = YAN_contact_Feathisia
+	#icon = 
+	x = 15
+	y = 14
+	cost = 10
+
+	ai_will_do = {
+		factor = 133
+	}
+
+	prerequisite = {
+		focus = YAN_checkmate_loterijen
+	}
+	prerequisite = {
+		focus = YAN_arrest_semuakawan
+	}
+
+	bypass = {
+		OR = {	
+			FEA = {
+				exists = no
+			}
+			NOT = {
+				FEA = {
+					has_autonomy_state = autonomy_free
+				}
+			}
+		}
+	}
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: focus YAN_contact_Feathisia"
+		country_event = { id = Indozeeb.87 hours = 6 }
+	}
+
+
+}
+
+shared_focus = {
+	id = YAN_friends_not_subjects
+	#icon = 
+	x = 14
+	y = 16
+	cost = 2
+
+	ai_will_do = {
+		factor = 132
+	}
+
+	mutually_exclusive = {
+		focus = YAN_greater_autonomy
+	}
+
+	prerequisite = {
+		focus = YAN_contact_Feathisia
+	}
+
+	bypass = {
+		OR = {	
+			FEA = {
+				exists = no
+			}
+			NOT = {
+				FEA = {
+					has_autonomy_state = autonomy_free
+				}
+			}
+		}
+	}
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: focus YAN_friends_not_subjects"
+		set_autonomy = {
+			target = YAN
+			autonomy_state = autonomy_free
+		}
+	}
+
+}
+
+shared_focus = {
+	id = YAN_greater_autonomy
+	#icon = 
+	x = 16
+	y = 16
+	cost = 2
+
+	ai_will_do = {
+		factor = 132
+	}
+
+	mutually_exclusive = {
+		focus = YAN_friends_not_subjects
+	}
+
+	prerequisite = {
+		focus = YAN_contact_Feathisia
+	}
+
+	bypass = {
+		OR = {	
+			FEA = {
+				exists = no
+			}
+			NOT = {
+				FEA = {
+					has_autonomy_state = autonomy_free
+				}
+			}
+		}
+	}
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: focus YAN_greater_autonomy"
+		##Oh cool Dominion Status
+		set_autonomy = {
+			target = YAN
+			autonomy_state = dominion
+		}
+	}
+
+}
+
+shared_focus = {
+	id = YAN_looking_outward
+	#icon = 
+	x = 15
+	y = 17
+	cost = 5
+
+	ai_will_do = {
+		factor = 131
+	}
+
+	prerequisite = {
+		focus = YAN_friends_not_subjects
+		focus = YAN_greater_autonomy
+	}
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: focus YAN_looking_outward"
+		IDO = {
+			add_opinion_modifier = {
+				target = YAN
+				modifier = Kuda_begin_diplomacy 
+			}
+		}
+		DEL = {
+			add_opinion_modifier = {
+				target = YAN
+				modifier = Kuda_begin_diplomacy 
+			}		}
+		IST = {
+			add_opinion_modifier = {
+				target = YAN
+				modifier = Kuda_begin_diplomacy 
+			}	
+		}
+		YAN = {
+			add_political_power = 50
+		}
+	}
+}
+
+shared_focus = {
+	id = YAN_our_dear_friends
+	#icon = 
+	x = 15
+	y = 18
+	cost = 2
+
+	ai_will_do = {
+		factor = 130 
+	}
+
+	prerequisite = {
+		focus = YAN_looking_outward
+	}
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: focus YAN_our_dear_friends"
+		##Something about our neighbouring states
+		give_guarantee = IDO
+		give_guarantee = DEL
+		give_guarantee = IST
+	}
+}
+
+shared_focus = {
+	id = YAN_SEZO
+	#icon = 
+	x = 15
+	y = 19
+	cost = 10
+
+	ai_will_do = {
+		factor = 129
+	}
+
+	prerequisite = {
+		focus = YAN_our_dear_friends
+	}
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: focus YAN_SEZO"
+		create_faction = "The_Association_of_South_East_Zebrican_Nations"
+		IST = { country_event = { id = Indozeeb.88 days = 3 } }
+		IDO = { country_event = { id = Indozeeb.88 days = 3 } }
+		DEL = { country_event = { id = Indozeeb.88 days = 3 } }
+		
+	}
+}
+
+shared_focus = {
+	id = YAN_SEZO_infra_plan
+	#icon = 
+	x = 12
+	y = 20
+	cost = 8
+
+	ai_will_do = {
+		factor = 128
+	}
+
+	prerequisite = {
+		focus = YAN_SEZO
+	}
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: focus YAN_SEZO_infra_plan"
+		every_other_country = {
+			limit = {
+				has_idea = YAN_business
+			}
+			add_ideas = YAN_infra_investment
+		}
+		1154 = {
+			add_building_construction = {
+				type = naval_base
+				level = 2
+				instant_build = yes
+				province = 16127
+			}
+		}
+		1141 = {
+			add_building_construction = {
+				type = naval_base
+				level = 1
+				instant_build = yes
+				province = 15929
+			}
+		}
+		1192 = {
+			add_building_construction = {
+				type = naval_base
+				level = 2
+				instant_build = yes
+				province = 15947
+			}
+		}
+		1149 = {	
+			add_building_construction = {
+				type = naval_base
+				level = 1
+				instant_build = yes
+				province = 16229
+			}
+		}
+		custom_effect_tooltip = YAN_SE_business1_tip
+	}
+}
+
+shared_focus = {
+	id = YAN_SEZO_Industry_Plan
+	#icon = 
+	x = 14
+	y = 20
+	cost = 10 
+
+	ai_will_do = {
+		factor = 128
+	}
+
+	prerequisite = {
+		focus = YAN_SEZO
+	}
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: focus YAN_SEZO_Industry_Plan"
+		every_other_country = {
+			limit = {
+				has_idea = YAN_business
+			}
+			add_ideas = YAN_business_investment_1
+		}
+		custom_effect_tooltip = YAN_SE_business2_tip
+		set_country_flag = YAN_SEZO_industry_flag
+	}
+}
+
+shared_focus = {
+	id = YAN_SEZO_FTA
+	#icon = 
+	x = 16
+	y = 20
+	cost = 10
+
+	ai_will_do = {
+		factor = 128
+	}
+
+	prerequisite = {
+		focus = YAN_SEZO
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: focus YAN_SEZO_FTA"
+		##Free Trade Zone
+		every_other_country = {
+			limit = {
+				has_idea = YAN_business
+			}
+			add_ideas = YAN_SE_FTA
+		}
+	}
+}
+
+
+
+shared_focus = {
+	id = YAN_SEZO_coordinated_military
+	#icon = 
+	x = 18
+	y = 20
+	cost = 10
+
+	ai_will_do = {
+		factor = 128
+	}
+
+	prerequisite = {
+		focus = YAN_SEZO
+	}
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: focus YAN_SEZO_coordinated_military"
+		add_ideas = YAN_SE_CM
+	}
+}
+
+###I am Semuakawan, *cocks gun* gib me independence###
+
+shared_focus = {
+	id = YAN_Semua_start
+	#icon = 
+	x = 15
+	y = 0
+	cost = 1 
+
+	ai_will_do = {
+		factor = 50
+	}
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: focus YAN_Semua_start"
+		country_event = { id = Indozeeb.90 days = 2 }
+		remove_ideas = YAN_dutchoverlord
+		remove_ideas = YAN_pulalap_rebellion
+		swap_ideas = {
+			remove_idea = YAN_angery5
+			add_idea = YAN_anarchy
+		}
+		FEA = {
+			set_autonomy = {
+				target = YAN
+				autonomy_state = autonomy_free
+			}
+		}
+	}
+}
+
+shared_focus = {
+	id = YAN_remove_dutch
+	#icon = 
+	x = 14
+	y = 1
+	cost = 2
+
+	ai_will_do = {
+		factor = 51
+	}
+
+	prerequisite = {
+		focus = YAN_Semua_start
+	}
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: focus YAN_remove_dutch"
+		1155 = {
+			add_manpower = -1453
+		}
+		1156 = {
+			add_manpower = -2546
+		}
+		1157 = {
+			add_manpower = -14943
+		}
+		1158 = {
+			add_manpower = -18573
+		}
+		1159 = {
+			add_manpower = -3850
+		}
+		add_stability = -0.05
+		add_popularity = {
+			ideology = fascism
+			popularity = 0.10
+		}
+
+	}
+}
+
+shared_focus = {
+	id = YAN_seize_what_remains
+	#icon = 
+	x = 16 
+	y = 1
+	cost = 2
+
+	ai_will_do = {
+		factor = 50
+	}
+
+	prerequisite = {
+		focus = YAN_Semua_start
+	}
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: focus YAN_seize_what_remains"
+		add_political_power = 50
+		add_equipment_to_stockpile = {
+			type = infantry_equipment_1
+			amount = 2000 
+			producer = FEA
+		}
+	}
+}
+
+shared_focus = {
+	id = YAN_trial_loterijen
+	#icon = 
+	x = 15
+	y = 2 
+	cost = 5
+
+	ai_will_do = {
+		factor = 70
+	}
+
+	prerequisite = {
+		focus = YAN_remove_dutch
+	}
+	prerequisite = {
+		focus = YAN_seize_what_remains
+	}
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: focus YAN_trial_loterijen"
+		country_event = { id = Indozeeb.91 hours = 5 }
+
+	}
+}
+
+shared_focus = {
+	id = YAN_adapt_police
+	#icon = 
+	x = 13
+	y = 3
+	cost = 6
+
+	ai_will_do = {
+		factor = 71 
+	}
+
+	prerequisite = {
+		focus = YAN_trial_loterijen
+	}
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: focus YAN_adapt_police"
+		add_ideas = YAN_Kawan_police
+
+	}
+}
+
+shared_focus = {
+	id = YAN_kawan_speech
+	#icon = 
+	x = 15
+	y = 3 
+	cost = 2
+
+	ai_will_do = {
+		factor = 75
+	}
+
+	prerequisite = {
+		focus = YAN_trial_loterijen
+	}
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: focus YAN_kawan_speech"
+		country_event = { id = Indozeeb.92 hours = 13 }
+
+	}
+}
+
+##This focus here has Semuakawan confirming Kudakelasi's support
+shared_focus = {
+	id = YAN_confirm_kuda
+	#icon = 
+	x = 17 
+	y = 3
+	cost = 5 
+
+	ai_will_do = {
+		factor = 73
+	}
+
+	prerequisite = {
+		focus = YAN_trial_loterijen
+	}
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: focus YAN_confirm_kuda"
+		add_ideas = YAN_kudakelasi_family
+		add_stability = 0.05
+	}
+}
+
+shared_focus = {
+	id = YAN_arrest_the_rioters
+	#icon = 
+	x = 13 
+	y = 4
+	cost = 7 
+
+	ai_will_do = {
+		factor = 72
+	}
+
+	prerequisite = {
+		focus = YAN_adapt_police
+	}
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: focus YAN_arrest_the_rioters"
+		add_stability = 0.10
+		add_popularity = { ideology = fascism popularity = -0.10 }
+	}
+}
+
+shared_focus = {
+	id = YAN_contract_police
+	#icon = 
+	x = 17 
+	y = 4
+	cost = 7 
+
+	ai_will_do = {
+		factor = 71
+	}
+
+	prerequisite = {
+		focus = YAN_confirm_kuda
+	}
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: focus YAN_contract_police"
+		add_stability = 0.05
+		add_political_power = -30
+		add_popularity = {
+			ideology = fascism 
+			popularity = 0.05
+		}
+		add_popularity = {
+			ideology = democratic
+			popularity = 0.05
+		}
+	}
+}
+
+shared_focus = {
+	id = YAN_stabilized_state
+	#icon = 
+	x = 15 
+	y = 5
+	cost = 2 
+
+	ai_will_do = {
+		factor = 100
+	}
+
+	prerequisite = {
+		focus = YAN_contract_police
+	}
+
+	prerequisite = {
+		focus = YAN_arrest_the_rioters
+	}
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: focus YAN_stabilized_state"
+		swap_ideas = {
+			remove_idea = YAN_anarchy
+			add_idea = YAN_terrible_economy
+		}
+		
+		add_political_power = 200
+	}
+}
+
+###Semuakawan Economic Tree
+
+shared_focus = {
+	id = YAN_saving_economy
+	#icon = 
+	x = 10
+	y = 6
+	cost = 5 
+
+	ai_will_do = {
+		factor = 99
+	}
+
+	prerequisite = {
+		focus = YAN_stabilized_state
+	}
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: focus YAN_saving_economy"
+		add_ideas = YAN_print_money
+	}
+}
+
+shared_focus = {
+	id = YAN_economy_help
+	#icon = 
+	x = 10 
+	y = 7 
+	cost = 2
+
+	ai_will_do = {
+		factor = 98
+	}
+
+	prerequisite = {
+		focus = YAN_saving_economy
+	}
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: focus YAN_economy_help"
+		country_event = { id = Indozeeb.92 days = 1 }
+		
+	}
+}
+
+##Trade
+shared_focus = {
+	id = YAN_international_trade
+	#icon 
+	x = 9 
+	y = 8 
+	cost = 5 
+
+	ai_will_do = {
+		factor = 97
+	}
+
+	available = {
+		has_country_flag = YAN_foreign_investment_focus
+
+	}
+
+	prerequisite = {
+		focus = YAN_economy_help
+	}
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: focus YAN_international_trade"
+		add_ideas = YAN_exporting_economy
+		
+	}
+}
+
+shared_focus = {
+	id = YAN_develop_resources
+	#icon = 
+	x = 7 
+	y = 9 
+	cost = 7 
+
+	ai_will_do = {
+		factor = 96 
+	}
+
+	prerequisite = {
+		focus = YAN_international_trade
+	}
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: focus YAN_develop_resources"
+		add_resource = {
+			type = rubber 
+			amount = 6
+			state = 1155
+		}
+		add_resource = {
+			type = rubber 
+			amount = 6 
+			state = 1157
+		}
+	}
+}
+
+shared_focus = {
+	id = YAN_develop_resources_rubber
+	#icon = 
+	x = 7
+	y = 10 
+	cost = 7
+
+	ai_will_do = {
+		factor = 96
+	}
+
+	prerequisite = {
+		focus = YAN_develop_resources
+	}
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: focus YAN_develop_resources_rubber"
+		add_resource = {
+			type = rubber
+			amount = 20
+			state = 1160
+		}
+	}
+}
+
+shared_focus = {
+	id = YAN_develop_processing_industry
+	#icon = 
+	x = 9 
+	y = 8 
+	cost = 5
+	
+	ai_will_do = {
+		factor = 95
+	}
+
+	prerequisite = {
+		focus = YAN_international_trade
+	}
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: focus YAN_develop_processing_industry"
+		add_tech_bonus = {
+			bonus = 0.1
+			uses = 2
+			category = excavation_tech
+		}
+	}
+}
+
+shared_focus = {
+	id = YAN_develop_processing_industry_2
+	#icon = 
+	x = 9 
+	y = 9 
+	cost = 7 
+
+	ai_will_do = {
+		factor = 94
+	}
+
+	prerequisite = {
+		focus = YAN_develop_processing_industry
+	}
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: focus YAN_develop_processing_industry_2"
+		1155 = {
+			add_building_construction = {
+				type = industrial_complex
+				level = 1 
+				instant_build = yes
+			}			
+		}
+		1159 = {
+			add_building_construction = {
+				type = industrial_complex
+				level = 1
+				instant_build = yes
+			}
+		}
+
+	}
+}
+
+shared_focus = {
+	id = YAN_export_economics
+	#icon = 
+	x = 8
+	y = 10
+	cost = 5 
+
+	ai_will_do = {
+		factor = 96
+	}
+
+	prerequisite = {
+		focus = YAN_develop_processing_industry_2
+	}
+	prerequisite = {
+		focus = YAN_develop_resources_rubber
+	}
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: focus YAN_export_economics"
+		remove_ideas = YAN_terrible_economy
+		add_timed_idea = { idea = YAN_recovering_economy  days = 260 }
+		swap_ideas = {
+			remove_idea = YAN_exporting_economy
+			add_idea = YAN_exporting_economy_2
+		}
+	}
+}
+
+##Domestic Industry
+shared_focus = {
+	id = YAN_domestic_focus
+	#icon = 
+	x = 11
+	y = 8 
+	cost = 5
+
+	ai_will_do = {
+		factor = 97
+	}
+
+	prerequisite = {
+		focus = YAN_economy_help
+	}
+
+	available = {
+		has_country_flag = YAN_domestic_investment_focus
+	}
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: focus YAN_domestic_focus"
+		add_ideas = YAN_domestic_economy
+	}
+}
+
+shared_focus = {
+	id = YAN_develop_domestic_industry
+	#icon = 
+	x = 13 
+	y = 9 
+	cost = 7 
+
+	ai_will_do = {
+		factor = 96
+	}
+
+	prerequisite = {
+		focus = YAN_domestic_focus
+	}
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: focus YAN_develop_domestic_industry"
+		1157 = {
+			add_extra_state_shared_building_slots = 1
+		}
+		1158 = {
+			add_extra_state_shared_building_slots = 1
+		}
+	}
+}
+
+shared_focus = {
+	id = YAN_develop_domestic_industry_2
+	#icon = 
+	x = 13 
+	y = 10 
+	cost = 10 
+
+	ai_will_do = {
+		factor = 95
+	}
+
+	prerequisite = {
+		focus = YAN_develop_domestic_industry
+	}
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: focus YAN_develop_domestic_industry_2"
+		1158 = {
+			add_building_construction = {
+				type = industrial_complex
+				level = 1
+				instant_build = yes
+			}
+		}
+		1157 = {
+			add_building_construction = {
+				type = industrial_complex
+				level = 1
+				instant_build = yes
+			}
+		}
+	}
+}
+
+shared_focus = {
+	id = YAN_domestic_building_tech
+	#icon = 
+	x = 11
+	y = 9 
+	cost = 5
+
+	ai_will_do = {
+		factor = 96
+	}
+
+	prerequisite = {
+		focus = YAN_domestic_focus
+	}
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: focus YAN_domestic_building_tech"
+		add_tech_bonus = {
+			bonus = 0.1
+			uses = 2
+			category = construction_tech
+		}
+	}
+}
+
+shared_focus = {
+	id = YAN_domestic_military_tech
+	#icon = 
+	x = 11
+	y = 10
+	cost = 10 
+
+	ai_will_do = {
+		factor = 96
+	}
+
+	prerequisite = {
+		focus = YAN_domestic_building_tech
+	}
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: focus YAN_domestic_military_tech"
+		1157 = {
+			add_building_construction = {
+				type = arms_factory
+				level = 1
+				instant_build = yes
+			}
+		}
+		1159 = {
+			add_building_construction = {
+				type = arms_factory
+				level = 1
+				instant_build = yes
+			}
+		}
+	}
+}
+
+shared_focus = {
+	id = YAN_domestic_economics
+	#icon = 
+	x = 12 
+	y = 11
+	cost = 5
+
+	ai_will_do = {
+		factor = 96
+	}
+
+	prerequisite = {
+		focus = YAN_domestic_military_tech
+	}
+	prerequisite = {
+		focus = YAN_develop_domestic_industry_2
+	}
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: focus YAN_domestic_economics"
+		remove_ideas = YAN_terrible_economy
+		add_timed_idea = { idea = YAN_recovering_economy days = 260 }
+		swap_ideas = {
+			remove_idea = YAN_domestic_economy
+			add_idea = YAN_domestic_economy_2
+		}
+	}
+}
+
+shared_focus = {
+	id = YAN_stop_inflation
+	#icon = 
+	x = 10 
+	y = 12
+	cost = 2 
+
+	ai_will_do = {
+		factor = 95
+	}
+
+	prerequisite = {
+		focus = YAN_domestic_economics
+		focus = YAN_export_economics
+	}
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: focus YAN_stop_inflation"
+		add_political_power = 50 
+		remove_ideas = YAN_print_money
+		swap_ideas = {
+			remove_idea = poverty4
+			add_idea = poverty5
+		}
+	}
+}
+
+
+
+
+
+###ACtual Semuakawan Political Stuff
+
+shared_focus = {
+	id = YAN_transform_culture
+	#icon = 
+	x = 19
+	y = 6 
+	cost = 10 
+
+	prerequisite = {
+		focus = YAN_stabilized_state
+	}
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: focus YAN_transform_culture"
+		add_popularity = {
+			ideology = neutrality
+			popularity = -0.10
+		}
+	}
+}
+
+shared_focus = {
+	id = YAN_remove_dutch_culture
+	#icon = 
+	x = 18 
+	y = 7 
+	cost = 8 
+
+	prerequisite = {
+		focus = YAN_transform_culture
+	}
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: focus YAN_remove_dutch_culture"
+		add_popularity = {
+			ideology = fascism
+			popularity = 0.10
+		}
+		add_war_support = 0.10
+		add_stability = -0.10
+		add_timed_idea = { idea = YAN_remove_dutch_culture days = 180 }
+		
+	}
+}
+
+shared_focus = {
+	id = YAN_remove_dutch_bureaucracy
+	#icon = 
+	x = 22
+	y = 7 
+	cost = 8 
+
+	prerequisite = {
+		focus = YAN_transform_culture
+	}
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: focus YAN_remove_dutch_bureuacracy"
+		remove_ideas = YAN_shit_paperwork
+		add_timed_idea = { idea = YAN_chaotic_paperwork days = 240 }
+		add_political_power = -50
+	}
+}
+
+shared_focus = {
+	id = YAN_one_language
+	#icon = 
+	x = 20
+	y = 7
+	cost = 8 
+
+	prerequisite = {
+		focus = YAN_transform_culture
+	}
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: focus YAN_one_language"
+		country_event = { id = Indozeeb.94 days = 2 }
+		add_stability = -0.10
+	}
+}
+
+shared_focus = {
+	id = YAN_many_cultures
+	#icon = 
+	x = 15
+	y = 8 
+	cost = 10 
+
+	prerequisite = {
+		focus = YAN_remove_dutch_culture
+	}
+
+	mutually_exclusive = {
+		focus = YAN_one_culture_forced
+	}
+
+	available = {
+		has_political_power > 100
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: focus YAN_many_races"
+		add_ideas = YAN_many_cultures_idea
+		add_political_power = -100
+	}
+}
+
+shared_focus = {
+	id = YAN_one_culture_forced
+	#icon = 
+	x = 17
+	y = 8 
+	cost = 5 
+
+	prerequisite = {
+		focus = YAN_remove_dutch_culture
+	}
+
+	mutually_exclusive = {
+		focus = YAN_many_cultures
+	}
+
+	available = {
+		has_political_power > 50
+	}
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: focus YAN_one_culture_forced"
+		add_ideas = YAN_one_culture_forced_idea
+		add_political_power = -50
+		set_country_flag = YAN_kudakelasi_coup_key2
+	}
+
+}
+
+##Foci about challenging the Lineages
+shared_focus = {
+	id = YAN_subjugate_lineages
+	#icon = 
+	x = 19
+	y = 8 
+	cost = 7 
+
+	prerequisite = {
+		focus = YAN_one_language
+	}
+
+	mutually_exclusive = {
+		focus = YAN_aloof_lineages
+	}
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: focus YAN_subjugate_lineages"
+		swap_ideas = {
+			remove_idea = YAN_kudakelasi_family
+			add_idea = YAN_subjugated_lineages
+
+		}
+		set_country_flag = YAN_kudakelasi_coup_key1
+	}
+}
+
+shared_focus = {
+	id = YAN_aloof_lineages
+	#icon = 
+	x = 21
+	y = 8 
+	cost = 7 
+
+	prerequisite = {
+		focus = YAN_one_language
+	}
+
+	mutually_exclusive = {
+		focus = YAN_subjugate_lineages
+	}
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: focus YAN_aloof_lineages"
+		swap_ideas = {
+			remove_idea = YAN_kudakelasi_family
+			add_idea = YAN_free_lineages
+
+		}
+	}
+}
+
+shared_focus = {
+	id = YAN_change_government_structure
+	#icon = 
+	x = 23
+	y = 8
+	cost = 8 
+
+	prerequisite = {
+		focus = YAN_remove_dutch_bureaucracy
+	}
+
+	available = {
+		has_political_power > 100
+	}
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: focus YAN_change_government_structure"
+		add_ideas = YAN_decentralized_rule
+		add_stability = -0.10
+		add_political_power = -100
+	}
+}
+
+shared_focus = {
+	id = YAN_advance_once_more
+	#icon = 
+	x = 19
+	y = 10
+	cost = 6 
+
+	prerequisite = {
+		focus = YAN_aloof_lineages
+		focus = YAN_subjugate_lineages
+	}
+	prerequisite = {
+		focus = YAN_many_cultures
+		focus = YAN_one_culture_forced
+	}
+	prerequisite = {
+		focus = YAN_change_government_structure
+	}
+
+	available = {
+		has_completed_focus = YAN_domestic_economics
+		has_completed_focus = YAN_export_economics
+	}
+
+	available = {
+		has_political_power > 50
+	}
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: focus YAN_advance_once_more"
+		##We've done transforming the Zebridean culture, time to move forward and develop the country more! Depends on which way you asked the Lineages help for on		add_stability = 0.05
+	}
+}
+
+shared_focus = {
+	id = YAN_a_new_dawn
+	#icon = 
+	x = 15 
+	y = 11
+	cost = 3 
+
+	prerequisite = {
+		focus = YAN_stop_inflation
+	}
+	prerequisite = {
+		focus = YAN_advance_once_more
+	}
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: focus YAN_a_new_dawn"
+		country_event = { id = Indozeeb.96 days = 1 }
+	}
+}
+
+shared_focus = {
+	id = YAN_utilize_linage_property 
+	#icon = 
+	x = 14
+	y = 12
+	cost = 7 
+
+	prerequisite = {
+		focus = YAN_a_new_dawn
+	}
+
+	available = {
+		has_idea = YAN_subjugated_lineages
+	}
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: focus YAN_utilize_linage_property"
+		1157 = {
+			add_building_construction = {
+				type = arms_factory
+				level = 1
+				instant_build = yes
+			}
+		}
+		1158 = {
+			add_building_construction = {
+				type = arms_factory
+				level = 1
+				instant_build = yes
+			}
+		}
+	}
+
+}
+
+shared_focus = {
+	id = YAN_guide_lineage_activities
+	#icon = 
+	x = 16
+	y = 12
+	cost = 7 
+
+	prerequisite = {
+		focus = YAN_a_new_dawn
+	}
+
+	available = {
+		has_idea = YAN_free_lineages
+	}
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: focus YAN_guide_lineage_activities"
+		1157 = {
+			add_building_construction = {
+				type = dockyard
+				level = 1
+				instant_build = yes
+			}
+		}
+		1158 = {
+			add_building_construction = {
+				type = dockyard
+				level = 1
+				instant_build = yes
+			}
+		}
+	}
+}
+
+shared_focus = {
+	id = YAN_landlord_supporting
+	#icon = 
+	x = 12
+	y = 13
+	cost = 8
+
+	prerequisite = {
+		focus = YAN_utilize_linage_property
+		focus = YAN_guide_lineage_activities
+	}
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: focus YAN_landlord_supporting"
+		add_ideas = YAN_landlord_support
+	}
+}
+
+shared_focus = {
+	id = YAN_get_a_mafia
+	#icon = 
+	x = 15
+	y = 13
+	cost = 2
+
+	prerequisite = {
+		focus = YAN_utilize_linage_property
+		focus = YAN_guide_lineage_activities
+	}
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: focus YAN_get_a_mafia"
+		##You get a team of economic experts from the lineages
+		country_event = { id = Indozeeb.97 days = 5 }
+	}
+}
+
+shared_focus = {
+	id = YAN_trans_island_connection_project
+	#icon = 
+	x = 15
+	y = 14
+	cost = 10 
+
+	prerequisite = {
+		focus = YAN_utilize_linage_property
+		focus = YAN_guide_lineage_activities
+	}
+	prerequisite = {
+		focus = YAN_get_a_mafia
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: focus YAN_trans_island_connection_project"
+		add_political_power = 200
+		set_country_flag = YAN_Semua_train_project
+		##Decisions to do various infrastructure projects
+		##TO DO 
+		###################	###################	###################	###################	###################	###################	###################	###################	###################
+			###################	###################	###################	###################	###################
+				###################	###################	###################	###################	###################	###################
+					###################	###################	###################	###################	###################	###################
+						###################	###################	###################	###################	###################	###################
+							###################	###################	###################	###################	###################	###################
+								###################	###################	###################	###################	###################	###################	###################	###################
+									###################	###################	###################	###################	###################
+	}
+}
+
+shared_focus = {
+	id = YAN_give_landlord_posistions
+	#icon = 
+	x = 12 
+	y = 14
+	cost = 7 
+
+	prerequisite = {
+		focus = YAN_landlord_supporting
+	}
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: focus YAN_give_landlord_posistions"
+		swap_ideas = {
+			remove_idea = YAN_landlord_support
+			add_idea = YAN_landlord_support2
+		}
+	}
+}
+
+shared_focus = {
+	id = YAN_revive_textile_industry
+	#icon = 
+	x = 14
+	y = 15
+	cost = 8 
+
+	prerequisite = {
+		focus = YAN_trans_island_connection_project
+	}
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: focus YAN_revive_textile_industry"
+		1155 = {
+			add_building_construction = {
+				type = industrial_complex
+				level = 1
+				instant_build = yes
+			}
+		}
+	}
+}
+
+shared_focus = {
+	id = YAN_subsidize_pulalapan_business
+	#icon = 
+	x = 16
+	y = 15
+	cost = 8 
+
+
+	prerequisite = {
+		focus = YAN_trans_island_connection_project
+	}
+	
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: focus YAN_subsidize_pulalpan_business"
+		1160 = {
+			add_building_construction = {
+				type = arms_factory 
+				level = 1
+				instant_build = yes 
+			}
+		}
+	}
+}
+
+shared_focus = {
+	id = YAN_competivite_production
+	#icon = x
+	x = 15
+	y = 16 
+	cost = 5
+
+	prerequisite = {
+		focus = YAN_revive_textile_industry
+		focus = YAN_subsidize_pulalapan_business
+	}
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: focus YAN_competivite_production"
+		add_ideas = YAN_competitive_production
+	}
+}
+
+shared_focus = {
+	id = YAN_build_temples
+	#icon
+	x = 16 
+	y = 17 
+	cost = 8 
+
+	prerequisite = {
+		focus = YAN_subsidize_pulalapan_business
+	}
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: focus YAN_build_temples"
+		1157 = {
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = {
+				type = industrial_complex
+				level = 1 
+				instant_build = yes
+			}
+		}
+	}
+}
+
+shared_focus = {
+	id = YAN_electronic_factory
+	#icon = 
+	x = 14
+	y = 17 
+	cost = 7 
+
+	prerequisite = {
+		focus = YAN_revive_textile_industry
+	}
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: focus YAN_electronic_factory"
+		##Bonus to electronic
+		add_tech_bonus = {
+			bonus = 0.5
+			uses = 1
+			category = electronic_mechanical_engineering
+		}
+		1158 = {
+			add_building_construction = {
+				type = industrial_complex
+				level = 1 
+				instant_build = yes
+			}
+		}
+	}
+}
+
+shared_focus = {
+	id = YAN_rice_farms
+	#icon = 
+	x = 12
+	y = 16
+	cost = 7
+
+	prerequisite = {
+		focus = YAN_give_landlord_posistions
+	}
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: focus YAN_rice_frams"
+		##Higher landlord idea which gives more monthly population and production efficicency
+		swap_ideas = {
+			remove_idea = YAN_landlord_support2
+			add_idea = YAN_landlord_support3
+		}
+		1156 = {
+			add_building_construction = {
+				type = industrial_complex
+				level = 1 
+				instant_build = yes
+			}
+		}
+	}
+}
+
+shared_focus = {
+	id = YAN_deregulate
+	#icon = 
+	x = 14
+	y = 18 
+	cost = 10
+	
+	prerequisite = {
+		focus = YAN_rice_farms
+	}
+	prerequisite = {
+		focus = YAN_electronic_factory
+	}
+	completion_reward = {
+		log ="[GetDateText]: [Root.GetName]: focus YAN_deregulate"
+		add_stability = -0.05
+		1157 = {
+			add_extra_state_shared_building_slots = 1
+		}
+		1158 = {
+			add_extra_state_shared_building_slots = 1
+		}
+		1159 = {
+			add_extra_state_shared_building_slots = 1
+		}
+	}
+}
+
+shared_focus = {
+	id = YAN_baby_for_tax_cuts
+	#icon = 
+	x = 16
+	y = 18
+	cost = 7 
+
+	prerequisite = {
+		focus = YAN_build_temples
+	}
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: focus YAN_baby_for_tax_cuts"
+		add_ideas = YAN_baby_for_tax_cuts_idea
+	}
+}
+
+shared_focus = {
+	id = YAN_fix_university_of_zava
+	#icon = x
+	x = 16
+	y = 19 
+	cost = 10
+
+	prerequisite = {
+		focus = YAN_baby_for_tax_cuts
+	}
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: focus YAN_fix_university_of_zava"
+		add_research_slot = 1 
+		swap_ideas = {
+			remove_idea = better_science_base
+			add_idea = big_science_base
+			
+		}
+		hidden_effect = {
+			country_event = {
+				id = Indozeeb.98 days = 432
+			}
+		}
+	}
+	
+}
+
+shared_focus = {
+	id = YAN_department_coordination
+	#icon = 
+	x = 14
+	y = 19
+	cost = 7 
+
+	prerequisite = {
+		focus = YAN_deregulate
+	}
+	
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: focus YAN_department_coordination"
+		add_timed_idea = { idea = YAN_improve_coordinations days = 200 }
+	}
+}
+
+shared_focus = {
+	id = YAN_Ministry_Home_Affairs
+	#icon = 
+	x = 14
+	y = 20
+	cost = 8 
+
+	prerequisite = {
+		focus = YAN_department_coordination
+	}
+	prerequisite = {
+		focus = YAN_fix_university_of_zava
+	}
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: focus YAN_Ministry_Home_Affairs"
+		##Get an idea that gives more building slots, pp, and monthly pp
+		add_ideas = YAN_Ministry_HA
+	}
+}
+
+shared_focus = {
+	id = YAN_military_fix
+	#icon = 
+	x = 19 
+	y = 12
+	cost = 7 
+
+	prerequisite = {
+		focus = YAN_a_new_dawn 
+	}
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: focus YAN_military_fix"
+		#Effect which gives research bonus for guns
+	}
+}
+
+
+
+shared_focus = {
+	id = YAN_get_artillery_researched
+	#icon = 
+	x = 18 
+	y = 13
+	cost = 7 
+
+	prerequisite = {
+		focus = YAN_military_fix
+	}
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: focus YAN_get_artillery_researched"
+		##Rsearch bonus for Artillery
+	}
+}
+
+shared_focus = {
+	id = YAN_learn_from_feathisian_manuals
+	#icon = 
+	x = 20 
+	y = 13
+	cost = 7
+
+	prerequisite = {
+		focus = YAN_military_fix
+	}
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: focus YAN_learn_from_feathisian_manuals"
+		##Army XP and doctrines of Grand Battleplan
+	}
+}
+
+shared_focus = {
+	id = YAN_fortify_key_locations
+	#icon = 
+	x = 19
+	y = 14
+	cost = 10
+
+	prerequisite = {
+		focus = YAN_military_fix
+	}
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: focus YAN_fortify_key_locations"
+		##Forts in some ports and cities
+	}
+
+}
+
+shared_focus = {
+	id = YAN_gas_artillery
+	#icon = 
+	x = 18
+	y = 15
+	cost = 7 
+
+	prerequisite = {
+		focus = YAN_get_artillery_researched
+	}
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: focus YAN_gas_artillery"
+		##Modifier to artillery
+	}
+}
+
+shared_focus = {
+	id = YAN_learn_from_historical_records
+	#icon = 
+	x = 20
+	y = 15
+	cost = 5
+
+	prerequisite = {
+		focus = YAN_learn_from_feathisian_manuals
+	}
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: focus YAN_learn_from_historical_records"
+		##Idea to get defense buffs on homeland and J U N G L E
+	}
+}
+
+shared_focus = {
+	id = YAN_integrate_police_army
+	#icon = 
+	x = 19
+	y = 16
+	cost = 7 
+
+	prerequisite = {
+		focus = YAN_fortify_key_locations
+	}
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: focus YAN_integrate_police_army"
+		##MP bonus and ideas
+	}
+}
+
+shared_focus = {
+	id = YAN_motorisation_manauls
+	#icon = 
+	x = 18
+	y = 17
+	cost = 7 
+
+	prerequisite = {
+		focus = YAN_gas_artillery
+	}
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: focus YAN_motorisation_manauls"
+		##Guides on how to navy well
+	}
+}
+
+shared_focus = {
+	id = YAN_professionalize_military
+	#icon = 
+	x = 20
+	y = 17 
+	cost = 5 
+
+	prerequisite = {
+		focus = YAN_learn_from_historical_records
+	}
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: focus YAN_professionalize_military"
+		##Promotion
+	}
+}
+
+shared_focus = {
+	id = YAN_form_kopasus_marines
+	#icon = 
+	x = 19 
+	y = 18 
+	cost = 8 
+
+	prerequisite = {
+		focus = YAN_fortify_key_locations
+		focus = YAN_professionalize_military
+
+	}
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: focus YAN_form_kopasus_marines"
+		##Spawn some division
+	}
+}
+
+shared_focus = {
+	id = YAN_naval_tactics
+	#icon = 
+	x = 18 
+	y = 19 
+	cost = 7 
+
+	prerequisite = {
+		focus = YAN_motorisation_manauls
+	}
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: focus YAN_naval_tactics"
+		##Research about naval tactics
+	}
+}
+
+shared_focus = {
+	id = YAN_design_destroyers
+	#icon = 
+	x = 18 
+	y = 20
+	cost = 7
+
+	prerequisite = {
+		focus = YAN_form_kopasus_marines
+		focus = YAN_naval_tactics
+	}
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: focus YAN_design_destroyers"
+		## Some things about designing destroyers
+	}
+}
+
+shared_focus = {
+	id = YAN_invest_dockyard
+	#icon = 
+	x = 18
+	y = 20
+	cost = 8 
+
+	prerequisite = {
+		focus = YAN_naval_tactics
+	}
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: focus YAN_invest_dockyard" 
+		1160 = {
+			add_building_construction = {
+				type = dockyard
+				level = 1
+				instant_build = yes
+			}
+		}
+	}
+}
+
+shared_focus = {
+	id = YAN_Zebridiean_Miracle
+	#icon = 
+	x = 16
+	y = 21
+	cost = 1
+
+	prerequisite = {
+		focus = YAN_Ministry_Home_Affairs
+	}
+	prerequisite = {
+		focus = YAN_invest_dockyard
+		focus = YAN_design_destroyers
+
+	}
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: focus YAN_Zebridiean_Miracle"
+		remove_ideas = YAN_terrible_economy
+		##Load new focus tree
+		load_focus_tree = semuakawan_land_two
+	}
+
+}
+
+shared_focus = {
+	id = YAN_foreign_start
+	#icon = 
+	x = 17 
+	y = 22
+	cost = 1 
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: focus YAN_foreign_start"
+		country_event = { id = Indozeeb.99 days = 1 }
+	}
+}
+
+shared_focus = {
+	id = YAN_invite_temple_boys
+	#icon = 
+	x = 16
+	y = 23
+	cost = 2 
+
+	prerequisite = {
+		focus = YAN_foreign_start
+	}
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: focus YAN_invite_temple_boys"
+		##Invite the boys from over the pond for some tea.
+		DEL = { country_event = { id = Indozeeb.100 days = 1 } }
+		
+	}
+}
+
+shared_focus = {
+	id = YAN_form_BIN
+	#icon = 
+	x = 18 
+	y = 23
+	cost = 7 
+
+	prerequisite = {
+		focus = YAN_foreign_start
+	}
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: focus YAN_form_BIN"
+		##Form an Intelligence Agency
+		#create_intelligence_agency = yes
+		###TO DO : Find way to create intelligence agency
+
+	}
+}
+
+shared_focus = {
+	id = YAN_send_piligrims
+	#icon = 
+	x = 15
+	y = 24
+	cost = 5
+
+	prerequisite = {
+		focus = YAN_invite_temple_boys
+	}
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: focus YAN_send_piligrims"
+		##DEL gets national psirit
+		DEL = {
+			add_ideas = YAN_DEL_religious_immigration
+		}
+	}
+}
+
+shared_focus = {
+	id = YAN_spread_religious_worship
+	#icon = 
+	x = 17
+	y = 24
+	cost = 8 
+
+	prerequisite = {
+		focus = YAN_form_BIN
+		focus = YAN_invite_temple_boys
+	}
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: focus YAN_spread_religious_worship"
+		##Internally
+		add_timed_idea = { idea = YAN_internal_religious_spread days = 365 }
+	}
+}
+
+shared_focus = {
+	id = YAN_establish_trade_routes
+	#icon = 
+	x = 19 
+	y = 24
+	cost = 6
+
+	prerequisite = {
+		focus = YAN_form_BIN
+	}
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: focus YAN_establish_trade_routes"
+		##Ideas with Golden Temple that aligns them with Zebridies
+		DEL = {
+			add_ideas = YAN_DEL_buddy_now
+		} 
+	}
+}
+
+shared_focus = {
+	id = YAN_offer_subjugation
+	#icon = 
+	x = 17
+	y = 25
+	cost = 5
+
+	prerequisite = {
+		focus = YAN_send_piligrims
+	}
+	prerequisite = {
+		focus = YAN_spread_religious_worship
+	}
+	prerequisite = {
+		focus = YAN_establish_trade_routes
+	}
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: focus YAN_offer_subjugation"
+		##Event - Subjugation or war
+		DEL = {
+			country_event = { id = Indozeeb.102 days = 5 }
+		}
+	}
+}
+
+shared_focus = {
+	id = YAN_connect_the_temple
+	#icon = 
+	x = 17
+	y = 26
+	cost = 10
+
+	prerequisite = {
+		focus = YAN_offer_subjugation
+	}
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: focus YAN_connect_the_temple"
+		##build infrastructure in Delangio
+		1141 = {
+			add_building_construction = {
+				type = infrastructure
+				level = 2
+				instant_build = yes
+			}
+			add_building_construction = {
+				type = naval_base
+				level = 3
+				instant_build = yes
+				province = 15929
+			}	
+		}
+		1192 = {
+			add_building_construction = {
+				type = infrastructure 
+				level = 2
+				instant_build = yes
+			}
+			add_building_construction = {
+				type = naval_base
+				level = 3
+				instant_build = yes
+				province = 15943
+			}
+		}
+		1147 = {
+			add_building_construction = {
+				type = infrastructure
+				level = 1
+				instant_build = yes
+			}
+		}
+		1140 = {
+			add_building_construction = {
+				type = infrastructure
+				level = 1
+				instant_build = yes
+			}
+		}
+		1142 = {
+			add_building_construction = {
+				type = infrastructure
+				level = 1
+				instant_build = yes
+			}
+		}
+		1139 = {
+			add_building_construction = {
+				type = infrastructure
+				level = 1
+				instant_build = yes
+			}
+		}
+		1145 = {
+			add_building_construction = {
+				type = infrastructure
+				level = 1
+				instant_build = yes
+			}
+		}
+		1144 = {
+			add_building_construction = {
+				type = infrastructure
+				level = 1
+				instant_build = yes
+			}
+		}
+
+	}
+}
+
+shared_focus = {
+	id = YAN_DEL_invest_industry
+	#icon
+	x = 19
+	y = 26
+	cost = 2
+
+	prerequisite = {
+		focus = YAN_offer_subjugation
+	}
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: focus YAN_DEL_build_schools"
+		##Build some things in Delangio - Idea that lasts until the integration of Delangio
+		##Decisions and shit 
+		add_ideas = YAN_DEL_investment
+		DEL = {
+			add_ideas = YAN_DEL_investment_2
+		}
+	}
+}
+
+shared_focus = {
+	id = YAN_DEL_help_civilians
+	#icon = 
+	x = 15
+	y = 26
+	cost = 2
+
+	prerequisite = {
+		focus = YAN_offer_subjugation
+	}
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: focus YAN_DEL_help_civilians"
+		##Support lives of the Delangio - Idea that lasts until integration
+		DEL = {
+			add_ideas = YAN_support_DEL_civs
+		}
+	}
+}
+
+shared_focus = {
+	id = YAN_roll_out_Vaccines
+	#icon = 
+	x = 14
+	y = 27
+	cost = 8 
+
+	prerequisite = {
+		focus = YAN_DEL_help_civilians
+	}
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: focus YAN_roll_out_Vaccines"
+		##Vaccine idea that gives more stability and more montly population
+		add_timed_idea = { idea = YAN_DEL_vaccine_rollout days = 200 }
+		##Possible event here
+	}
+}
+
+shared_focus = {
+	id = YAN_educate_civilians
+	#icon = 
+	x = 16
+	y = 27
+	cost = 8 
+
+	prerequisite = {
+		focus = YAN_DEL_help_civilians
+	}
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: focus YAN_educate_civilians"
+		##More Education
+		##EDUCATION Focus
+	}
+}
+
+shared_focus = {
+	id = YAN_DEL_mine_resources
+	#icon = 
+	x = 18
+	y = 27 
+	cost = 8 
+
+	prerequisite = {
+		focus = YAN_DEL_invest_industry
+	}
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: focus YAN_DEL_mine_resources"
+		##Mine resources in Delangio
+		##Wait till you get to know the resources
+	}
+}
+
+shared_focus = {
+	id = YAN_DEL_further_investment
+	#icon = 
+	x = 20
+	y = 27
+	cost = 8
+
+	prerequisite = {
+		focus = YAN_DEL_invest_industry
+	}
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: focus YAN_DEL_further_investment"
+		##Try and modernize Delangionian Industry by investing more things into the area. - More Industry & More Building slots
+		swap_ideas = {
+			remove_idea = YAN_DEL_investment
+			add_idea = YAN_DEL_investment2
+		}
+		DEL = {
+			swap_ideas = {
+				remove_idea = YAN_DEL_investment_2
+				add_idea = YAN_DEL_investment_22
+			}
+		}
+		1141 = {
+			add_extra_state_shared_building_slots = 2
+			add_building_construction = {
+				type = industrial_complex
+				level = 1
+				instant_build = yes
+			}
+		}
+		1147 = {
+			add_extra_state_shared_building_slots = 1
+		}
+		1192 = {
+			add_extra_state_shared_building_slots = 1
+		}
+	}
+}
+
+shared_focus = {
+	id = YAN_DEL_set_up_telegrams
+	#icon = 
+	x = 14
+	y = 28
+	cost = 7 
+
+	prerequisite = {
+		focus = YAN_roll_out_Vaccines
+	}
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: focus YAN_DEL_set_up_telegrams"
+		##INfrastrucute in Delangio more
+		1139 = {
+			add_building_construction = {
+				type = infrastructure
+				level = 2
+				instant_build = yes
+			}
+
+		}
+		1140 = {
+			add_building_construction = {
+				type = industrial_complex
+				level = 1 
+				instant_build = yes
+			}
+		}
+		1141 = {
+			add_building_construction = {
+				type = industrial_complex
+				level = 1 
+				instant_build = yes
+			}
+		}
+		1142 = {
+			add_building_construction = {
+				type = industrial_complex
+				level = 1 
+				instant_build = yes
+			}
+		}
+	}
+}
+
+shared_focus = {
+	id = YAN_DEL_build_electricity
+	#icon = 
+	x = 16
+	y = 28
+	cost = 7 
+
+	prerequisite = {
+		focus = YAN_educate_civilians
+	}
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: focus YAN_DEL_build_electricity"
+		##Build infrastructure more in Delangio that gives some civilian industries1
+		1144 = {
+			add_building_construction = {
+				type = industrial_complex
+				level = 1 
+				instant_build = yes
+			}
+			add_building_construction = {
+				type = infrastructure
+				level = 3
+				instant_build = yes
+			}
+		}
+	}
+}
+
+shared_focus = {
+	id = YAN_DEL_boost_rubber_industry
+	#icon = 
+	x = 18
+	y = 28
+	cost = 6 
+
+	prerequisite = {
+		focus = YAN_DEL_mine_resources
+	}
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: focus YAN_DEL_boost_rubber_industry"
+		##Rubber resources!
+		add_resource = {
+			type = rubber
+			amount = 34
+			state = 1140
+		}
+		add_resource = {
+			type = rubber
+			amount = 21
+			state = 1142
+		}
+		add_resource = {
+			type = rubber
+			amount = 75
+			state = 1145
+		}
+	}
+}
+
+shared_focus = {
+	id = YAN_DEL_modernize_industry
+	#icon = 
+	x = 20
+	y = 28
+	cost = 8 
+	
+	prerequisite = {
+		focus = YAN_DEL_further_investment
+	}
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: focus YAN_DEL_modernize_industry"
+		##Some arms factory
+		1139 = {
+			add_extra_state_shared_building_slots = 2
+			add_building_construction = {
+				type = arms_factory
+				level = 1
+				instant_build = yes
+
+			}
+			add_building_construction = {
+				type = industrial_complex
+				level = 1
+				instant_build = yes
+
+			}
+
+		}
+	}
+}
+
+shared_focus = {
+	id = YAN_integrate_Delangio
+	#icon = 
+	x = 17
+	y = 29
+	cost = 10 
+
+	prerequisite = {
+		focus = YAN_DEL_set_up_telegrams
+	}
+	prerequisite = {
+		focus = YAN_DEL_build_electricity
+	}
+	prerequisite = {
+		focus = YAN_DEL_boost_rubber_industry
+	}
+	prerequisite = {
+		focus = YAN_DEL_modernize_industry
+	}
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: focus YAN_integrate_Delangio"
+		##Get cores on Delangio
+		add_state_core = 1139
+		add_state_core = 1144
+		add_state_core = 1145
+		add_state_core = 1147
+		add_state_core = 1141
+		add_state_core = 1142
+		add_state_core = 1140
+		add_state_core = 1192
+		add_state_core = 1139
+		remove_ideas = YAN_DEL_investment2
+	}
+}
+
+shared_focus = {
+	id = YAN_invade_IST
+	#icon = 
+	x = 16
+	y = 30
+	cost = 7 
+
+	prerequisite = {
+		focus = YAN_integrate_Delangio
+	}
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: focus YAN_invade_IST"
+		##What the focus says, also get spirits that is bad economically
+		YAN = {
+			declare_war_on = {
+				target = IST
+				type = annex_everything
+			}
+		}
+	}
+}
+
+shared_focus = {
+	id = YAN_IST_rebuild_ports
+	#icon = 
+	x = 14
+	y = 31
+	cost = 8 
+
+	prerequisite = {
+		focus = YAN_invade_IST
+	}
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: focus YAN_IST_rebuid_ports"
+		##Rebuild ports because geopolitically, that's important
+		IST = {
+			1154 = {
+				add_building_construction = {
+					type = naval_base
+					level = 2
+					instant_build = yes
+					province = 16127
+				}
+			}
+		}
+	}
+}
+
+shared_focus = {
+	id = YAN_IST_connect_with_DEL
+	#icon = 
+	x = 16
+	y = 31
+	cost = 10
+
+	prerequisite = {
+		focus = YAN_invade_IST
+	}
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: focus YAN_IST_connect_with_DEL"
+		##Build a railway between Golden Citya nd major Istowan Cities
+		1190 = {
+			add_building_construction = {
+				type = infrastructure
+				level = 3
+				instant_build = yes
+			}
+		}
+		1189 = {
+			add_building_construction = {
+				type = infrastructure
+				level = 3
+				instant_build = yes
+			}
+		}
+	}
+}
+
+shared_focus = {
+	id = YAN_IST_encourage_fishing
+	#icon = 
+	x = 14
+	y = 32
+	cost = 7
+
+	prerequisite = {
+		focus = YAN_IST_rebuild_ports
+	}
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: focus YAN_IST_encourage_fishing"
+		##Fishing investments
+		1154 = {
+			add_building_construction = {
+				type = industrial_complex
+				level = 1
+				instant_build = yes
+			}
+			add_building_construction = {
+				type = infrastructure
+				level = 2
+				instant_build = yes
+			}
+			
+		}
+	}
+}
+
+shared_focus = {
+	id = YAN_IST_western_trade_connections
+	#icon = 
+	x = 14
+	y = 33
+	cost = 7 
+
+	prerequisite = {
+		focus = YAN_IST_encourage_fishing
+	}
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: focus YAN_IST_western_trade_connections"
+		##Some events with western nations
+	}
+}
+
+shared_focus = {
+	id = YAN_IST_invest
+	#icon = 
+	x = 16
+	y = 32
+	cost = 7 
+
+	prerequisite = {
+		focus = YAN_IST_connect_with_DEL
+	}
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: focus YAN_IST_invest"
+		##Some more building slots in IST
+		1154 = {
+			add_extra_state_shared_building_slots = 2
+		}
+		1190 = {
+			add_extra_state_shared_building_slots = 2
+			add_building_construction = {
+				type = industrial_complex
+				level = 1
+				instant_build = yes
+			}
+		}
+
+	}
+}
+
+shared_focus = {
+	id = YAN_IST_expand_electricity_grid
+	#icon = 
+	x = 16
+	y = 33
+	cost = 7 
+
+	prerequisite = {
+		focus = YAN_IST_invest
+	}
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: focus YAN_IST_expand_electricity_grid"
+		##More Infrastructure for IST
+		1152 = {
+			add_building_construction = {
+				type = infrastructure
+				level = 1
+				instant_build = yes
+			}
+		}
+		1153 = {
+			add_building_construction = {
+				type = infrastructure
+				level = 1
+				instant_build = yes
+			}
+		}
+		1143 = {
+			add_building_construction = {
+				type = infrastructure
+				level = 1
+				instant_build = yes
+			}
+		}
+	}
+}
+
+shared_focus = {
+	id = YAN_integrate_IST
+	#icon = 
+	x = 15
+	y = 34
+	cost = 9 
+
+	prerequisite = {
+		focus = YAN_IST_western_trade_connections
+	}
+	prerequisite = {
+		focus = YAN_IST_expand_electricity_grid
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: focus YAN_integrate_IST"
+		add_state_core = 1154
+		add_state_core = 1152
+		add_state_core = 1190
+		add_state_core = 1191
+		add_state_core = 1189
+		add_state_core = 1153 
+		add_state_core = 1143
+	}
+}
+
+shared_focus = {
+	id = YAN_invade_IDO
+	#icon = 
+	x = 18
+	y = 30
+	cost = 7 
+
+	prerequisite = {
+		focus = YAN_integrate_Delangio
+	}
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: focus YAN_invade_IDO"
+		##What the focus says, ans also some ideas about angry tribes in the interior
+		YAN = {
+			declare_war_on = {
+				target = IDO
+				type = annex_everything
+			}
+		}
+	}
+}
+
+shared_focus = {
+	id = YAN_connect_IDO 
+	#icon = 
+	x = 20
+	y = 31
+	cost = 7 
+
+	prerequisite = {
+		focus = YAN_invade_IDO
+	}
+
+	available = {
+		IDO = {
+			exists = no
+		}
+	}
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: focus YAN_connect_IDO"
+		##Build infrastructure to Gold city
+		1148 = {
+			add_building_construction = {
+				type = infrastructure
+				level = 2
+				instant_build = yes
+			}
+		}
+		1146 = {
+			add_building_construction = {
+				type = infrastructure
+				level = 2
+				instant_build = yes
+			}
+		}
+	}
+
+
+}
+
+shared_focus = {
+	id = YAN_IDO_investments
+	#icon = 
+	x = 20
+	y = 32
+	cost = 7 
+
+	prerequisite = {
+		focus = YAN_connect_IDO
+	}
+
+
+	available = {
+		IDO = {
+			exists = no
+		}
+	}
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: focus YAN_IDO_invesments"
+		##Unvest into the IDO, mainly the ports. 
+		add_stability = 0.25
+		1148 = {
+			add_building_construction = {
+				type = industrial_complex
+				level = 1
+				instant_build = yes
+			}
+			add_building_construction = {
+				type = naval_base
+				level = 2
+				instant_build = yes
+				province = 16214
+			}
+		}
+	}
+}
+
+shared_focus = {
+	id = YAN_IDO_connect_northwards
+	#icon = x
+	x = 20
+	y = 33
+	cost = 7 
+
+	prerequisite = {
+		focus = YAN_IDO_investments
+	}
+
+	available = {
+		IDO = {
+			exists = no
+		}
+	}
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: focus YAN_IDO_connect_northwards"
+		##Trade Connections northwards
+	}
+}
+
+shared_focus = {
+	id = YAN_secure_the_interior
+	#icon = 
+	x = 18
+	y = 31
+	cost = 7 
+
+	prerequisite = {
+		focus = YAN_invade_IDO
+	}
+
+	available = {
+		IDO = {
+			exists = no
+		}
+	}
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: focus YAN_secure_the_interior"
+		##Attack the Tribes
+		1150 = {
+			add_manpower = -4735
+		}
+		1149 = {
+			add_manpower = -6583
+		}
+		add_timed_idea = { idea = YAN_IDO_warcrimes days = 100 }
+
+	}
+}
+
+shared_focus = {
+	id = YAN_IDO_protect_infrastructure
+	#icon = 
+	x = 18 
+	y = 32
+	cost = 5
+
+	prerequisite = {
+		focus = YAN_secure_the_interior
+	}
+
+	select_effect = {
+		add_ideas = YAN_IDO_soldier_deployment
+	}
+
+	available = {
+		IDO = {
+			exists = no
+		}
+	}
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: focus YAN_IDO_protect_infrastructure"
+		##Get more infrastructure, while some soldier ideas to protect them
+		remove_ideas = YAN_IDO_soldier_deployment
+		1148 = {
+			add_building_construction = {
+				type = infrastructure
+				level = 1
+				instant_build = yes 
+			}
+		}
+		1146 = {
+			add_building_construction = {
+				type = infrastructure
+				level = 1
+				instant_build = yes 
+			}
+		}
+
+
+	}
+}
+
+shared_focus = {
+	id = YAN_IDO_destroy_rebellion
+	#icon = 
+	x = 18
+	y = 33
+	cost = 10
+
+	prerequisite = {
+		focus = YAN_IDO_protect_infrastructure
+	}
+
+	available = {
+		IDO = {
+			exists = no
+		}
+		NOT = {
+			has_idea = YAN_IDO_soldier_deployment
+		}
+	}
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: focus YAN_IST_destroy_rebellion"
+		##Remove bad spirit
+		1149 = {
+			add_manpower = -5938
+		}
+		1150 = {
+			add_manpower = -8593
+		}
+		remove_ideas = YAN_IDO_terrorists
+	}
+}
+
+shared_focus = {
+	id = YAN_integrate_IDO
+	#icon = 
+	x = 19
+	y = 34
+	cost = 10
+
+	prerequisite = {
+		focus = YAN_IDO_destroy_rebellion
+	}
+	prerequisite = {
+		focus = YAN_IDO_connect_northwards
+	}
+
+	available = {
+		IDO = {
+			exists = no
+		}
+		NOT = {
+			has_idea = YAN_IDO_terrorists
+		}
+	}
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: focus YAN_integrate_IDO"
+		##Integrate IST
+		add_state_core = 1149
+		add_state_core = 1150
+		add_state_core = 1148
+		add_state_core = 1146
+	}
+}
+
+shared_focus = {
+	id = YAN_proclaim_the_kingdom
+	#icon = 
+	x = 17
+	y = 35
+	cost = 2
+
+	prerequisite = {
+		focus = YAN_integrate_IST
+	}
+	prerequisite = {
+		focus = YAN_integrate_IDO
+	}
+
+	available = {
+		custom_trigger_tooltip = {
+			tooltip = YAN_proclaim_the_kingdom_tooltiptext
+			controls_state = 1154
+			controls_state = 1153
+			controls_state = 1191
+			controls_state = 1190
+			controls_state = 1189
+			controls_state = 1143
+			controls_state = 1152
+			controls_state = 1142
+			controls_state = 1141
+			controls_state = 1140
+			controls_state = 1139
+			controls_state = 1145
+			controls_state = 1144
+			controls_state = 1147
+			controls_state = 1192
+			controls_state = 1150
+			controls_state = 1149
+			controls_state = 1148
+			controls_state = 1146
+		}
+	}
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: focus YAN_proclaim_the_kingdom"
+		##New Colour, new look, and Semuakawan is now a king - The Endgoal has been achieved. 
+		set_cosmetic_tag = SE_unified
+		custom_effect_tooltip = YAN_proclaim_the_kingdom_effect_tt
+		hidden_effect = {
+			country_event = { id = Indozeeb.104 days = 2 }
+			news_event = { id = Indozeeb.105 }
+			retire_ideology_leader = fascism
+		}
+		
+	
+
+	}
+}
+
+###########################
+###########################
+###########################
+###########################
+######LOTERIJEN TREE#######
+###########################
+###########################
+###########################
+###########################
+
+shared_focus = {
+	id = YAN_loterijen_power
+	#icon = 
+	x = 5
+	y = 0 
+	cost = 1
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: focus YAN_loterijen_power"
+		country_event = { id = Indozeeb.150 days = 5 }
+	}
+}
+
+shared_focus = {
+	id = YAN_convene_volksraad
+	#icon = 
+	x = 5
+	y = 1
+	cost = 1
+
+	prerequisite = {
+		focus = YAN_loterijen_power
+	}
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: focus YAN_convene_volksraad"
+		country_event = { id = Indozeeb.152 days = 5 }
+		##Volksraad convenes and Loterijen prepares his plans - Implementing the Ethical Policy 2.0, Beating the remaining insurgents, and mkaing the Zebridies the Flowena of Zebrica
+	}
+}
+
+shared_focus = {
+	id = YAN_contact_kudakelasi
+	#icon = 
+	x = 1
+	y = 2
+	cost = 3
+
+	prerequisite = {
+		focus = YAN_convene_volksraad
+	}
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: focus YAN_contact_kudakelasi"
+		##Contacting Kudakelasi
+		country_event = { id = Indozeeb.153 days = 1 }
+	}
+}
+
+shared_focus = {
+	id = YAN_break_rebellious_lineages
+	#icon = 
+	x = 3
+	y = 3 
+	cost = 10
+
+	prerequisite = {
+		focus = YAN_contact_kudakelasi
+	}
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: focus YAN_break_rebellious_lineages"
+		##Seizing Naughty Lineages property
+		1155 = {
+			add_extra_state_shared_building_slots = 2
+			add_building_construction = {
+				type = arms_factory
+				level = 1
+				instant_build = yes
+			}
+		}
+		1156 = {
+			add_extra_state_shared_building_slots = 3
+			add_building_construction = {
+				type = dockyard
+				level = 1
+				instant_build = yes
+			}
+		}
+
+	}
+}
+
+shared_focus = {
+	id = YAN_break_up_smuggling
+	#icon = 
+	x = 3
+	y = 4
+	cost = 7
+
+	prerequisite = {
+		focus = YAN_break_rebellious_lineages
+	}
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: focus YAN_break_up_smuggling"
+		add_stability = 0.05
+		add_equipment_to_stockpile = {
+			type = infantry_equipment
+			amount = 2500
+			producer = KIR
+		}
+		add_equipment_to_stockpile = {
+			type = infantry_equipment
+			amount = 1000
+			producer = GRI
+		}
+		add_equipment_to_stockpile = {
+			type = infantry_equipment
+			amount = 700
+			producer = WNG
+		}
+		##Where did all this new guns came from? Weird. 
+	}
+}
+
+shared_focus = {
+	id = YAN_reassert_control
+	#icon = 
+	x = -1 
+	y = 3
+	cost = 5 
+
+	prerequisite = {
+		focus = YAN_contact_kudakelasi
+	}
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: focus YAN_reassert_control"
+		add_popularity = {
+			ideology = neutrality 
+			popularity = 0.05
+		}
+		add_stability = 0.10
+		##Something something arresting radical independence leaders 
+	}
+}
+
+shared_focus = {
+	id = YAN_disband_independence_organisations
+	#icon = 
+	x = -1
+	y = 4
+	cost = 6
+
+	prerequisite = {
+		focus = YAN_reassert_control
+	}
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: focus YAN_disband_independence_organisations"
+		add_political_power = -50
+		add_popularity = {
+			ideology = fascism 
+			popularity = -0.10
+		}
+		add_popularity = {
+			ideology = communism 
+			popularity = -0.13
+		}
+		add_popularity = {
+			ideology = democratic 
+			popularity = -0.10
+		}
+	}
+}
+
+shared_focus = {
+	id = YAN_investigate_western_landlords
+	#icon = 
+	x = 1
+	y = 3
+	cost = 5
+
+	prerequisite = {
+		focus = YAN_contact_kudakelasi
+	}
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: focus YAN_investigate_western_landlords"
+		country_event = { id = Indozeeb.109 days = 1}
+		##Focus telling about investigating the Western landlords for helping the rebellion 
+	}
+}
+
+shared_focus = {
+	id = YAN_confiscate_landlord_lands
+	#icon = 
+	x = 1
+	y = 4
+	cost = 10
+	
+	prerequisite = {
+		focus = YAN_investigate_western_landlords
+	}
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: focus YAN_confiscate_landlord_lands"
+		add_political_power = -100
+		1156 = {
+			add_extra_state_shared_building_slots = 2
+		}
+		1155 = {
+			add_extra_state_shared_building_slots = 1 
+		}
+	}
+}
+
+shared_focus = {
+	id = YAN_appoint_loyal_bureaucrats
+	#icon = 
+	x = 1
+	y = 5
+	cost = 6 
+
+	prerequisite = {
+		focus = YAN_confiscate_landlord_lands
+	}
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: focus YAN_appoint_loyal_bureaucrats"
+		add_stability = -0.10
+		add_ideas = YAN_loyal_bureaucrats
+		##Semi-corrupt bureaucrats but loyal bureaucrats
+	}
+}
+
+shared_focus = {
+	id = YAN_exile_intellectuals
+	#icon = 
+	x = -1
+	y = 5 
+	cost = 7 
+
+	prerequisite = {
+		focus = YAN_disband_independence_organisations
+	}
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: focus YAN_exile_intellectuals"
+		add_timed_idea = {
+			idea = YAN_exile_intellectuals_idea
+			days = 400
+		}
+		##Quite clearly, he exiles them. 
+	}
+}
+
+shared_focus = {
+	id = YAN_centralise_industry
+	#icon = 
+	x = 3
+	y = 5
+	cost = 6 
+
+	prerequisite = {
+		focus = YAN_break_up_smuggling
+	}
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: focus YAN_centralise_industry"
+		swap_ideas = {
+			remove_idea = YAN_Kudakelasi_loterijen
+			add_idea = YAN_Kudakelasi_loterijen_2
+		}
+	}
+}
+
+shared_focus = {
+	id = YAN_rebuild_textile_industry
+	#icon = 
+	x = 5
+	y = 6 
+	cost = 6 
+
+	mutually_exclusive = {
+		focus = YAN_land_approriation
+	}
+
+	prerequisite = {
+		focus = YAN_centralise_industry
+	}
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: focus YAN_rebuild_textile_industry"
+		1157 = {
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = {
+				type = industrial_complex
+				level = 1
+				instant_build = yes 
+			}
+		}
+	}
+}
+
+shared_focus = {
+	id = YAN_invest_machines
+	#icon = 
+	x = 6
+	y = 7 
+	cost = 3 
+
+	prerequisite = {
+		focus = YAN_rebuild_textile_industry
+	}
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: focus YAN_invest_machines"
+		1157 = {
+			add_building_construction = {
+				type = industrial_complex
+				level = 1
+				instant_build = yes 
+			}
+		}
+	}
+}
+
+shared_focus = {
+	id = YAN_fix_railroads
+	#icon = 
+	x = 3.5
+	y = 7
+	cost = 7
+
+	prerequisite = {
+		focus = YAN_rebuild_textile_industry
+		focus = YAN_land_approriation
+	}
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: focus YAN_fix_railroads"
+		1157 = {
+			add_building_construction = {
+				type = infrastructure
+				level = 1
+				instant_build = yes 
+			}
+		}
+		1158 = {
+			add_building_construction = {
+				type = infrastructure
+				level = 1
+				instant_build = yes 
+			}
+		}
+		1159 = {
+			add_building_construction = {
+				type = infrastructure
+				level = 1
+				instant_build = yes 
+			}
+		}
+	}
+}
+
+shared_focus = {
+	id = YAN_improve_market_connections
+	#icon = 
+	x = 4.5
+	y = 8
+	cost = 6 
+
+	prerequisite = {
+		focus = YAN_fix_railroads
+	}
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: focus YAN_improve_market_connections"
+		##Port improvements
+		1157 = {
+			add_building_construction = {
+				type = infrastructure
+				level = 2
+				instant_build = yes 
+			}
+		}
+		1158 = {
+			add_building_construction = {
+				type = infrastructure
+				level = 2
+				instant_build = yes 
+			}
+		}
+		1159 = {
+			add_building_construction = {
+				type = infrastructure
+				level = 1
+				instant_build = yes 
+			}
+		}
+	}
+}
+
+shared_focus = {
+	id = YAN_subsidise_new_markets
+	#icon = 
+	x = 6
+	y = 8 
+	cost = 5
+
+	prerequisite = {
+		focus = YAN_invest_machines
+	}
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: focus YAN_subsidise_new_markets"
+		1155 = {
+			add_building_construction = {
+				type = arms_factory
+				level = 1
+				instant_build = yes 
+			}
+		}
+	}
+}
+
+shared_focus = {
+	id = YAN_economic_liberalisation
+	#icon = 
+	x = 5
+	y = 9 
+	cost = 2
+
+	prerequisite = {
+		focus = YAN_subsidise_new_markets
+	}
+	prerequisite = {
+		focus = YAN_improve_market_connections
+	}
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: focus YAN_economic_liberalisation "
+		add_ideas = YAN_economic_liberalisation_idea
+	}
+}
+
+shared_focus = {
+	id = YAN_land_approriation 
+	#icon = 
+	x = 2
+	y = 6
+	cost = 15
+
+	mutually_exclusive = {
+		focus = YAN_rebuild_textile_industry
+	}
+
+	prerequisite = {
+		focus = YAN_appoint_loyal_bureaucrats
+	}
+	prerequisite = {
+		focus = YAN_centralise_industry
+	}
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: focus YAN_land_approriation"
+		##Cultivation System 2.0 here we come
+		add_stability = -0.20
+		add_ideas = YAN_cultivation_system
+		1157 = {
+			add_extra_state_shared_building_slots = 2
+			add_building_construction = {
+				type = industrial_complex
+				level = 2
+				instant_build = yes 
+			}
+		}
+		1158 = {
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = {
+				type = industrial_complex
+				level = 1
+				instant_build = yes 
+			}
+		}
+		1156 = {
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = {
+				type = industrial_complex
+				level = 1
+				instant_build = yes 
+			}
+		}
+		1155 = {
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = {
+				type = industrial_complex
+				level = 1
+				instant_build = yes 
+			}
+		}
+	}
+}
+
+shared_focus = {
+	id = YAN_resource_exploitation_time_west
+	#icon = 
+	x = 1
+	y = 7
+	cost = 4
+
+	prerequisite = {
+		focus = YAN_land_approriation
+	}
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: focus YAN_resource_exploitation_time"
+		##Probably the western ones for rubber
+		##
+		add_resource = {
+			type = rubber
+			amount = 23
+			state = 1155
+		}
+		add_resource = {
+			type = rubber
+			amount = 39
+			state = 1156
+		}
+	}
+}
+
+shared_focus = {
+	id = YAN_resource_exploitation_time_east
+	#icon = 
+	x = 1
+	y = 8
+	cost = 4
+
+	prerequisite = {
+		focus = YAN_resource_exploitation_time_west
+	}
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: focus YAN_resource_exploitation_time"
+	
+		##Eastern ones get steel
+		add_resource = {
+			type = steel
+			amount = 10
+			state = 1157
+		}
+		add_resource = {
+			type = steel
+			amount = 13
+			state = 1158
+		}
+		add_resource = {
+			type = steel
+			amount = 17
+			state = 1159
+		}
+	}
+}
+
+shared_focus = {
+	id = YAN_improve_ports
+	#icon =
+	x = 2.5
+	y = 8
+	cost = 6
+
+	prerequisite = {
+		focus = YAN_fix_railroads
+	}
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: focus YAN_improve_ports"
+		##PORT IMPROVEMENT
+		1155 = {
+			add_building_construction = {
+				type = naval_base
+				level = 2
+				instant_build = yes 
+				province = 13377
+			}
+		}
+		1156 = {
+			add_building_construction = {
+				type = naval_base
+				level = 2
+				instant_build = yes 
+				province = 20257
+			}
+		}
+		1157 = {
+			add_building_construction = {
+				type = naval_base
+				level = 2
+				instant_build = yes 
+				province = 20085
+			}
+			add_building_construction = {
+				type = naval_base
+				level = 2
+				instant_build = yes 
+				province = 20082
+			}
+		}
+	}
+}
+
+shared_focus = {
+	id = YAN_government_economy
+	#icon =
+	x = 2
+	y = 9
+	cost = 2
+
+	prerequisite = {
+		focus = YAN_resource_exploitation_time_east
+	}
+	prerequisite = {
+		focus = YAN_improve_ports
+	}
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: focus YAN_government_economy"
+		add_ideas = YAN_government_economy_idea
+		
+	}
+}
+
+shared_focus = {
+	id = YAN_reopen_old_colonial_schools
+	#icon = 
+	x = -1
+	y = 6
+	cost = 5
+
+	prerequisite = {
+		focus = YAN_exile_intellectuals
+	}
+	prerequisite = {
+		focus = YAN_appoint_loyal_bureaucrats
+	}
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: focus YAN_reopen_old_colonial_schools"
+		add_ideas = YAN_STOVIA_reopened
+	}
+}

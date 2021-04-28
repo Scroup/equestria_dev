@@ -1,0 +1,137 @@
+focus_tree = {
+	id = YAN_start_tree
+
+	country = {
+		factor = 0
+
+		modifier = {
+			add = 40
+			tag = YAN
+		}
+	}
+	default = no
+	continuous_focus_position = { x = 0 y = 1650 }
+
+	shared_focus = YAN_solid_chaos
+
+}
+
+focus_tree = {
+	id = kudakelasi_tree
+
+	country = {
+		factor = 0
+
+		modifier = {
+			add = 10
+			tag = YAN
+		}
+	}
+	default = no
+	continuous_focus_position = { x = 0 y = 1650 }
+
+	shared_focus = YAN_great_game
+	shared_focus = YAN_governor_election
+}
+
+focus_tree = {
+	id = kudakelasi_governor
+
+	country = {
+		factor = 0
+
+		modifier = {
+			add = 10
+			tag = YAN
+		}
+	}
+	default = no
+	continuous_focus_position = { x = 0 y = 1650 }
+
+	shared_focus = YAN_great_game
+	shared_focus = YAN_governor_election
+	shared_focus = YAN_mistress_of_zebridies
+	shared_focus = YAN_starting_army
+	shared_focus = YAN_navy_start
+	shared_focus = YAN_air1
+}
+
+focus_tree = {
+	id = loterijen_governor
+
+	country = {
+		factor = 0 
+		modifier = {
+			add = 10 
+			tag = YAN
+		}
+	}
+	default = no
+	continuous_focus_position = { x = 0 y = 1650 }
+
+	shared_focus = YAN_loterijen_power
+	shared_focus = YAN_starting_army
+	shared_focus = YAN_navy_start
+	shared_focus = YAN_air1
+}
+
+focus_tree = {
+	id = loterijen_paradise
+
+	country = {
+		factor = 0 
+		modifier = {
+			add = 10 
+			tag = YAN
+		}
+	}
+	default = no
+	continuous_focus_position = { x = 0 y = 1650 }
+
+	shared_focus = YAN_loterijen_power
+	shared_focus = YAN_starting_army
+	shared_focus = YAN_navy_start
+	shared_focus = YAN_air1
+	shared_focus = YAN_a_new_day
+}
+
+focus_tree = {
+	id = semuakawan_land
+
+	country = {
+		factor = 0 
+		modifier = {
+			add = 10 
+			tag = YAN
+		}
+	}
+	default = no
+	continuous_focus_position = { x = 0 y = 1650 }
+
+	shared_focus = YAN_Semua_start
+	shared_focus = YAN_starting_army
+	shared_focus = YAN_navy_start
+	shared_focus = YAN_air1
+}
+
+focus_tree = {
+	id = semuakawan_land_two
+
+	country = {
+		factor = 0 
+		modifier = {
+			add = 10
+			tag = YAN
+		}
+	}
+	default = no
+	continuous_focus_position = { x = 0 y = 1650 }
+
+	shared_focus = YAN_Semua_start
+	shared_focus = YAN_foreign_start
+	shared_focus = YAN_starting_army
+	shared_focus = YAN_navy_start
+	shared_focus = YAN_air1
+	
+}
+

@@ -1,0 +1,2625 @@
+YAN_insurgency_category = {
+	YAN_secure_beakavia = {
+		icon = rifles
+		visible = {
+			owns_state = 1158 
+			1158 = {
+				is_demilitarized_zone = yes
+			}
+		}
+
+		available = {
+			NOT = {
+				has_country_flag= YAN_going_battle
+			}
+			has_equipment = {
+  				infantry_equipment > 100
+			}
+		}
+		highlight_states = {
+			state = 1158
+		}
+		days_remove = 20
+		fire_only_once = yes
+
+		modifier = {
+			political_power_gain = -0.30
+		}
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision YAN_secure_beakvia"
+			1158 = { set_demilitarized_zone = no}
+			hidden_effect = {
+				set_country_flag = YAN_going_battle
+			}
+		}
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove YAN_secure_beakvia"
+			hidden_effect = {
+				clr_country_flag = YAN_going_battle
+			}
+		}
+		ai_will_do = {
+			factor = 400
+		}
+	}
+
+	YAN_secure_zava = {
+		icon = rifles
+		visible = {
+			owns_state = 1157
+			1157 = {
+				is_demilitarized_zone = yes
+			}
+		}
+		available = {
+			NOT = {
+				has_country_flag = YAN_going_battle
+			}
+			has_equipment = {
+  				infantry_equipment > 150
+			}			
+		}
+		highlight_states = {
+			state = 1157
+		}
+		days_remove = 20
+		fire_only_once = yes
+
+		modifier = {
+			political_power_gain = -0.30
+		}
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision YAN_secure_zava"
+			1157 = { set_demilitarized_zone = no}
+			hidden_effect = {
+				set_country_flag = YAN_going_battle
+			}
+		}
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove YAN_secure_zava"
+			hidden_effect = {
+				clr_country_flag = YAN_going_battle
+			}
+		}
+		ai_will_do = {
+			factor = 390
+		}
+	}
+
+	YAN_secure_the_factories = {
+		icon = rifles
+		visible = {
+			owns_state = 1157
+
+		}
+		available = {
+			NOT = {
+				has_country_flag = YAN_going_battle
+			}
+			NOT = {
+				1157 = {
+					is_demilitarized_zone = no
+				}
+			}
+			has_equipment = {
+  				infantry_equipment > 200
+			}
+			has_equipment = {
+				support_equipment > 20
+			}
+		}
+		highlight_states = {
+			state = 1157
+		}
+		days_remove = 20
+		fire_only_once = yes
+
+		modifier = {
+			political_power_gain = -0.30
+			consumer_goods_factor = 0.05
+			industrial_capacity_factory = -0.10
+			industrial_capacity_dockyard = -0.10
+		}
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision YAN_secure_the_factories"
+			add_popularity = { ideology = communism popularity = -0.05 }
+			hidden_effect = {
+				set_country_flag = YAN_going_battle
+			}
+		}
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove YAN_secure_the_factories"
+			hidden_effect = {
+				clr_country_flag = YAN_going_battle
+			}
+		}
+		ai_will_do = {
+			factor = 380
+		}
+	}
+
+	YAN_the_showdown = {
+		icon = chi_army_corruption3
+		visible = {
+			owns_state = 1159
+			1159 = {
+				is_demilitarized_zone = yes
+			}
+		}
+		available = {
+			NOT = {
+				has_country_flag = YAN_going_battle
+			}
+			has_equipment = {
+				infantry_equipment > 300
+			}
+			has_equipment = {
+				support_equipment > 30
+			}
+		}
+		highlight_states = {
+			state = 1159
+		}
+		days_remove = 20
+		fire_only_once = yes
+
+		modifier = {
+			political_power_gain = -0.30
+			stability_weekly = -0.01
+		}
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision YAN_the_showdown"
+			country_event = Indozeeb.5
+			1159 = { set_demilitarized_zone = no}
+			hidden_effect = {
+				set_country_flag = YAN_going_battle
+			}
+		}
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove YAN_the_showdown"
+			hidden_effect = {
+				clr_country_flag = YAN_going_battle
+			}
+		}
+		ai_will_do = {
+			factor = 370
+		}
+	}
+
+	YAN_secure_cemar = {
+		icon = rifles
+		visible = {
+			owns_state = 1156
+			1156 = {
+				is_demilitarized_zone = yes
+			}
+		}
+		available = {
+			NOT = {
+				has_country_flag = YAN_going_battle
+			}
+			has_equipment = {
+				infantry_equipment > 400
+			}
+		}
+		highlight_states = {
+			state = 1156
+		}
+		days_remove = 20
+		fire_only_once = yes
+
+		modifier = {
+			political_power_gain = -0.30
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision YAN_secure_cemar"
+			1156 = { set_demilitarized_zone = no}
+			hidden_effect = {
+				set_country_flag = YAN_going_battle
+			}
+		}
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove YAN_secure_cemar"
+			hidden_effect = {
+				clr_country_flag = YAN_going_battle
+			}
+		}
+		ai_will_do = {
+			factor = 360
+		}
+	}
+
+	YAN_secure_maredia = {
+		icon = rifles
+		visible = {
+			owns_state = 1155
+			1155 = {
+				is_demilitarized_zone = yes
+			}
+		}
+
+		available = {
+			NOT = {
+				has_country_flag = YAN_going_battle
+			}
+			has_equipment = {
+				infantry_equipment > 500
+			}
+		}
+		highlight_states = {
+			state = 1155
+		}
+		days_remove = 20
+		fire_only_once = yes
+
+		modifier = {
+			political_power_gain = -0.30
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision YAN_secure_maredia"
+			1155 = { set_demilitarized_zone = no}
+			hidden_effect = {
+				set_country_flag = YAN_going_battle
+			}
+		}
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove YAN_secure_maredia"
+			hidden_effect = {
+				clr_country_flag = YAN_going_battle
+			}
+		}
+		ai_will_do = {
+			factor = 350
+		}
+	}
+
+	YAN_secure_darkisland = {
+		icon = rifles
+		visible = {
+			owns_state = 1160
+			1160 = {
+				is_demilitarized_zone = yes
+			}
+		}
+		available = {
+			NOT = {
+				has_country_flag = YAN_going_battle
+			}
+			has_equipment = {
+				infantry_equipment > 700
+			}
+		}
+		highlight_states = {
+			state = 1160
+		}
+		days_remove = 20
+		fire_only_once = yes
+
+		modifier = {
+			political_power_gain = -0.30
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision YAN_secure_darkisland"
+			1160 = { set_demilitarized_zone = no}
+			hidden_effect = {
+				set_country_flag = YAN_going_battle
+			}
+		}
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove YAN_secure_darkisland"
+			hidden_effect = {
+				clr_country_flag = YAN_going_battle
+				set_country_flag = YAN_all_island_secured
+			}
+		}
+		ai_will_do = {
+			factor = 340
+		}
+
+	}
+
+	YAN_securing_power = {
+		icon = chi_wargaming_division
+		available = {
+			1158 = {
+				is_demilitarized_zone = no
+			}
+			1157 = {
+				is_demilitarized_zone = no
+			}
+			1159 = {
+				is_demilitarized_zone = no
+			}
+			1156 = {
+				is_demilitarized_zone = no
+			}
+			1155 = {
+				is_demilitarized_zone = no
+			}
+			1160 = {
+				is_demilitarized_zone = no
+			}
+
+		}
+
+		days_remove = 30
+		fire_only_once = yes
+
+		modifier = {
+			political_power_gain = -0.40
+		}
+
+		available = {
+			has_equipment = {
+				infantry_equipment > 800
+				support_equipment > 50
+			}
+			has_country_flag = YAN_all_island_secured
+
+		}
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision YAN_securing_power"
+			country_event = Indozeeb.6
+
+			hidden_effect = {
+				set_country_flag = YAN_going_battle
+			}
+		}
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove YAN_securing_power"
+			hidden_effect = {
+				clr_country_flag = YAN_going_battle
+			}
+		}
+		ai_will_do = {
+			factor = 340
+		}
+
+	}
+
+	YAN_semuakawan_takes_power_timer = {
+		icon = chi_wargaming_division
+		activation = {
+			1158 = { is_demilitarized_zone = yes }
+			1157 = { is_demilitarized_zone = yes }
+			1159 = { is_demilitarized_zone = yes }
+			1156 = { is_demilitarized_zone = yes }
+			1155 = { is_demilitarized_zone = yes }
+			1160 = { is_demilitarized_zone = yes }
+		}
+
+		days_remove = 200
+
+		modifier = {
+
+		}
+
+		available = {
+			always = no
+		}
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision YAN_semuakawan_takes_power_time"
+		}
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision YAN_semuakawan_takes_power_time"
+			set_politics = {
+				ruling_party = fascism
+			}
+			add_popularity = {
+				ideology = fascism
+				popularity = 0.15
+			}
+			add_stability = -0.05
+		}
+
+	}
+
+}
+
+YAN_loterijen_fucks_the_natives_category = {
+
+}
+
+
+YAN_great_game_category = {
+	YAN_placate_bureaucrats = {
+		icon = generic_deal_with_the_devil
+
+		visible = {
+			original_tag = YAN
+
+			has_completed_focus = YAN_great_game
+			NOT = {
+				has_completed_focus = YAN_mistress_of_zebridies
+			}
+		}
+
+		cost = 50
+		days_re_enable = 30
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision YAN_populace_placate_bureaucrats"
+			add_to_variable = {
+				var = YAN_sistem_support_kuda
+				value = 10
+			}
+			subtract_from_variable = {
+				var = YAN_populace_support_kuda
+				value = 3
+			}
+			subtract_from_variable = {
+				var = YAN_independence_support_kuda
+				value = 5 
+			}
+
+		}
+	}
+
+	YAN_placate_populace = {
+		icon = generic_deal_with_the_devil
+
+		visible = {
+			original_tag = YAN
+
+			has_completed_focus = YAN_great_game
+			NOT = {
+				has_completed_focus = YAN_mistress_of_zebridies
+			}
+		}
+
+		cost = 50
+		days_re_enable = 30
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision YAN_populace_placate_populace"
+			add_to_variable = {
+				var = YAN_populace_support_kuda
+				value = 10
+			}
+
+		}
+	}
+
+	YAN_placate_movement = {
+		icon = generic_deal_with_the_devil
+
+		visible = {
+			original_tag = YAN
+
+			has_completed_focus = YAN_great_game
+			NOT = {
+				has_completed_focus = YAN_mistress_of_zebridies
+			}
+		}
+
+		cost = 50
+		days_re_enable = 30
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision YAN_populace_placate_movement"
+			add_to_variable = {
+				var = YAN_independence_support_kuda
+				value = 10
+			}
+			subtract_from_variable = {
+				var = YAN_populace_support_kuda
+				value = 3
+			}
+			subtract_from_variable = {
+				var = YAN_sistem_support_kuda
+				value = 5 
+			}
+		}
+	}
+}
+
+
+###Specific Things one can do with the Lineages
+YAN_lineage_time_category = {
+	##names "Pandai, Garang, Sopan and Tegas""
+	##
+	#check_variable = {
+	#	var = var_name
+	#	value = var_name_2
+	#	compare = less_than
+	#}
+	#less_than
+	#less_than_or_equals
+	#greater_than
+	#greater_than_or_equals
+	#equals
+	#not_equals
+	#YAN_Pandai_legal -> Central Islands
+	#YAN_Garang_legal -> Western Islands
+	#YAN_Tegas_legal -> Main power in Pulalap
+	#YAN_Sopan_legal -> Mainly naval
+
+	#####Lineage Specific Tasks
+
+	YAN_Pandai_crackdown = {
+		icon = GFX_decision_unknown
+		visible = {
+			has_country_flag = YAN_lineage_time
+		}
+		available = {
+			check_variable = {
+				var = YAN_Pandai_legal
+				value = 90
+				compare = less_than
+			}
+			#custom_ 
+		}
+		cost = 100
+		days_re_enable = 60
+		days_remove = 30
+
+		ai_will_do = {
+			factor = 100
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: decision YAN_Pandai_crackdown"
+			set_country_flag = YAN_Pandai_investigation
+		}
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: decision YAN_Pandai_crackdown"
+			clr_country_flag = YAN_Pandai_investigation
+			add_to_variable = {
+				var = YAN_Pandai_legal
+				value = 10
+			}
+
+		}
+	}
+	YAN_Pandai_threathen_1 = {
+		icon = GFX_decision_generic_break_treaty
+		visible = {
+			has_country_flag = YAN_lineage_time
+			check_variable = {
+				var = YAN_Pandai_legal
+				value = 30
+				compare = less_than_or_equals
+			}
+		}
+		available = {
+			check_variable = {
+				var = YAN_Pandai_legal
+				value = 20
+				compare = less_than_or_equals
+			}
+		}
+		cost = 30
+		days_re_enable = 20
+		days_remove = 30
+		ai_will_do = {
+			factor = 70
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: decision YAN_Pandai_threathen_1"
+		}
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: decision YAN_Pandai_threathen_1"
+			YAN_independence_min = yes
+			custom_effect_tooltip = YAN_decrease_movement
+		}
+	}
+	YAN_Pandai_threathen_2 = {
+		icon = GFX_decision_generic_break_treaty
+		visible = {
+			has_country_flag = YAN_lineage_time
+			check_variable = {
+				var = YAN_Pandai_legal
+				value = 30
+				compare = less_than_or_equals
+			}
+		}
+		available = {
+			check_variable = {
+				var = YAN_Pandai_legal
+				value = 20
+				compare = less_than_or_equals
+			}
+		}
+		cost = 30
+		days_re_enable = 20
+		days_remove = 30
+		ai_will_do = {
+			factor = 70
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: decision YAN_Pandai_threathen_2"
+		}
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: decision YAN_Pandai_threathen_2"
+			YAN_sistem_min = yes
+			custom_effect_tooltip = YAN_decrease_sistems
+		}
+	}
+	##Insert decision that can give soldiers
+	YAN_Pandai_smuggle = {
+		icon = GFX_decision_generic_industry
+		visible = {
+			has_country_flag = YAN_lineage_time
+			check_variable = {
+				var = YAN_Pandai_legal
+				value = 40
+				compare = less_than_or_equals
+			}
+		}
+		available = {
+			check_variable = {
+				var = YAN_Pandai_legal
+				value = 30
+				compare = less_than_or_equals
+			}
+		}
+		cost = 70
+		days_re_enable = 60
+		days_remove = 14
+		ai_will_do = {
+			factor = 70
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: decision YAN_Pandai_smuggle"
+		}
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: decision YAN_Pandai_smuggle"
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = 1000
+				producer = FEA
+			}
+		}	
+	}
+	YAN_Pandai_drugs = {
+		icon = GFX_decision_generic_research
+		visible = {
+			has_country_flag = YAN_lineage_time
+			check_variable = {
+				var = YAN_Pandai_legal
+				value = 40
+				compare = less_than_or_equals
+			}
+		}
+		available = {
+			check_variable = {
+				var = YAN_Pandai_legal
+				value = 30
+				compare = less_than_or_equals
+			}
+		}
+		cost = 40
+		days_re_enable = 50
+		days_remove = 7 
+		ai_will_do = {
+			factor = 5
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: decision YAN_Pandai_drugs"
+		}
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: decision YAN_Pandai_drugs"
+			YAN_populace_add = yes
+			custom_effect_tooltip = YAN_increase_populace
+			add_stability = -0.05
+		}
+	}
+	YAN_Pandai_building_slots_1 = {
+		icon = GFX_decision_generic_construction
+		visible = {
+			has_country_flag = YAN_lineage_time
+			check_variable = {
+				var = YAN_Pandai_legal
+				value = 10
+				compare = greater_than_or_equals
+			}
+		}
+		available = {
+			check_variable = {
+				var = YAN_Pandai_legal
+				value = 20
+				compare = greater_than_or_equals
+			}
+		}
+		cost = 50
+		fire_only_once = yes
+
+		days_remove = 21
+		ai_will_do = {
+			factor = 80
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: decision YAN_Pandai_building_slots_1"
+		}
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: decision YAN_Pandai_building_slots_1"
+			1157 = {
+				add_extra_state_shared_building_slots = 1 
+			}
+			set_country_flag = YAN_001_Pandai
+		}
+	}
+	YAN_Pandai_building_slots_2 = {
+		icon = GFX_decision_generic_construction
+		visible = {
+			has_country_flag = YAN_lineage_time
+			has_country_flag = YAN_001_Pandai
+			check_variable = {
+				var = YAN_Pandai_legal
+				value = 10
+				compare = greater_than_or_equals
+			}
+		}
+		available = {
+			check_variable = {
+				var = YAN_Pandai_legal
+				value = 20
+				compare = greater_than_or_equals
+			}
+		}
+		cost = 50
+		fire_only_once = yes
+
+		days_remove = 21
+		ai_will_do = {
+			factor = 80
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: decision YAN_Pandai_building_slots_2"
+		}
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: decision YAN_Pandai_building_slots_2"
+			1158 = {
+				add_extra_state_shared_building_slots = 1 
+			}
+			set_country_flag = YAN_002_Pandai
+		}
+	}
+	YAN_Pandai_building_slots_3 = {
+		icon = GFX_decision_generic_construction
+		visible = {
+			has_country_flag = YAN_lineage_time
+			check_variable = {
+				var = YAN_Pandai_legal
+				value = 10
+				compare = greater_than_or_equals
+			}
+			has_country_flag = YAN_002_Pandai
+		}
+		available = {
+			check_variable = {
+				var = YAN_Pandai_legal
+				value = 20
+				compare = greater_than_or_equals
+			}
+		}
+		cost = 50
+		fire_only_once = yes
+		days_remove = 21
+		ai_will_do = {
+			factor = 80
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: decision YAN_Pandai_building_slots_3"
+		}
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: decision YAN_Pandai_building_slots_3"
+			1159 = {
+				add_extra_state_shared_building_slots = 1 
+			}
+		}
+	}
+	YAN_Pandai_infra_1 = {
+		icon = GFX_decision_generic_operation
+		visible = {
+			has_country_flag = YAN_lineage_time
+			check_variable = {
+				var = YAN_Pandai_legal
+				value = 20
+				compare = greater_than_or_equals
+			}
+		}
+		available = {
+			check_variable = {
+				var = YAN_Pandai_legal
+				value = 30
+				compare = greater_than_or_equals
+			}
+			NOT = {
+			}
+		}
+		cost = 30
+		fire_only_once = yes
+		days_remove = 21
+		ai_will_do = {
+			factor = 80
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: decision YAN_Pandai_infra_1"
+		}
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: decision YAN_Pandai_infra_1"
+			1157 = {
+				add_building_construction  = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			set_country_flag = YAN_003_Pandai
+		}
+	}
+	YAN_Pandai_infra_2 = {
+		icon = GFX_decision_generic_operation
+		visible = {
+			has_country_flag = YAN_lineage_time
+			check_variable = {
+				var = YAN_Pandai_legal
+				value = 20
+				compare = greater_than_or_equals
+			}
+			has_country_flag = YAN_003_Pandai
+		}
+		available = {
+			check_variable = {
+				var = YAN_Pandai_legal
+				value = 30
+				compare = greater_than_or_equals
+			}
+			NOT = {
+			}
+		}
+		cost = 30
+		fire_only_once = yes
+		days_remove = 21
+		ai_will_do = {
+			factor = 80
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: decision YAN_Pandai_infra_2"
+		}
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: decision YAN_Pandai_infra_2"
+			1158 = {
+				add_building_construction  = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			set_country_flag = YAN_004_Pandai
+		}
+	}
+	YAN_Pandai_infra_3 = {
+		icon = GFX_decision_generic_operation
+		visible = {
+			has_country_flag = YAN_lineage_time
+			check_variable = {
+				var = YAN_Pandai_legal
+				value = 20
+				compare = greater_than_or_equals
+			}
+			has_country_flag = YAN_004_Pandai
+		}
+		available = {
+			check_variable = {
+				var = YAN_Pandai_legal
+				value = 30
+				compare = greater_than_or_equals
+			}
+			NOT = {
+			}
+		}
+		cost = 30
+		fire_only_once = yes
+		days_remove = 21
+		ai_will_do = {
+			factor = 80
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: decision YAN_Pandai_infra_3"
+		}
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: decision YAN_Pandai_infra_3"
+			1159 = {
+				add_building_construction  = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	YAN_Pandai_civie_1 = {
+		icon = GFX_decision_generic_construction
+		visible = {
+			has_country_flag = YAN_lineage_time
+			check_variable = {
+				var = YAN_Pandai_legal
+				value = 30
+				compare = greater_than_or_equals
+			}
+		}
+		available = {
+			check_variable = {
+				var = YAN_Pandai_legal
+				value = 30
+				compare = greater_than_or_equals
+			}
+			NOT = {
+			}
+		}
+		cost = 60
+		fire_only_once = yes
+		days_remove = 30
+		ai_will_do = {
+			factor = 100
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: decision YAN_Pandai_civie_1"
+		}
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: decision YAN_Pandai_civie_1"
+			1157 = {
+				add_building_construction  = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			set_country_flag = YAN_005_Pandai
+
+		}
+	}
+	YAN_Pandai_civie_2 = {
+		icon = GFX_decision_generic_construction
+		visible = {
+			has_country_flag = YAN_lineage_time
+			check_variable = {
+				var = YAN_Pandai_legal
+				value = 30
+				compare = greater_than_or_equals
+			}
+			has_country_flag = YAN_005_Pandai
+		}
+		available = {
+			check_variable = {
+				var = YAN_Pandai_legal
+				value = 30
+				compare = greater_than_or_equals
+			}
+			NOT = {
+			}
+		}
+		cost = 60
+		fire_only_once = yes
+		days_remove = 30
+		ai_will_do = {
+			factor = 100
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: decision YAN_Pandai_civie_2"
+		}
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: decision YAN_Pandai_civie_2"
+			1158 = {
+				add_building_construction  = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			set_country_flag = YAN_006_Pandai
+		}
+
+	}
+	YAN_Pandai_civie_3 = {
+		icon = GFX_decision_generic_construction
+		visible = {
+			has_country_flag = YAN_lineage_time
+			check_variable = {
+				var = YAN_Pandai_legal
+				value = 30
+				compare = greater_than_or_equals
+			}
+			has_country_flag = YAN_006_Pandai
+		}
+		available = {
+			check_variable = {
+				var = YAN_Pandai_legal
+				value = 30
+				compare = greater_than_or_equals
+			}
+			NOT = {
+			}
+		}
+		cost = 60
+		fire_only_once = yes
+		days_remove = 30
+		ai_will_do = {
+			factor = 100
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: decision YAN_Pandai_civie_3"
+		}
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: decision YAN_Pandai_civie_3"
+			1159 = {
+				add_building_construction  = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+
+	}
+	YAN_Pandai_mil_1 = {
+		icon = GFX_decision_ger_military_buildup
+		visible = {
+			has_country_flag = YAN_lineage_time
+			check_variable = {
+				var = YAN_Pandai_legal
+				value = 30
+				compare = greater_than_or_equals
+			}
+		}
+		available = {
+			check_variable = {
+				var = YAN_Pandai_legal
+				value = 50
+				compare = greater_than_or_equals
+			}
+			NOT = {
+			}
+		}
+		cost = 80
+		fire_only_once = yes
+		days_remove = 50
+		ai_will_do = {
+			factor = 90
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: decision YAN_Pandai_mil_1"
+		}
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: decision YAN_Pandai_mil_1"
+			1157 = {
+				add_extra_state_shared_building_slots = 1 
+				add_building_construction  = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+			set_country_flag = YAN_007_Pandai
+		}
+	}
+	YAN_Pandai_mil_2 = {
+		icon = GFX_decision_ger_military_buildup
+		visible = {
+			has_country_flag = YAN_lineage_time
+			check_variable = {
+				var = YAN_Pandai_legal
+				value = 30
+				compare = greater_than_or_equals
+			}
+			has_country_flag = YAN_007_Pandai
+		}
+		available = {
+			check_variable = {
+				var = YAN_Pandai_legal
+				value = 50
+				compare = greater_than_or_equals
+			}
+			NOT = {
+			}
+		}
+		cost = 80
+		fire_only_once = yes
+		days_remove = 50
+		ai_will_do = {
+			factor = 90
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: decision YAN_Pandai_mil_2"
+		}
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: decision YAN_Pandai_mil_2"
+			1158 = {
+				add_extra_state_shared_building_slots = 1 
+				add_building_construction  = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+			set_country_flag = YAN_008_Pandai
+		}
+
+	}
+	YAN_Pandai_mil_3 = {
+		icon = GFX_decision_ger_military_buildup 
+		visible = {
+			has_country_flag = YAN_lineage_time
+			check_variable = {
+				var = YAN_Pandai_legal
+				value = 30
+				compare = greater_than_or_equals
+			}
+			has_country_flag = YAN_008_Pandai
+		}
+		available = {
+			check_variable = {
+				var = YAN_Pandai_legal
+				value = 50
+				compare = greater_than_or_equals
+			}
+			NOT = {
+			}
+		}
+		cost = 80
+		fire_only_once = yes
+		days_remove = 50
+		ai_will_do = {
+			factor = 90
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: decision YAN_Pandai_mil_3"
+		}
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: decision YAN_Pandai_mil_3"
+			1159 = {
+				add_extra_state_shared_building_slots = 1 
+				add_building_construction  = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+
+	}
+
+	YAN_Pandai_bigcivie = {
+		icon = GFX_decision_hol_draw_up_staff_plans
+		visible = {
+			has_country_flag = YAN_lineage_time
+			check_variable = {
+				var = YAN_Pandai_legal
+				value = 50
+				compare = greater_than_or_equals
+			}
+		}
+		available = {
+			check_variable = {
+				var = YAN_Pandai_legal
+				value = 70
+				compare = greater_than_or_equals
+			}
+			has_country_flag = YAN_005_Pandai
+		}
+		cost = 200
+		fire_only_once = yes
+		days_remove = 400
+		ai_will_do = {
+			factor = 100
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: decision YAN_Pandai_bigcivie"
+		}
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: decision YAN_Pandai_bigcivie"
+			1157 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+			1158 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+			1159 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction  = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+
+	}
+
+
+	YAN_Garang_crackdown = {
+		icon = GFX_decision_generic_decision
+		visible = {
+			has_country_flag = YAN_lineage_time
+		}
+		available = {
+			check_variable = {
+				var = YAN_Garang_legal
+				value = 90
+				compare = less_than
+			}
+		}
+		cost = 100
+		days_re_enable = 60
+		days_remove = 30
+
+		ai_will_do = {
+			factor = 100
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: decision YAN_Garang_crackdown"
+			set_country_flag = YAN_Garang_investigation
+		}
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: decision YAN_Garang_crackdown"
+			clr_country_flag = YAN_Garang_investigation
+			add_to_variable = {
+				var = YAN_Garang_legal
+				value = 10
+			}
+
+		}
+	}
+	YAN_Garang_threathen_1 = {
+		icon = GFX_decision_generic_break_treaty
+		visible = {
+			has_country_flag = YAN_lineage_time
+			check_variable = {
+				var = YAN_Garang_legal
+				value = 30
+				compare = less_than_or_equals
+			}
+		}
+		available = {
+			check_variable = {
+				var = YAN_Garang_legal
+				value = 20
+				compare = less_than_or_equals
+			}
+		}
+		cost = 30
+		days_re_enable = 20
+		days_remove = 30
+		ai_will_do = {
+			factor = 70
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: decision YAN_Garang_threathen_1"
+		}
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: decision YAN_Garang_threathen_1"
+			YAN_independence_min = yes
+			custom_effect_tooltip = YAN_decrease_movement
+		}
+	}
+	YAN_Garang_threathen_2 = {
+		icon = GFX_decision_generic_break_treaty 
+		visible = {
+			has_country_flag = YAN_lineage_time
+			check_variable = {
+				var = YAN_Pandai_legal
+				value = 30
+				compare = less_than_or_equals
+			}
+		}
+		available = {
+			check_variable = {
+				var = YAN_Pandai_legal
+				value = 20
+				compare = less_than_or_equals
+			}
+		}
+		cost = 30
+		days_re_enable = 20
+		days_remove = 30
+		ai_will_do = {
+			factor = 70
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: decision YAN_Garang_threathen_2"
+		}
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: decision YAN_Garang_threathen_2"
+			YAN_sistem_min = yes
+			custom_effect_tooltip = YAN_decrease_sistems
+		}
+	}
+	YAN_Garang_smuggle = {
+		icon = GFX_decision_generic_industry
+		visible = {
+			has_country_flag = YAN_lineage_time
+			check_variable = {
+				var = YAN_Garang_legal
+				value = 40
+				compare = less_than_or_equals
+			}
+		}
+		available = {
+			check_variable = {
+				var = YAN_Pandai_legal
+				value = 30
+				compare = less_than_or_equals
+			}
+		}
+		cost = 70
+		days_re_enable = 60
+		days_remove = 14
+		ai_will_do = {
+			factor = 70
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: decision YAN_Garang_smuggle"
+		}
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: decision YAN_Garang_smuggle"
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = 1000
+				producer = KIR
+			}
+		}	
+	}
+	YAN_Garang_drugs = {
+		icon = GFX_decision_generic_research
+		visible = {
+			has_country_flag = YAN_lineage_time
+			check_variable = {
+				var = YAN_Garang_legal
+				value = 40
+				compare = less_than_or_equals
+			}
+		}
+		available = {
+			check_variable = {
+				var = YAN_Garang_legal
+				value = 30
+				compare = less_than_or_equals
+			}
+		}
+		cost = 40
+		days_re_enable = 50
+		days_remove = 7 
+		ai_will_do = {
+			factor = 5
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: decision YAN_Garang_drugs"
+		}
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: decision YAN_Garang_drugs"
+			YAN_populace_add = yes
+			custom_effect_tooltip = YAN_increase_populace
+			add_stability = -0.05
+		}
+	}
+	YAN_Garang_building_slots_1 = {
+        icon = GFX_decision_generic_construction
+        visible = {
+            has_country_flag = YAN_lineage_time
+            check_variable = {
+                var = YAN_Garang_legal
+                value = 10
+                compare = greater_than_or_equals
+            }
+        }
+        available = {
+            check_variable = {
+                var = YAN_Garang_legal
+                value = 20
+                compare = greater_than_or_equals
+            }
+        }
+        cost = 50
+        fire_only_once = yes
+
+        days_remove = 21
+        ai_will_do = {
+            factor = 80
+        }
+        complete_effect = {
+            log = "[GetDateText]: [Root.GetName]: decision YAN_Garang_building_slots_1"
+        }
+        remove_effect = {
+            log = "[GetDateText]: [Root.GetName]: decision YAN_Garang_building_slots_1"
+            1155 = {
+                add_extra_state_shared_building_slots = 1 
+			}
+			set_country_flag = YAN_001_Garang
+        }
+    }
+    YAN_Garang_building_slots_2 = {
+        icon = GFX_decision_generic_construction
+        visible = {
+			has_country_flag = YAN_lineage_time
+            check_variable = {
+                var = YAN_Garang_legal
+                value = 10
+                compare = greater_than_or_equals
+			}
+			has_country_flag = YAN_001_Garang
+        }
+        available = {
+            check_variable = {
+                var = YAN_Garang_legal
+                value = 20
+                compare = greater_than_or_equals
+            }
+        }
+        cost = 50
+        fire_only_once = yes
+
+        days_remove = 21
+        ai_will_do = {
+            factor = 80
+        }
+        complete_effect = {
+            log = "[GetDateText]: [Root.GetName]: decision YAN_Garang_building_slots_2"
+        }
+        remove_effect = {
+            log = "[GetDateText]: [Root.GetName]: decision YAN_Garang_building_slots_2"
+            1156 = {
+                add_extra_state_shared_building_slots = 1 
+			}
+        }
+    }
+     YAN_Garang_infra_1 = {
+        icon = GFX_decision_generic_operation
+        visible = {
+            has_country_flag = YAN_lineage_time
+            check_variable = {
+                var = YAN_Garang_legal
+                value = 20
+                compare = greater_than_or_equals
+			}
+			
+        }
+        available = {
+            check_variable = {
+                var = YAN_Garang_legal
+                value = 30
+                compare = greater_than_or_equals
+            }
+        }
+        cost = 30
+        fire_only_once = yes
+        days_remove = 21
+        ai_will_do = {
+            factor = 80
+        }
+        complete_effect = {
+            log = "[GetDateText]: [Root.GetName]: decision YAN_Garang_infra_1"
+        }
+        remove_effect = {
+            log = "[GetDateText]: [Root.GetName]: decision YAN_Garang_infra_1"
+            1155 = {
+                add_building_construction  = {
+                    type = infrastructure
+                    level = 1
+                    instant_build = yes
+                }
+			}
+			set_country_flag = YAN_002_Garang
+        }
+    }
+    YAN_Garang_infra_2 = {
+        icon = GFX_decision_generic_operation
+        visible = {
+            has_country_flag = YAN_lineage_time
+            check_variable = {
+                var = YAN_Garang_legal
+                value = 20
+                compare = greater_than_or_equals
+			}
+			has_country_flag = YAN_002_Garang
+        }
+        available = {
+            check_variable = {
+                var = YAN_Garang_legal
+                value = 30
+                compare = greater_than_or_equals
+            }
+            NOT = {
+            }
+        }
+        cost = 30
+        fire_only_once = yes
+        days_remove = 21
+        ai_will_do = {
+            factor = 80
+        }
+        complete_effect = {
+            log = "[GetDateText]: [Root.GetName]: decision YAN_Garang_infra_2"
+        }
+        remove_effect = {
+            log = "[GetDateText]: [Root.GetName]: decision YAN_Garanginfra_2"
+            1156 = {
+                add_building_construction  = {
+                    type = infrastructure
+                    level = 1
+                    instant_build = yes
+                }
+			}
+        }
+    }
+    YAN_Garang_civie_1 = {
+        icon = GFX_decision_generic_construction
+        visible = {
+            has_country_flag = YAN_lineage_time
+            check_variable = {
+                var = YAN_Garang_legal
+                value = 20
+                compare = greater_than_or_equals
+            }
+        }
+        available = {
+            check_variable = {
+                var = YAN_Garang_legal
+                value = 30
+                compare = greater_than_or_equals
+            }
+            NOT = {
+            }
+        }
+        cost = 60
+        fire_only_once = yes
+        days_remove = 30
+        ai_will_do = {
+            factor = 100
+        }
+        complete_effect = {
+            log = "[GetDateText]: [Root.GetName]: decision YAN_Garang_civie_1"
+        }
+        remove_effect = {
+            log = "[GetDateText]: [Root.GetName]: decision YAN_Garang_civie_1"
+            1155 = {
+                add_building_construction  = {
+                    type = industrial_complex
+                    level = 1
+                    instant_build = yes
+                }
+			}
+			set_country_flag = YAN_003_Garang
+        }
+    }
+    YAN_Garang_civie_2 = {
+        icon = GFX_decision_generic_construction
+        visible = {
+            has_country_flag = YAN_lineage_time
+            check_variable = {
+                var = YAN_Garang_legal
+                value = 20
+                compare = greater_than_or_equals
+			}
+			has_country_flag = YAN_003_Garang
+        }
+        available = {
+            check_variable = {
+                var = YAN_Garang_legal
+                value = 30
+                compare = greater_than_or_equals
+            }
+            NOT = {
+            }
+        }
+        cost = 60
+        fire_only_once = yes
+        days_remove = 30
+        ai_will_do = {
+            factor = 100
+        }
+        complete_effect = {
+            log = "[GetDateText]: [Root.GetName]: decision YAN_Garang_civie_2"
+        }
+        remove_effect = {
+            log = "[GetDateText]: [Root.GetName]: decision YAN_Garang_civie_2"
+            1156 = {
+                add_building_construction  = {
+                    type = industrial_complex
+                    level = 1
+                    instant_build = yes
+                }
+			}
+        }
+
+    }
+    YAN_Garang_mil_1 = {
+        icon = GFX_decision_ger_military_buildup
+        visible = {
+			has_country_flag = YAN_lineage_time
+            check_variable = {
+                var = YAN_Garang_legal
+                value = 30
+                compare = greater_than_or_equals
+            }
+        }
+        available = {
+            check_variable = {
+                var = YAN_Garang_legal
+                value = 50
+                compare = greater_than_or_equals
+            }
+            NOT = {
+            }
+        }
+        cost = 80
+        fire_only_once = yes
+        days_remove = 50
+        ai_will_do = {
+            factor = 90
+        }
+        complete_effect = {
+            log = "[GetDateText]: [Root.GetName]: decision YAN_Garang_mil_1"
+        }
+        remove_effect = {
+            log = "[GetDateText]: [Root.GetName]: decision YAN_Garang_mil_1"
+            1155 = {
+                add_extra_state_shared_building_slots = 1 
+                add_building_construction  = {
+                    type = arms_factory
+                    level = 1
+                    instant_build = yes
+                }
+			}
+			set_country_flag = YAN_004_Garang
+        }
+    }
+    YAN_Garang_mil_2 = {
+        icon = GFX_decision_ger_military_buildup 
+        visible = {
+            has_country_flag = YAN_lineage_time
+            check_variable = {
+                var = YAN_Garang_legal
+                value = 30
+                compare = greater_than_or_equals
+			}
+			has_country_flag = YAN_004_Garang
+        }
+        available = {
+            check_variable = {
+                var = YAN_Garang_legal
+                value = 50
+                compare = greater_than_or_equals
+            }
+            NOT = {
+            }
+        }
+        cost = 80
+        fire_only_once = yes
+        days_remove = 50
+        ai_will_do = {
+            factor = 90
+        }
+        complete_effect = {
+            log = "[GetDateText]: [Root.GetName]: decision YAN_Garang_mil_2"
+        }
+        remove_effect = {
+            log = "[GetDateText]: [Root.GetName]: decision YAN_Garang_mil_2"
+            1156 = {
+                add_extra_state_shared_building_slots = 1 
+                add_building_construction  = {
+                    type = arms_factory
+                    level = 1
+                    instant_build = yes
+                }
+            }
+        }
+
+    }
+  
+
+	YAN_Garang_bigcivvie = {
+		icon = GFX_decision_hol_draw_up_staff_plans
+		visible = {
+			has_country_flag = YAN_lineage_time
+			check_variable = {
+				var = YAN_Garang_legal
+				value = 50
+				compare = greater_than_or_equals
+			}
+		}
+		available = {
+			check_variable = {
+				var = YAN_Garang_legal
+				value = 70
+				compare = greater_than_or_equals
+			}
+			has_country_flag = YAN_003_Garang
+		}
+		cost = 200
+		fire_only_once = yes
+		days_remove = 400
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: decision YAN_Garang_bigcivvie"
+		}
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: decision YAN_Garang_bigcivvie"
+			1156 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+			1155 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+
+	#
+	YAN_Sopan_crackdown = {
+		icon = GFX_decision_unknown
+		visible = {
+			has_country_flag = YAN_business_kuda_check_1
+		}
+		available = {
+			check_variable = {
+				var = YAN_Sopan_legal
+				value = 90
+				compare = less_than
+			}
+		}
+		cost = 100
+		days_re_enable = 60
+		days_remove = 30
+
+		ai_will_do = {
+			factor = 100
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: decision YAN_Sopan_crackdown"
+			set_country_flag = YAN_Sopan_investigation
+		}
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: decision YAN_Sopan_crackdown"
+			clr_country_flag = YAN_Sopan_investigation
+			add_to_variable = {
+				var = YAN_Sopan_legal
+				value = 10
+			}
+
+		}
+	}
+
+	YAN_Sopan_smuggle = {
+		icon = GFX_decision_generic_industry
+		visible = {
+			has_country_flag = YAN_business_kuda_check_1
+			check_variable = {
+				var = YAN_Sopan_legal
+				value = 40
+				compare = less_than_or_equals
+			}
+		}
+		available = {
+			check_variable = {
+				var = YAN_Sopan_legal
+				value = 30
+				compare = less_than_or_equals
+			}
+		}
+		cost = 70
+		days_re_enable = 60
+		days_remove = 10
+		ai_will_do = {
+			factor = 10
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: decision YAN_Sopan_smuggle"
+		}
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: decision YAN_Sopan_smuggle"
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = 1000
+				producer = GRI
+			}
+		}
+	}
+
+	YAN_Sopan_drugs = {
+		icon = GFX_decision_generic_research
+		visible = {
+			has_country_flag = YAN_business_kuda_check_1
+			check_variable = {
+				var = YAN_Sopan_legal
+				value = 40
+				compare = less_than_or_equals
+			}
+		}
+		available = {
+			check_variable = {
+				var = YAN_Sopan_legal
+				value = 30
+				compare = less_than_or_equals
+			}
+		}
+		cost = 40
+		days_re_enable = 50
+		days_remove = 7 
+		ai_will_do = {
+			factor = 5
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: decision YAN_Sopan_drugs"
+		}
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: decision YAN_Sopan_drugs"
+			YAN_populace_add = yes
+			custom_effect_tooltip = YAN_increase_populace
+		}
+	}
+
+	YAN_Sopan_dockyard1 = {
+		icon = GFX_decision_generic_naval
+		visible = {
+			has_country_flag = YAN_business_kuda_check_1
+			check_variable = {
+				var = YAN_Sopan_legal
+				value = 20
+				compare = greater_than_or_equals
+			}
+		}
+			available = {
+				check_variable = {
+					var = YAN_Sopan_legal
+					value = 50
+					compare = greater_than_or_equals
+				}
+			}
+		cost = 70
+		fire_only_once = yes
+		days_remove = 70
+		ai_will_do = {
+			factor = 80
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: decision YAN_Sopan_dockyard1"
+		}
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: decision YAN_Sopan_dockyard1"
+			1157 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction  = {
+                    type = dockyard
+                    level = 1
+                    instant_build = yes
+                }
+			}
+		}
+		
+	}
+
+	YAN_Sopan_dockyard2 = {
+		icon = GFX_decision_generic_naval
+		visible = {
+			has_country_flag = YAN_business_kuda_check_1
+			check_variable = {
+				var = YAN_Sopan_legal
+				value = 20
+				compare = greater_than_or_equals
+			}
+		}
+			available = {
+				check_variable = {
+					var = YAN_Sopan_legal
+					value = 50
+					compare = greater_than_or_equals
+				}
+			}
+		cost = 70
+		fire_only_once = yes
+		days_remove = 70
+		ai_will_do = {
+			factor = 80
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: decision YAN_Sopan_dockyard2"
+		}
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: decision YAN_Sopan_dockyard2"
+			1158 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction  = {
+                    type = dockyard
+                    level = 1
+                    instant_build = yes
+                }
+			}
+		}
+		
+	}
+
+	YAN_Sopan_dockyard3 = {
+		icon = GFX_decision_generic_naval
+		visible = {
+			has_country_flag = YAN_business_kuda_check_1
+			check_variable = {
+				var = YAN_Sopan_legal
+				value = 20
+				compare = greater_than_or_equals
+			}
+		}
+			available = {
+				check_variable = {
+					var = YAN_Sopan_legal
+					value = 50
+					compare = greater_than_or_equals
+				}
+			}
+		cost = 70
+		fire_only_once = yes
+		days_remove = 70
+		ai_will_do = {
+			factor = 80
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: decision YAN_Sopan_dockyard3"
+		}
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: decision YAN_Sopan_dockyard3"
+			1159 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction  = {
+                    type = dockyard
+                    level = 1
+                    instant_build = yes
+                }
+			}
+		}
+		
+	}
+
+	YAN_Sopan_dockyard4 = {
+		icon = GFX_decision_generic_naval
+		visible = {
+			has_country_flag = YAN_business_kuda_check_1
+			check_variable = {
+				var = YAN_Sopan_legal
+				value = 20
+				compare = greater_than_or_equals
+			}
+		}
+			available = {
+				check_variable = {
+					var = YAN_Sopan_legal
+					value = 50
+					compare = greater_than_or_equals
+				}
+			}
+		cost = 70
+		fire_only_once = yes
+		days_remove = 70
+		ai_will_do = {
+			factor = 80
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: decision YAN_Sopan_dockyard4"
+		}
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: decision YAN_Sopan_dockyard4"
+			1156 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction  = {
+                    type = dockyard
+                    level = 1
+                    instant_build = yes
+                }
+			}
+		}
+		
+	}
+
+	YAN_Sopan_navy_commision1 = {
+		icon = GFX_decision_generic_naval
+		visible = {
+			has_country_flag = YAN_business_kuda_check_1
+			check_variable = {
+				var = YAN_Sopan_legal
+				value = 40
+				compare = greater_than_or_equals
+			}
+		}
+		available = {
+			check_variable = {
+				var = YAN_Sopan_legal
+				value = 80
+				compare = greater_than_or_equals
+			}
+		}
+		cost = 150
+		fire_only_once = yes
+		days_remove = 170
+		ai_will_do = {
+			factor = 100
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: decision YAN_Sopan_navy_commission1"
+		}
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: decision YAN_Sopan_navy_commission1"
+			##Patrol Fleet Commission 
+			custom_effect_tooltip = YAN_Sopan_navy_commission1_tt
+			hidden_effect = { load_oob = "YAN_patrol_fleet" } 
+		}
+	}
+
+	YAN_Sopan_navy_commision2 = {
+		icon = GFX_decision_generic_naval
+		visible = {
+			has_country_flag = YAN_business_kuda_check_1
+			check_variable = {
+				var = YAN_Sopan_legal
+				value = 40
+				compare = greater_than_or_equals
+			}
+		}
+		available = {
+			check_variable = {
+				var = YAN_Sopan_legal
+				value = 85
+				compare = greater_than_or_equals
+			}
+		}
+		cost = 175
+		fire_only_once = yes
+		days_remove = 365
+		ai_will_do = {
+			factor = 100
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: decision YAN_Sopan_navy_commission2"
+		}
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: decision YAN_Sopan_navy_commission2"
+			##Crusier Fleet Commission 
+			custom_effect_tooltip = YAN_Sopan_navy_commission2_tt
+			hidden_effect = { load_oob = "YAN_crusier_fleet" } 
+		}
+	}
+
+	YAN_Sopan_navy_commision3 = {
+		icon = GFX_decision_generic_naval
+		visible = {
+			has_country_flag = YAN_business_kuda_check_1
+			check_variable = {
+				var = YAN_Sopan_legal
+				value = 40
+				compare = greater_than_or_equals
+			}
+		}
+		available = {
+			check_variable = {
+				var = YAN_Sopan_legal
+				value = 90
+				compare = greater_than_or_equals
+			}
+		}
+		cost = 200
+		fire_only_once = yes
+		days_remove = 450
+		ai_will_do = {
+			factor = 100
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: decision YAN_Sopan_navy_commission3"
+		}
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: decision YAN_Sopan_navy_commission3"
+			##Battle  Fleet Commission
+			custom_effect_tooltip = YAN_Sopan_navy_commission1_tt
+			hidden_effect = { load_oob = "YAN_battle_fleet" } 
+		}
+	}
+
+	YAN_Tegas_crackdown = {
+		#icon = 
+		visible = {
+			has_country_flag = YAN_business_kuda_check_2
+		}
+		available = {
+			check_variable = {
+				var = YAN_Tegas_legal
+				value = 90
+				compare = less_than
+			}
+		}
+		cost = 100
+		days_re_enable = 60
+		days_remove = 30
+
+		ai_will_do = {
+			factor = 100
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: decision YAN_Tegas_crackdown"
+			set_country_flag = YAN_Tegas_investigation
+		}
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: decision YAN_Tegas_crackdown"
+			clr_country_flag = YAN_Tegas_investigation
+			add_to_variable = {
+				var = YAN_Tegas_legal
+				value = 10
+			}
+
+		}
+	}
+
+	YAN_Tegas_development_1 = {
+		#icon = 
+		visible = {
+			has_country_flag = YAN_business_kuda_check_2
+		}
+		available = {
+			check_variable = {
+				var = YAN_Tegas_legal
+				value = 20
+				compare = greater_than_or_equals
+			}
+		}
+		cost = 50
+		days_remove = 60
+
+		ai_will_do = {
+			factor = 90
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: decision YAN_Tegas_development_1"
+		}
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: decision YAN_Tegas_development_1"
+			1160 = {
+				add_extra_state_shared_building_slots = 2 
+			}
+		}
+	}
+
+	
+	
+}
+
+YAN_se_business_category = {
+	YAN_IST_railway_time = {
+		#icon = 
+		visible = {
+			has_completed_focus = YAN_SEZO_infra_plan
+		}
+		available = {
+			has_political_power > 50
+		}
+		cost = 50
+		days_remove = 120
+		fire_only_once = yes
+		ai_will_do = {
+			factor = 100
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: decision YAN_IST_railway_time"
+			IST = {
+				add_stability = -0.05
+			}
+		}
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: decision YAN_IST_railway_time"
+			1154 = {
+				add_building_construction = {
+					type = infrastructure
+					instant_build = yes
+					level = 2
+				}
+			}
+			1143 = {
+				add_building_construction = {
+					type = infrastructure 
+					level = 2
+					instant_build = yes
+				}
+			}
+			1153 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+			IST = {
+				add_stability = 0.05
+			}
+
+		}
+	}
+	YAN_DEL_railway_time = {
+		#icon = 
+		visible = {
+			has_completed_focus = YAN_SEZO_infra_plan
+		}
+		available = {
+			has_political_power > 100
+		}
+		cost = 100
+		days_remove = 200 
+		fire_only_once = yes
+		ai_will_do = {
+			factor = 110
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: decision YAN_DEL_railway_time"
+			DEL = {
+				add_stability = -0.05
+			}
+			YAN = {
+			}
+		}
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: decision YAN_DEL_railway_time"
+			DEL = {
+				add_stability = 0.05
+			}
+			YAN = {
+			}
+			1141 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 3
+					instant_build = yes
+				}
+			}
+			1192 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 3
+					instant_build = yes
+				}
+			}
+			1142 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+			1140 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+			1147 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+			1139 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	YAN_IDO_railway_time = {
+		#icon = 
+		visible = {
+			has_completed_focus = YAN_SEZO_infra_plan
+		}
+		available = {
+			has_political_power > 50
+		}
+		cost = 50
+		days_remove = 120
+		fire_only_once = yes
+		ai_will_do = {
+			factor = 100
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: decision YAN_IDO_railway_time"
+			IDO = {
+				add_stability = -0.05
+			}
+		}
+		remove_effect = {
+			log =  "[GetDateText]: [Root.GetName]: decision YAN_IDO_railway_time"
+			IDO = {
+				add_stability = 0.05
+			}
+			1149 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 3
+					instant_build = yes
+				}
+			}
+			1148 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+			1146 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	YAN_IST_industry_time = {
+		#icon = 
+		visible = {
+			has_country_flag = YAN_SEZO_industry_flag
+		}
+		available = {
+			has_political_power > 100
+		}
+		cost = 150
+		days_remove = 210
+		fire_only_once = yes
+		ai_will_do = {
+			factor = 99
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.Getname]: decision YAN_IST_industry_time"
+			IST = {
+				add_stability = -0.05
+			}
+			YAN = {
+				add_political_power = -20
+			}
+		}
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: decision YAN_IST_industry_time"
+			IST = {
+				add_stability = 0.05
+				swap_ideas = {
+					remove_idea = YAN_business_investment_1
+					add_idea = YAN_business_investment_2
+				}
+			}
+			1154 = {
+				add_building_construction = {
+					type = industrial_complex
+					level = 1 
+					instant_build = yes
+				}
+			}
+			1153 = {
+				add_building_construction = {
+					type = industrial_complex
+					level = 1 
+					instant_build = yes
+				}
+			}
+			1143 = {
+				add_building_construction = {
+					type = industrial_complex
+					level = 1 
+					instant_build = yes
+				}
+			}
+			1190 = {
+				add_building_construction = {
+					type = industrial_complex
+					level = 1 
+					instant_build = yes
+				}
+			}
+			YAN = {
+				add_political_power = 100
+			}
+		}
+	}
+	YAN_IDO_industry_time = {
+		#icon = 
+		visible = {
+			has_country_flag = YAN_SEZO_industry_flag
+		}
+		available = {
+			has_political_power > 110
+		}
+		cost = 150
+		days_remove = 260
+		fire_only_once = yes
+		ai_will_do = {
+			factor = 99
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: decision YAN_IDO_industry_time"
+			IDO = {
+				add_stability = -0.07
+			}
+			YAN = {
+				add_political_power = -30
+			}
+		}
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: decision YAN_IDO_industry_time"
+			IDO = {
+				add_stability = 0.07
+				swap_ideas = {
+					remove_idea = YAN_business_investment_1
+					add_idea = YAN_business_investment_2
+				}
+			}
+			YAN = {
+				add_political_power = 130
+			}
+			1149 = {
+				add_building_construction = {
+					type = industrial_complex
+					level = 1 
+					instant_build = yes
+				}
+			}
+			1148 = {
+				add_building_construction = {
+					type = industrial_complex
+					level = 1 
+					instant_build = yes
+				}
+			}
+			1146 = {
+				add_building_construction = {
+					type = industrial_complex
+					level = 1 
+					instant_build = yes
+				}
+			}
+		}
+	}
+	YAN_DEL_industry_time = {
+		#icon = 
+		visible = {
+			has_country_flag = YAN_SEZO_industry_flag
+		}
+		available = {
+			has_political_power > 200
+		}
+		cost = 200
+		days_remove = 400
+		fire_only_once = yes
+		ai_will_do = {
+			factor = 101
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: decision YAN_DEL_industry_time"
+			DEL = {
+				add_stability = -0.10
+	
+			}
+			YAN = {
+				add_political_power = -50
+			}
+		}
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: decision YAN_DEL_industry_time"
+			DEL = {
+				add_stability = 0.15
+			}
+			YAN = {
+				add_political_power = 300
+			}
+			1139 = {
+				add_building_construction = {
+					type = industrial_complex
+					level = 1 
+					instant_build = yes
+				}			
+			}
+			1140 = {
+				add_building_construction = {
+					type = industrial_complex
+					level = 1 
+					instant_build = yes
+				}
+			}
+			1141 = {
+				add_building_construction = {
+					type = industrial_complex
+					level = 1 
+					instant_build = yes
+				}
+			}
+			1142 = {
+				add_building_construction = {
+					type = industrial_complex
+					level = 1 
+					instant_build = yes
+				}
+			}
+			1147 = {
+				add_building_construction = {
+					type = industrial_complex
+					level = 1 
+					instant_build = yes
+				}
+			}
+			1192 = {
+				add_building_construction = {
+					type = industrial_complex
+					level = 1 
+					instant_build = yes
+				}
+			}
+		}
+	}
+}
+
+
+YAN_semua_economy_category = {
+	YAN_print_money_time = {
+		icon = GFX_decision_ger_mefo_bills
+
+		available = {
+			NOT = {
+				has_idea = YAN_print_money
+			}
+		}
+		
+
+		days_mission_timeout = 400
+		cost = 10
+
+		activation = {
+			has_completed_focus = YAN_saving_economy
+		}
+		allowed = {
+			tag = YAN
+		}
+
+		fire_only_once = yes
+		fixed_random_seed = no
+
+		ai_will_do = {
+			factor = 0 
+		}
+
+	
+		
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: decision YAN_print_money_time"
+		}
+		timeout_effect = {
+			log = "[GetDateText]: [Root.GetName]: decision YAN_print_money_time"
+			country_event = { id = Indozeeb hours = 3 }
+			##Make event about the coup
+			##THis is a fail
+			set_country_flag = YAN_kudakelasi_coup_key3
+		}
+	}
+}
