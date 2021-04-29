@@ -1,0 +1,82 @@
+﻿division_template = {
+	name = "Haris Mahaliyun"		# 'Infantry Division' - Represents local tribal levies (militia)
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+	}
+
+	priority = 0
+}
+
+division_template = {
+	name = "Haras Alsharaf"		# Elite Garde
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+		infantry = { x = 2 y = 0 }
+	}
+
+	support = {
+		recon = { x = 0 y = 0 }
+	}
+}
+
+division_template = { 
+	name = "Dire Khafif"			#Light armor
+	regiments = {
+		light_armor = { x = 0 y = 0 }
+		light_armor = { x = 0 y = 1 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+		infantry = { x = 1 y = 3 }
+	}
+	support = {
+		recon = { x = 0 y = 0 }
+	}
+}
+
+
+
+
+
+units = {
+	##### Haras Alsharaf #####
+}
+
+
+instant_effect = {
+	add_equipment_production = {
+		equipment = {
+			type = infantry_equipment_1
+			creator = "EMR"
+		}
+		requested_factories = 4
+		progress = 0.5
+		efficiency = 100
+	}
+	add_equipment_production = {
+		equipment = {
+			type = support_equipment_1
+			creator = "EMR"
+		}
+		requested_factories = 1
+		progress = 0.5
+		efficiency = 100
+	}
+	add_equipment_production = {
+		equipment = {
+			type = gw_tank_equipment
+			creator = "EMR"
+		}
+		requested_factories = 1
+		progress = 0.30
+		efficiency = 30
+	}
+}

@@ -6587,6 +6587,30 @@ spriteTypes = {
 		texturefile = "gfx/interface/goals/goal_CTL_benjen_triumphant.tga"
 	}
 	SpriteType = {
+		name = "GFX_goal_The_Ugabooga_Boys_and_the_Golden_Cock_Ring"
+		texturefile = "gfx/interface/goals/The_Ugabooga_Boys_and_the_Golden_Cock_Ring.tga"
+	}
+	SpriteType = {
+		name = "GFX_goal_Zigger_Lute"
+		texturefile = "gfx/interface/goals/Zigger_Lute.tga"
+	}
+	SpriteType = {
+		name = "GFX_goal_Zigger_Hat"
+		texturefile = "gfx/interface/goals/Zigger_Hat.tga"
+	}
+	SpriteType = {
+		name = "GFX_goal_Zigger_Box"
+		texturefile = "gfx/interface/goals/Zigger_Box.tga"
+	}
+	SpriteType = {
+		name = "GFX_goal_Zigger_Shields"
+		texturefile = "gfx/interface/goals/Zigger_Shields.tga"
+	}
+	SpriteType = {
+		name = "GFX_goal_Zigger_Spears"
+		texturefile = "gfx/interface/goals/Zigger_Spears.tga"
+	}
+    SpriteType = {
 		name = "GFX_goal_coffee_boom_2"
 		texturefile = "gfx/interface/goals/goal_coffee_boom_2.tga"
 	}
@@ -6625,6 +6649,54 @@ spriteTypes = {
 	SpriteType = {
 		name = "GFX_goal_new_airforce"
 		texturefile = "gfx/interface/goals/new_airforce.tga"
+	}
+	SpriteType = {
+		name = "GFX_goal_ZUG_heretic_termination"
+		texturefile = "gfx/interface/goals/ZUG_heretic_termination.tga"
+	}
+	SpriteType = {
+		name = "GFX_goal_generic_army_zeeb"
+		texturefile = "gfx/interface/goals/generic_army_zeeb.tga"
+	}
+	SpriteType = {
+		name = "GFX_goal_Zigger_Temple"
+		texturefile = "gfx/interface/goals/Zigger_Temple.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_Zigger_Muskets"
+		texturefile = "gfx/interface/goals/Zigger_Muskets.tga"
+	}
+	SpriteType = {
+		name = "GFX_goal_Zigger_War_Canoes"
+		texturefile = "gfx/interface/goals/Zigger_War_Canoes.tga"
+	}
+	SpriteType = {
+		name = "GFX_goal_Zigger_Old_vs_New"
+		texturefile = "gfx/interface/goals/Zigger_Old_vs_New.tga"
+	}
+	SpriteType = {
+		name = "GFX_goal_communism_cloud"
+		texturefile = "gfx/interface/goals/communism_cloud.tga"
+	}
+	SpriteType = {
+		name = "GFX_goal_Pepsi"
+		texturefile = "gfx/interface/goals/Pepsi.tga"
+	}
+	SpriteType = {
+		name = "GFX_goal_Pepsiman"
+		texturefile = "gfx/interface/goals/Pepsiman.tga"
+	}
+	SpriteType = {
+		name = "GFX_goal_holy_communism"
+		texturefile = "gfx/interface/goals/holy_communism.tga"
+	}
+	SpriteType = {
+		name = "GFX_goal_divine_socialism"
+		texturefile = "gfx/interface/goals/divine_socialism.tga"
+    }
+    SpriteType = {
+		name = "GFX_goal_generic_forestry"
+		texturefile = "gfx/interface/goals/generic_forestry.tga"
 	}
 	SpriteType = {
 		name = "GFX_goal_JER_anti_monarchist_rallies"
@@ -6862,6 +6934,10 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_goal_JER_MPA_victory"
 		texturefile = "gfx/interface/goals/goal_JER_MPA_victory.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_zebra_hammer"
+		texturefile = "gfx/interface/goals/zebra_hammer.dds"
 	}
 	spriteType = {
 		name = "GFX_goal_JER_bring_the_unions_into_politics"

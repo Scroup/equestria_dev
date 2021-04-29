@@ -1,0 +1,58 @@
+﻿### OOB for file CNT_1007.txt
+units = {
+	fleet = {
+		name = "Sentur Donanmasi"
+		naval_base = 16521 # İlkşehir
+		task_force = {
+			name = "Sentur Donanmasi"
+			location = 16521 # İlkşehir
+			ship = { name = "SKG Pasa" definition = battleship start_experience_factor = 0.2 equipment = { battleship_1 = { amount = 1 owner = CNT } } }
+			ship = { name = "SKG Ali" definition = battleship start_experience_factor = 0.4 equipment = { battleship_1 = { amount = 1 owner = CNT } } }
+			
+			ship = { name = "SKG Reis" definition = heavy_cruiser start_experience_factor = 0.2 equipment = { heavy_cruiser_1 = { amount = 1 owner = CNT } } }
+			ship = { name = "SKG Kadir" definition = heavy_cruiser start_experience_factor = 0.2 equipment = { heavy_cruiser_1 = { amount = 1 owner = CNT } } }
+			ship = { name = "SKG Abdül" definition = heavy_cruiser start_experience_factor = 0.2 equipment = { heavy_cruiser_1 = { amount = 1 owner = CNT } } }
+	
+			ship = { name = "SKG Kilic" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = CNT version_name = "Canter Class" } } }
+			ship = { name = "SKG Salih" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = CNT version_name = "Canter Class" } } }
+			ship = { name = "SKG Pakkiyi" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = CNT version_name = "Canter Class" } } }
+			ship = { name = "SKG Bogazqala" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = CNT version_name = "Canter Class" } } }
+		}				
+	}
+
+	fleet = {
+		name = "Denizalti Filosu"
+		naval_base = 4648 # Pakkıyı
+		task_force = {
+			name = "Denizalti Filosu"
+			location = 4648 # Pakkıyı
+			ship = { name = "SKG S-1" definition = submarine equipment = { submarine_1 = { amount = 1 owner = CNT } } }
+			ship = { name = "SKG S-2" definition = submarine equipment = { submarine_1 = { amount = 1 owner = CNT } } }
+			ship = { name = "SKG S-3" definition = submarine equipment = { submarine_1 = { amount = 1 owner = CNT } } }
+		}				
+	}
+
+}
+
+instant_effect = {
+
+	### Ships Under Contruction ###
+	add_equipment_production = {
+		equipment = {
+			type = battleship_1
+			creator = "CNT" 
+		}
+		requested_factories = 2
+		progress = 0.82
+		amount = 1
+	}
+	add_equipment_production = {
+		equipment = {
+			type = battleship_1
+			creator = "CNT" 
+		}
+		requested_factories = 2
+		progress = 0.8
+		amount = 1
+	}
+}

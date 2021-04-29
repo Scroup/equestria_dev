@@ -704,6 +704,30 @@ category_all_armor = {
 		}
 	}
 
+	infantry_weapons_spirit_warriors = {
+		research_cost = 1
+		allow = {
+			always = no
+		}
+		spirit_warriors = {
+			need = {
+				infantry_equipment = 140
+			}
+		}
+	}
+
+	magical_weapons_spirit_warriors = {
+		research_cost = 1
+		allow = {
+			always = no
+		}
+		spirit_warriors = {
+			need = {
+				magical_equipment = 140
+			}
+		}
+	}
+
 	EQC_section_z_tech = {
 
 		research_cost = 1
@@ -2010,7 +2034,94 @@ category_all_armor = {
 		}
 		
 	}
+	camel_race = {
+
+		research_cost = 1
+		allow = {
+			always = no
+		}
+		
+	}
+	cat_race = {
+
+		research_cost = 1
+		allow = {
+			always = no
+		}
+		
+	}
+	centaur_race = {
+
+		research_cost = 1
+		allow = {
+			always = no
+		}
+		
+		category_army = {
+			breakthrough = 0.15
+		}
+	}
+	donkey_race = {
+
+		research_cost = 1
+		allow = {
+			always = no
+		}
+		
+	}
 	dragon_race = {
+
+		research_cost = 1
+		allow = {
+			always = no
+		}
+		
+	}
+	gargoyle_race = {
+
+		research_cost = 1
+		allow = {
+			always = no
+		}
+
+		category_all_infantry = {
+			maximum_speed = 0.15
+		}
+		
+	}
+	giraffe_race = {
+
+		research_cost = 1
+		allow = {
+			always = no
+		}
+		
+	}
+	hippogriff_race = {
+
+		research_cost = 1
+		allow = {
+			always = no
+		}
+		
+	}
+	kirin_race = {
+
+		research_cost = 1
+		allow = {
+			always = no
+		}
+		
+	}
+	llama_race = {
+
+		research_cost = 1
+		allow = {
+			always = no
+		}
+		
+	}
+	harpy_race = {
 
 		research_cost = 1
 		allow = {
@@ -2043,6 +2154,14 @@ category_all_armor = {
 
 	}
 	yak_race = {
+
+		research_cost = 1
+		allow = {
+			always = no
+		}
+
+	}
+	yeti_race = {
 
 		research_cost = 1
 		allow = {
