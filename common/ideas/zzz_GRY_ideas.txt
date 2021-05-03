@@ -878,7 +878,19 @@ ideas = {
 			}
 			picture = BRF_everyman_a_knight
 		}
-
+		GRY_magnate_powerful = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				consumer_goods_factor = -0.10
+			}
+			picture = chi_hyper_inflation2
+		}
 		# Here goes Komissariat stuff
 		GRY_research_boost_10K = {
 			allowed = {

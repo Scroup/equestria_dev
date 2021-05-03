@@ -7,7 +7,7 @@ shared_focus = {
 	x = 8
 	y = 0
 	completion_reward = {
-		add_political_power = 50
+		country_event = { id = gryphianhost.1 } # Kalas is old but wants to meet his fate in the battle
 
 		log = "[GetDateText]: [Root.GetName]: Focus GRY_prywhen_raid"
 	}

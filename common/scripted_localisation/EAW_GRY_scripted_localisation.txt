@@ -2,19 +2,25 @@ defined_text = {
     name = GRY_candidate_tt
     text = {
         trigger = {
-            has_state_flag = GRY_supports_grif
+            ROOT = {
+                has_state_flag = GRY_supports_grif
+            }
         }
         localization_key = GRY_candidate_grif_tt
     }
     text = {
         trigger = {
-            has_state_flag = GRY_supports_krav
+            ROOT = {
+                has_state_flag = GRY_supports_krav
+            }
         }
         localization_key = GRY_candidate_krav_tt
     }
     text = {
         trigger = {
-			has_state_flag = GRY_supports_bagr
+            ROOT = {
+			    has_state_flag = GRY_supports_bagr
+            }
         }
         localization_key = GRY_candidate_bagr_tt
     }

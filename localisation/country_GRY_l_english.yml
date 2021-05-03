@@ -60,6 +60,16 @@
  
  ###Events###
 
+ gryphianhost.1.t:0 "The Last Battle"
+ gryphianhost.1.d:0 "-Kalas, you're old and will die soon\n-raid time"
+ gryphianhost.1.a:0 "The fate of a true cossack."
+
+ gryphianhost.2.t:0 "Land Dispute"
+ gryphianhost.2.d:0 "-I'm rich land is mine Kalas I'll pay you\n-This is my fifth cousins's land, it's mine"
+ gryphianhost.2.a:0 "Give land to rich guy and get the shekels."
+ gryphianhost.2.b:0 "Give land to the veteran."
+
+ ## Komissariat
  ##give us stuff pls events
  gryphianhost.240.t:0 "A Request From Our Border March"
  gryphianhost.240.d:0 "The administrator of the Reichskommissariat Kosakenland has sent us an appeal today, offering a decent amount of capable griffons to serve in our armed forces, in exchange for a cache of firearms. They cite the need for arming their domestic peacekeepers, but do we currently require such a trade?"
@@ -170,10 +180,14 @@
  GRY_milAdv1:0 "Anton Nevsbeak"
  GRY_armyChief1:0 "Boris 'Vladimirovich' Kestral"
  GRY_polishGenius:0 "Mateusz Nobeak"
+
  # Ideas
  GRY_cossacks:0 "Cossack Military"
  GRY_cossacks_desc:0 "The fearsome Cossacks of the Host are renowned for their speed and vast numbers. Their raids are a blight upon neighbouring ponies' villages and small towns."
-# Komissariat decisions
+ GRY_magnate_powerful:0 "Magnate's Bribe"
+ GRY_magnate_powerful_desc:0 "Magnate has generously awarded us for supporting his land claim. While this decision probably wasn't a morally right one, but who cares, when you get this much money?"
+ 
+ # Komissariat decisions
  GRY_exploitation:0 "Resource Exploitation"
  GRY_exploitation_desc:0 "The new administration is concerned with getting as much out of the land as possible, with little regard to long-term sustainability or giving the Zaphzans a fair share of the pie."
  GRY_even_more_conscription:0 "Lowered Recruitment Age"
@@ -189,7 +203,7 @@
  
  ###Decisions###
  GRY_hetman_popularity_category:0 "Power Struggle"
- GRY_hetman_popularity_category_desc:0 "It's a common knowledge that Kalas Bulba's days are numbered, so §YBorad Grifnitsky§!, §RYevhen Kravlets§! and §CLevdruna Bagrovska§! already struggle for power.\n\n[592.GetName] supports [592.GRY_candidate_tt]\n[596.GetName] supports [596.GRY_candidate_tt]\n[597.GetName] supports [597.GRY_candidate_tt]\n[598.GetName] supports [598.GRY_candidate_tt]\n[609.GetName] supports [609.GRY_candidate_tt]\n[610.GetName] supports [610.GRY_candidate_tt]\n[611.GetName] supports [611.GRY_candidate_tt]\n[612.GetName] supports [612.GRY_candidate_tt]\n[613.GetName] supports [613.GRY_candidate_tt]\n[631.GetName] supports [631.GRY_candidate_tt]"
+ GRY_hetman_popularity_category_desc:0 "It's common knowledge that Kalas Bulba's days are numbered, so §YBorad Grifnitsky§!, §RYevhen Kravlets§! and §CLevdruna Bagrovska§! already struggle for power.\n\n[592.GetName] supports [592.GRY_candidate_tt]\n[596.GetName] supports [596.GRY_candidate_tt]\n[597.GetName] supports [597.GRY_candidate_tt]\n[598.GetName] supports [598.GRY_candidate_tt]\n[609.GetName] supports [609.GRY_candidate_tt]\n[610.GetName] supports [610.GRY_candidate_tt]\n[611.GetName] supports [611.GRY_candidate_tt]\n[612.GetName] supports [612.GRY_candidate_tt]\n[613.GetName] supports [613.GRY_candidate_tt]\n[631.GetName] supports [631.GRY_candidate_tt]" # todo: write more for that
  GRY_support_grifnitsky:0 "Support §YGrifnitsky§!'s nomination"
  GRY_support_kravlets:0 "Support §RKravlets§!' nomination"
  GRY_support_coalition:0 "Support §CBagrovska§!'s nomination"
@@ -219,12 +233,14 @@
  GRY_candidate_grif_tt:0 "§YBorad Grifnitsky§!"
  GRY_candidate_krav_tt:0 "§RYevhen Kravlets§!"
  GRY_candidate_bagr_tt:0 "§CLevdruna Bagrovska§!"
- GRY_candidate_none_tt:0 "§RERROR§!"
+ GRY_candidate_none_tt:0 "§RERROR§!" # shouldn't ever be there tho
 
  GRY_grif_tt:0 "§YBorad Grifnitsky§!"
  GRY_krav_tt:0 "§RYevhen Kravlets§!"
  GRY_bagr_tt:0 "§CLevdruna Bagrovska§!"
 
+ GRY_pohryfynnia_goes_krav:0 "You will anger the local darmolits, so §gPohryfynnja§! will support §RYevhen Kravlets§!!"
+ GRY_pohryfynnia_goes_bagr:0 "You will anger the local rysovars, so §gPohryfynnja§! will support §CLevdruna Bagrovska§!!"
 ## GUI stuffs
 
 gry_leading_candidate_in_the_state:0 "Leading candidate in [?this.GetName]:"

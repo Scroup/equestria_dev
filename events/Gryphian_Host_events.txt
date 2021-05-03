@@ -1,5 +1,66 @@
 ﻿add_namespace = gryphianhost
 
+country_event = { # Kalas is old but wants to meet his fate in the battle like a true cossack
+	id = gryphianhost.1 
+	immediate = {log = "[GetDateText]: [Root.GetName]: event gryphianhost.1"}
+	title = gryphianhost.1.t
+	desc = gryphianhost.1.d
+	picture = GFX_event_griffon_with_gun
+
+	is_triggered_only = yes
+
+	option = {
+		name = gryphianhost.1.a
+		add_political_power = 20
+	}
+}
+
+country_event = { # Land dispute, darmolit-veteran vs a rysovar magnate, magnate promises money
+	id = gryphianhost.2
+	immediate = {log = "[GetDateText]: [Root.GetName]: event gryphianhost.2"}
+	title = gryphianhost.2.t
+	desc = gryphianhost.2.d
+	picture = GFX_event_griffon_with_gun
+
+	trigger = {
+		has_completed_focus = GRY_prywhen_raid # To ensure the introductory event #1 comes first
+	}
+
+	mean_time_to_happen = {
+		days = 7
+	}
+
+	option = {
+		name = gryphianhost.2.a # we decide magnate gets the land, darmolits are angry at Kalas and region votes Kravlets
+		add_political_power = 5
+		add_timed_idea = {
+			idea = GRY_magnate_powerful
+			days = 60
+		}
+		596 = {
+			clr_state_flag = GRY_supports_grif
+			set_state_flag = GRY_supports_krav
+		}
+		ai_chance = {
+			base = 50
+		}
+		custom_effect_tooltip = GRY_pohryfynnia_goes_krav
+	}
+	option = {
+		name = gryphianhost.2.a # veteran gets the land, rysovars are angry and region votes Bagrovska
+		add_political_power = -5
+		596 = {
+			clr_state_flag = GRY_supports_grif
+			set_state_flag = GRY_supports_bagr
+		}
+		ai_chance = {
+			base = 50
+		}
+		custom_effect_tooltip = GRY_pohryfynnia_goes_bagr
+	}
+}
+
+# Komissariat stuff
 country_event = {#GRI gets message asking for more guns in exchange for manpower
 	id = gryphianhost.240
 	immediate = {log = "[GetDateText]: [Root.GetName]: event gryphianhost.240"}
@@ -39,9 +100,6 @@ country_event = {#GRI gets message asking for more guns in exchange for manpower
 		}
 	}
 }
-
-
-# Komissariat stuff
 country_event = {#GRI gets message asking for more guns in exchange for manpower
 	id = gryphianhost.240
 	immediate = {log = "[GetDateText]: [Root.GetName]: event gryphianhost.240"}
