@@ -5,6 +5,7 @@ state={
 	history={
 		owner = STG
 		add_core_of = STG
+		add_core_of = EQS
 		buildings = {
 			infrastructure = 2
 			9176 = { naval_base = 1 }
@@ -13,6 +14,9 @@ state={
 	}
 	provinces={
 		6070 9176
+	}
+	resources = {
+		oil = 4
 	}
 	manpower=3900
 	buildings_max_level_factor=1.000
